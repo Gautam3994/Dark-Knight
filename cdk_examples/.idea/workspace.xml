@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="81a0db57-c50f-4f83-9911-3b9d14339d9a" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="cdk_examples" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1U2JMYQQx4oTDaLBP7yMZSswJ5n" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lambda/testy.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gautam\PycharmProjects\cdk_examples\functions\Canary" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gautam\PycharmProjects\cdk_examples\functions\first_big_project\item_actions" />
+      <recent name="C:\Users\Gautam\PycharmProjects\cdk_examples\functions\first_big_project\storeitem" />
+      <recent name="C:\Users\Gautam\PycharmProjects\cdk_examples" />
+      <recent name="C:\Users\Gautam\PycharmProjects\cdk_examples\functions\automated_tweets" />
+      <recent name="C:\Users\Gautam\PycharmProjects\cdk_examples\functions\Canary" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="AWS Lambda.[Remote] itemactions">
+    <configuration name="canary" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="boto_3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Gautam\PycharmProjects\Flask_API\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Lambda" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Lambda/canary.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cdk_examples" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="cdk_examples" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cdk_examples_stack" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="cdk_examples" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Gautam\PycharmProjects\cdk_examples\.env\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cdk_examples" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cdk_examples/cdk_examples_stack.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dynamodb_items" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="cdk_examples" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Gautam\PycharmProjects\cdk_examples\.env\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../boto_3" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../boto_3/dynamodb_items.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testy" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="cdk_examples" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Gautam\PycharmProjects\cdk_examples\.env\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Lambda" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Lambda/testy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="[Local] null" type="aws.lambda" factoryName="Local" nameIsGenerated="true">
+      <option name="credentialProviderId" value="profile:dark_knight" />
+      <option name="regionId" value="us-east-2" />
+      <option name="environmentVariables">
+        <map />
+      </option>
+      <option name="handler" />
+      <option name="logicalFunctionName" />
+      <option name="memorySize" value="128" />
+      <option name="runtime" />
+      <option name="templateFile" value="" />
+      <option name="timeout" value="300" />
+      <option name="useTemplate" value="true" />
+      <option name="input" />
+      <option name="inputIsFile" value="false" />
+      <sam>
+        <option name="additionalBuildArgs" value="" />
+        <option name="additionalLocalArgs" value="" />
+        <option name="buildInContainer" value="false" />
+        <option name="dockerNetwork" value="" />
+        <option name="skipImagePull" value="false" />
+      </sam>
+      <method v="2" />
+    </configuration>
+    <configuration name="[Remote] CreateItemsFromS3" type="aws.lambda" factoryName="Remote" temporary="true" nameIsGenerated="true">
+      <option name="credentialProviderId" value="profile:dark_knight" />
+      <option name="regionId" value="us-east-2" />
+      <option name="functionName" value="CreateItemsFromS3" />
+      <option name="input" value="{&#10;  &quot;Records&quot;: [&#10;    {&#10;      &quot;eventVersion&quot;: &quot;2.0&quot;,&#10;      &quot;eventSource&quot;: &quot;aws:s3&quot;,&#10;      &quot;awsRegion&quot;: &quot;{region}&quot;,&#10;      &quot;eventTime&quot;: &quot;1970-01-01T00:00:00Z&quot;,&#10;      &quot;eventName&quot;: &quot;ObjectCreated:Put&quot;,&#10;      &quot;userIdentity&quot;: {&#10;        &quot;principalId&quot;: &quot;EXAMPLE&quot;&#10;      },&#10;      &quot;requestParameters&quot;: {&#10;        &quot;sourceIPAddress&quot;: &quot;127.0.0.1&quot;&#10;      },&#10;      &quot;responseElements&quot;: {&#10;        &quot;x-amz-request-id&quot;: &quot;EXAMPLE123456789&quot;,&#10;        &quot;x-amz-id-2&quot;: &quot;EXAMPLE123/5678abcdefghijklambdaisawesome/mnopqrstuvwxyzABCDEFGH&quot;&#10;      },&#10;      &quot;s3&quot;: {&#10;        &quot;s3SchemaVersion&quot;: &quot;1.0&quot;,&#10;        &quot;configurationId&quot;: &quot;testConfigRule&quot;,&#10;        &quot;bucket&quot;: {&#10;          &quot;name&quot;: &quot;sourcebucket&quot;,&#10;          &quot;ownerIdentity&quot;: {&#10;            &quot;principalId&quot;: &quot;EXAMPLE&quot;&#10;          },&#10;          &quot;arn&quot;: &quot;arn:{partition}:s3:::mybucket&quot;&#10;        },&#10;        &quot;object&quot;: {&#10;          &quot;key&quot;: &quot;Sales.csv&quot;,&#10;          &quot;size&quot;: 1024,&#10;          &quot;eTag&quot;: &quot;0123456789abcdef0123456789abcdef&quot;,&#10;          &quot;sequencer&quot;: &quot;0A1B2C3D4E5F678901&quot;&#10;        }&#10;      }&#10;    }&#10;  ]&#10;}" />
+      <option name="inputIsFile" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="[Remote] EC2_instance_state" type="aws.lambda" factoryName="Remote" nameIsGenerated="true">
+      <option name="credentialProviderId" value="profile:dark_knight" />
+      <option name="regionId" value="us-east-2" />
+      <option name="functionName" value="EC2_instance_state" />
+      <option name="input" />
+      <option name="inputIsFile" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="[Remote] itemactions" type="aws.lambda" factoryName="Remote" temporary="true" nameIsGenerated="true">
+      <option name="credentialProviderId" value="profile:dark_knight" />
+      <option name="regionId" value="us-east-2" />
+      <option name="functionName" value="itemactions" />
+      <option name="input" />
+      <option name="inputIsFile" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="AWS Lambda.[Remote] EC2_instance_state" />
+      <item itemvalue="AWS Lambda.[Local] null" />
+      <item itemvalue="AWS Lambda.[Remote] CreateItemsFromS3" />
+      <item itemvalue="AWS Lambda.[Remote] itemactions" />
+      <item itemvalue="Python.canary" />
+      <item itemvalue="Python.testy" />
+      <item itemvalue="Python.cdk_examples" />
+      <item itemvalue="Python.cdk_examples_stack" />
+      <item itemvalue="Python.dynamodb_items" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="AWS Lambda.[Remote] itemactions" />
+        <item itemvalue="AWS Lambda.[Remote] CreateItemsFromS3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81a0db57-c50f-4f83-9911-3b9d14339d9a" name="Default Changelist" comment="" />
+      <created>1574548709250</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574548709250</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,203 @@
+
+
+
+
+
+
+
+    
+
+
+
+<html>
+    <head>
+        <script src='dwr/interface/LoginAction.js'></script>
+        <script src='dwr/engine.js'></script>
+        <script src='dwr/util.js'></script>
+        <link href="https://tnvelaivaaippu.gov.in/Empowerst/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://tnvelaivaaippu.gov.in/Empowerst/css/onward.css" rel="stylesheet" type="text/css" />
+
+        <script>
+            function logOut(){
+                document.forms[0].action="LoginAction.htm";
+                document.forms[0].method.disabled = false;
+                document.forms[0].method.value="loginPage";
+                document.forms[0].submit();
+            }
+        </script>
+
+        <style type="text/css">
+            body{padding:0;margin:0;font-family:helvetica;}
+            #container{margin:0px auto;width:868px;}
+            #container #top404{background-image:url('https://tnvelaivaaippu.gov.in/Empowerst/images/404top.png');background-repeat:no-repeat;width:868px;height:168px;}
+            #container #mid404{background-image:url('https://tnvelaivaaippu.gov.in/Empowerst/images/404mid.gif');background-repeat:repeat-y;width:868px;}
+            #container #mid404 #gatorbottom{position:relative;left:21px;float:left;}
+            #container #mid404 #errorimg{float:left;padding:15px 380px 10px;}
+            #container #mid404 #content{float:left;text-align:center;width:868px;}
+            #container #mid404 #content #errorcode{font-size:20px;font-weight:800;}
+            /*#container #mid404 #content p{font-weight:800;font-size:20px;color:#AB0000;}*/
+            #container #mid404 #content #banner{margin:20px 0 0 ;}
+            #container #mid404 #content #hostedby{font-family:Verdana, sans-serif; font-weight:800; font-size:12px; font-style:italic; margin:20px 0 0; text-align:center;}
+            #container #mid404 #content #coupon{color:#AB0000;font-size:22px;font-style:italic;}
+            #container #mid404 #content #getstarted a{font-family:Verdana, sans-serif;color:#AB0000;font-size:15px;font-style:italic;font-weight:800; text-align:center;}
+            #container #mid404 #content #getstarted {margin:0 0 35px; text-align:center;}
+            #container #bottom404{background-image:url('https://tnvelaivaaippu.gov.in/Empowerst/images/404bottom.gif');background-repeat:no-repeat;width:868px;height:14px;}
+        </style>
+        <style>
+            .filterErrorMessage{font-family:Verdana, sans-serif; width:100%; color:#BD1310; font-size:13px; font-weight:bold; text-align:left; }
+            .filterErrorMessage1{font-family:Verdana, sans-serif; width:100%; color:#000000; font-size:11px; font-weight:normal; text-align:left; height:15px; }
+        </style>
+    </head>
+    <body>
+        <form method="post">
+            <div id="container">
+                <div id="top404"></div>
+                <div id="mid404">
+                    <div id="errorimg"><img src="https://tnvelaivaaippu.gov.in/Empowerst/images/error.png" alt=""></div>
+                    <div id="content">
+                        <div id="errorcode">ERROR FOUND</div>
+                        <!--p style="font-weight:800;font-size:20px;color:#AB0000;">Oops! Looks like </p-->
+                        <p align="left" style="padding-left:80px;">
+<font class="filterErrorMessage">&nbsp;</font><br><br><font class="filterErrorMessage1"><b>This error has occured for one of the following reasons :</b></font><br><font class="filterErrorMessage1">		1) Bad gateway.</font><br><font class="filterErrorMessage1">		2) Cross-Site Request Forgery (CSRF).</font><br><font class="filterErrorMessage1">		3) Incorrect Authorization.</font><br><font class="filterErrorMessage1">		4) Uncontrolled Format String.</font><br><font class="filterErrorMessage1">		5) Missing Encryption of Sensitive Data.</font><br><font class="filterErrorMessage1">		6) Execution with Unnecessary Privileges.</font><br></p>
+                        <div id="hostedby">This site is hosted by Department of Employment and Training, <br>Govt. of Tamilnadu!</div>
+                        <div id="coupon"></div>
+                        <div id="getstarted"><a href="#" onclick="logOut()" title="Department of Employment and Training, Govt. of Tamilnadu">Click here to LOGIN</a></div>
+                    </div>
+                    <div style="clear: left;"></div>
+                </div>
+                <div id="bottom404"></div>
+            </div>            
+            <input type="hidden" name="method">
+        </form>
+    </body>
+    
+
+
+
+
+<script src='dwr/interface/UserCreationAction.js'></script>
+<script src='dwr/engine.js'></script>
+<script src='dwr/util.js'></script>
+
+<div style="width:100%; margin-top:10px;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="footerTopRow">&nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <table width="100%" border="0" cellspacing="4" cellpadding="4" background="https://tnvelaivaaippu.gov.in/Empowerst/images/bgMiddTop.gif" >                    
+                    <tr class="footerPage">
+<!--                    <form>-->
+                        <td width="100%" align="center" colspan="3">
+                            <div id="concurrentcount"></div>
+<!--                            <table width="50%" border="0" cellspacing="2" cellpadding="2"  class="sessiontable">
+                                <tr class="sessiontableheader">                                    
+                                    <td align="center" width="100%" colspan="4">
+                                        <a href="#" onclick="getMenuRequest('CandidateProfileAction','searchUpdateQualification')">
+                                            Alert for Concurrent UserID Access<font class="sessioncount">3</font>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="sessiontabletr">
+                                    <td align="center" width="10%">Sno</td>
+                                    <td align="center" width="30%">IP Address</td>
+                                    <td align="center" width="40%">Login Time</td>
+                                    <td align="center" width="20%">Action</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" width="10%">1</td>
+                                    <td align="center" width="30%">192.168.4.111</td>
+                                    <td align="center" width="40%">23/01/2014 12:58:01</td>
+                                    <td align="center" width="20%"><input type="button" value="Remove Session" onclick="killSession('abcdefghij')"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center" width="10%">2</td>
+                                    <td align="center" width="30%">192.168.4.110</td>
+                                    <td align="center" width="40%">23/01/2014 12:38:01</td>
+                                    <td align="center" width="20%"><input type="button" value="Remove Session" onclick="killSession('abcdefghij')"/></td>
+                                </tr>
+                            </table>-->
+                        </td>
+<!--                        <input type="hidden" name="method"/>-->
+<!--                    </form>-->
+        </tr>
+        <tr class="footerPage">
+            <td width="30%" align="center">
+                Coordinated by ELCOT & NIC<br>
+                ©2011. Department of Employment and Training, Govt. of Tamilnadu
+            </td>
+            <td width="40%" align="center" class="homefooter_m">
+                <a href="#">Office Addresses</a> |
+                <a href="#">Links</a> |
+                <a href="#">Feedback</a> |
+                <a href="#">Disclaimer</a> <br>
+                This site is best viewed in Firefox 3.x and Internet Explorer 6+ <br>
+                <a href="#">Version 2.1.0</a>
+                <a href="#" onclick="alertscriptversion()">S Version 2.0.0</a>
+            </td>
+            <td width="30%">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr class="footerPage">
+                        <td align="right">Powered by&nbsp;</td>
+                        <td align="left"><a href="#" ><img src="https://tnvelaivaaippu.gov.in/Empowerst/images/onward_logo.gif" border="0" /></a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+    if(''!=null && ''!="null" && ''!=""){
+        var input = document.createElement("input");
+        input.setAttribute("type","hidden");
+        input.setAttribute("name","issuechknumber");
+        input.setAttribute("id","issuechknumber");
+        input.setAttribute("class","hiddenbutton");
+        input.setAttribute("readonly",true);
+        input.setAttribute("value",'');
+        document.forms[0].appendChild(input);
+        //alert(document.getElementById("issuechknumber").value);
+    }
+</script>
+<script>
+    function getMenuRequest(actionName,methodName,menuName){
+        if(menuName!=null && menuName!=""){
+            UserCreationAction.isAccessDenied(menuName,function(value){
+                if(!value){
+                    alert("Access Denied");
+                    return false;
+                } else {
+                    getBlanket('hederReqBlanket');
+                    document.forms[0].action=actionName+".htm";
+                    document.forms[0].method.value=methodName;
+                    document.forms[0].submit();
+                }
+            });
+        } else {
+            getBlanket('hederReqBlanket');
+            document.forms[0].action=actionName+".htm";
+            document.forms[0].method.value=methodName;
+            document.forms[0].submit();
+        }
+    }
+</script>
+<script type="text/javascript">
+    CheckConcurrentAccess();    
+    function CheckConcurrentAccess(){
+        SessionHandlerAction.getConcurrentUsersCount({callback:callbackConcurrentAccess,async:false});
+    }
+    function callbackConcurrentAccess(map){
+        if(map!=null){
+            //                alert(map.concurrentcount);
+            document.getElementById("concurrentcount").innerHTML=map.concurrentcount;
+        }else{
+            document.getElementById("concurrentcount").innerHTML = "";
+        }
+    }
+</script>
+
+</html>

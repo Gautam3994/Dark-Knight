@@ -1,0 +1,341 @@
+/*
+ * Document   : dateValidations.js
+ * Created on : Jan 21, 2011, 4:15:39 PM
+ * Author     : Jagan Mohan. B
+ */
+
+var dtCh= "/";
+var minYear=1900;
+var maxYear=2100;
+
+function isInteger(s) {
+    var i;
+    for (i = 0; i < s.length; i++){   
+        // Check that current character is number.
+        var c = s.charAt(i);
+        if (((c < "0") || (c > "9"))) return false;
+    }
+    // All characters are numbers.
+    return true;
+}
+
+function stripCharsInBag(s, bag) {
+    var i;
+    var returnString = "";
+    // Search through string's characters one by one.
+    // If character is not in bag, append to returnString.
+    for (i = 0; i < s.length; i++){   
+        var c = s.charAt(i);
+        if (bag.indexOf(c) == -1) returnString += c;
+    }
+    return returnString;
+}
+
+function daysInFebruary (year){
+	// February has 29 days in any year evenly divisible by four,
+    // EXCEPT for centurial years which are not also divisible by 400.
+    return (((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0))) ? 29 : 28 );
+}
+
+function DaysArray(n) {
+    for (var i = 1; i <= n; i++) {
+        this[i] = 31
+	if (i==4 || i==6 || i==9 || i==11) {this[i] = 30}
+	if (i==2) {this[i] = 29}
+   }
+   return this
+}
+
+function isValidDate(textBoxObj){
+    var elementValue = textBoxObj.value;
+    var daysInMonth = DaysArray(12)
+    var pos1=elementValue.indexOf(dtCh)
+    var pos2=elementValue.indexOf(dtCh,pos1+1)
+    var strDay=elementValue.substring(0,pos1)
+    var strMonth=elementValue.substring(pos1+1,pos2)
+    var strYear=elementValue.substring(pos2+1)
+    strYr=strYear
+    if (strDay.charAt(0)=="0" && strDay.length>1)
+        strDay=strDay.substring(1)
+    if (strMonth.charAt(0)=="0" && strMonth.length>1)
+        strMonth=strMonth.substring(1)
+    for (var i = 1; i <= 3; i++) {
+        if (strYr.charAt(0)=="0" && strYr.length>1) strYr=strYr.substring(1)
+    }
+    month=parseInt(strMonth)
+    day=parseInt(strDay)
+    year=parseInt(strYr)
+    if(elementValue!="") {
+        if (pos1==-1 || pos2==-1){
+            return errorMessage("The date format should be : dd/mm/yyyy", textBoxObj);
+        }
+        if (strMonth.length<1 || month<1 || month>12){
+            return errorMessage("Please enter a valid month", textBoxObj);
+        }
+        if (strDay.length<1 || day<1 || day>31 || (month==2 && day>daysInFebruary(year)) || day > daysInMonth[month]){
+            return errorMessage("Please enter a valid day", textBoxObj);
+        }
+        if (strYear.length != 4 || year==0 || year<minYear || year>maxYear){
+            return errorMessage("Please enter a valid 4 digit year between "+minYear+" and "+maxYear, textBoxObj);
+        }
+        if (elementValue.indexOf(dtCh,pos2+1)!=-1 || isInteger(stripCharsInBag(elementValue, dtCh))==false){
+            return errorMessage("Please enter a valid date", textBoxObj);
+        }
+    }
+    return true;
+}
+
+function errorMessage(message, element) {
+    alert(message);
+    element.value='';
+    element.focus();
+    return false;
+}
+
+function formatDate(textBoxObj) {
+    var elementValue = textBoxObj.value;
+    for (i=0; i<elementValue.length; i++){
+        if(((i==2)||(i==5))){}
+        else {
+            var c = elementValue.charAt(i);
+            if (((c < "0") || (c > "9"))){
+                alert("Only Numbers Are Allowed");
+                textBoxObj.value='';
+                return false;
+            }
+        }
+    }
+    if((elementValue.length==2)||(elementValue.length==5)){
+        textBoxObj.value=elementValue+'/';
+    }
+    return true;
+}
+
+/**
+ * Below Function used for check the enter date is Future data and Minor Date or not
+ */
+function minorValidateDate(textBoxObj){
+    var toDayDate = document.forms[0].todaydate.value;
+    var textBoxValue=textBoxObj.value;
+    if(textBoxValue.length!=''){
+        if(textBoxValue.length==10){
+            var dobArray,dobDay,dobMonth,dobYear;
+            if(textBoxValue!=""){
+                dobArray=textBoxValue.split("/")
+                dobDay=dobArray[0];
+                dobMonth=dobArray[1];
+                dobYear=dobArray[2];
+            }
+
+            var toDayDateArray,currentDay,currentMonth,currentYear;
+            if(toDayDate!=""){
+                toDayDateArray=toDayDate.split("/")
+                currentDay=toDayDateArray[0];
+                currentMonth=toDayDateArray[1];
+                currentYear=toDayDateArray[2] ;
+            }
+
+            if((dobYear>currentYear) || (dobYear==currentYear && dobMonth>currentMonth) || (dobYear==currentYear && dobMonth==currentMonth && dobDay>currentDay)){
+                alert("Date of Birth cann't be a Future Date");
+                textBoxObj.value='';
+                return false;
+            }
+
+            var yearAge = currentYear - dobYear;
+
+            var dateAge = "";
+            var monthAge = "";
+            if (currentMonth >= dobMonth){
+                monthAge = currentMonth - dobMonth;
+            } else {
+                yearAge--;
+                monthAge = 12 + currentMonth -dobMonth;
+            }
+            if (currentDay >= dobDay){
+                dateAge = currentDay - dobDay;
+            } else {
+                monthAge--;
+                dateAge = 31 + currentDay - dobDay;
+                if (monthAge < 0) {
+                    monthAge = 11;
+                    yearAge--;
+                }
+            }
+            if(yearAge<14){
+                alert("Date of Birth should be a greater than 14 years");
+                textBoxObj.value='';
+                return false;
+            }
+        }
+    }
+    return true;
+}
+function futureValidateDate(textBoxObj){
+    var toDayDate = document.forms[0].todaydate.value;
+    var textBoxValue=textBoxObj.value;
+    if(textBoxValue.length!=''){
+        if(textBoxValue.length==10){
+            var dobArray,dobDay,dobMonth,dobYear;
+            if(textBoxValue!=""){
+                dobArray=textBoxValue.split("/")
+                dobDay=dobArray[0];
+                dobMonth=dobArray[1];
+                dobYear=dobArray[2];
+            }
+
+            var toDayDateArray,currentDay,currentMonth,currentYear;
+            if(toDayDate!=""){
+                toDayDateArray=toDayDate.split("/")
+                currentDay=toDayDateArray[0];
+                currentMonth=toDayDateArray[1];
+                currentYear=toDayDateArray[2] ;
+            }
+
+            if((dobYear>currentYear) || (dobYear==currentYear && dobMonth>currentMonth) || (dobYear==currentYear && dobMonth==currentMonth && dobDay>currentDay)){
+                alert("Date of Birth cann't be a Future Date");
+                textBoxObj.value='';
+                return false;
+            }
+        }
+    }
+    return true;
+}
+function futureValidateYear(textBoxObj,lab){
+    var toDayDate = document.forms[0].todaydate.value;
+    var textBoxValue=textBoxObj.value;
+//    alert(toDayDate);
+//    alert(textBoxValue);
+    if(textBoxValue.length!=''){
+        if(textBoxValue.length==4){
+            var dobArray,dobDay,dobMonth,dobYear;
+            dobYear = textBoxValue;
+
+//            if(textBoxValue!=""){
+//                dobArray=textBoxValue.split("/")
+//                dobDay=dobArray[0];
+//                dobMonth=dobArray[1];
+//                dobYear=dobArray[2];
+//            }
+
+            var toDayDateArray,currentDay,currentMonth,currentYear;
+            if(toDayDate!=""){
+                toDayDateArray=toDayDate.split("/")
+                currentDay=toDayDateArray[0];
+                currentMonth=toDayDateArray[1];
+                currentYear=toDayDateArray[2] ;
+            }
+//            alert('dobYear>currentYear' + dobYear+'>' +currentYear);
+            if(dobYear>currentYear){
+                alert(lab+" sholud not be greater than the current Year");
+                textBoxObj.value='';
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+function qualAgeValidateDate(textBoxObj) {
+    var toDayDate = document.forms[0].todaydate.value;
+    var textBoxValue=textBoxObj.value;
+    if(textBoxValue.length!=''){
+        if(textBoxValue.length==10){
+            var dobArray,dobDay,dobMonth,dobYear;
+            if(textBoxValue!=""){
+                dobArray=textBoxValue.split("/")
+                dobDay=dobArray[0];
+                dobMonth=dobArray[1];
+                dobYear=dobArray[2];
+            }
+
+            var toDayDateArray,currentDay,currentMonth,currentYear;
+            if(toDayDate!=""){
+                toDayDateArray=toDayDate.split("/")
+                currentDay=toDayDateArray[0];
+                currentMonth=toDayDateArray[1];
+                currentYear=toDayDateArray[2] ;
+            }
+
+            if((dobYear>currentYear) || (dobYear==currentYear && dobMonth>currentMonth) || (dobYear==currentYear && dobMonth==currentMonth && dobDay>currentDay)){
+                alert("Date of Birth cann't be a Future Date");
+                textBoxObj.value='';
+                return false;
+            }
+
+            var yearAge = currentYear - dobYear;
+
+            var dateAge = "";
+            var monthAge = "";
+            if (currentMonth >= dobMonth){
+                monthAge = currentMonth - dobMonth;
+            } else {
+                yearAge--;
+                monthAge = 12 + currentMonth -dobMonth;
+            }
+            if (currentDay >= dobDay){
+                dateAge = currentDay - dobDay;
+            } else {
+                monthAge--;
+                dateAge = 31 + currentDay - dobDay;
+                if (monthAge < 0) {
+                    monthAge = 11;
+                    yearAge--;
+                }
+            }
+            if(yearAge<14){
+                alert("To add Qualification Candidate should be completed 15 years");
+                textBoxObj.value='';
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+/**
+ * This function used for checking the enterd date is Future data or not
+ */
+function futureDataChecking(obj) {
+    var todaydate = document.forms[0].todaydate.value;
+    if(obj.value!=''){
+        if(isFutureDate(obj,todaydate)){
+            alert("Entered date can not be greater than the working date");
+            obj.value='';
+        }
+    }
+}
+
+/**
+ * This function used for checking the enterd date is Past data or not
+ */
+function pastDataChecking(obj) {
+    var todaydate=document.forms[0].todaydate.value;
+    if(obj.value!=''){
+        if(!isFutureDate(obj,todaydate)){
+            alert("Entered date can not be less than the working date");
+            obj.value="";
+        }
+    }
+}
+
+function isFutureDate(txtbox,obj) {
+    var db=txtbox.value;
+    var strArray=db.split("/")
+    var arrDay=strArray[0]
+    var arrMonth=strArray[1]
+    var arrYear=strArray[2]
+
+    var db1=obj;
+
+    if(db1!=""){
+        var stArray=db1.split("/")
+        var thisDay=stArray[0]
+        var thisMonth=stArray[1]
+        var thisYear=stArray[2]
+    }
+    if(arrYear>thisYear || (arrYear==thisYear && arrMonth>thisMonth) || (arrYear==thisYear && arrMonth==thisMonth && arrDay>thisDay)) {
+        return true;
+    } else {
+        return false;
+    }
+}

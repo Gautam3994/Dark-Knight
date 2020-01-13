@@ -1,0 +1,228 @@
+  # dynamodb = aws_dynamodb.Table \
+        #     (self, "dynamo_sample", table_name="movies",
+        #      partition_key=aws_dynamodb.Attribute(name="year", type=aws_dynamodb.AttributeType.NUMBER),
+        #      sort_key=aws_dynamodb.Attribute(name="title", type=aws_dynamodb.AttributeType.STRING),
+        #      read_capacity=1, write_capacity=1
+        #      )
+
+        # ses_role_for_lambda = Role(self, id="Creating_a_role_to_access_SES",
+        #                            assumed_by=ServicePrincipal("lambda.amazonaws.com"),
+        #                            role_name="SES_Access_Lambda")
+        # ses_role_for_lambda.add_to_policy(PolicyStatement(effect=Effect.ALLOW,
+        #                                                   actions=["ses:*"], resources=["*"]))
+
+        # ses_policy = Policy(self, id="SES_access_policy", policy_name="SES_Policy",
+        #                     statements=[PolicyStatement(effect=Effect.ALLOW,
+        #                                                 actions=["ses:*"], resources=["*"])], roles=[ses_role_for_lambda])
+
+        # bucket_name_for_s3 = "".join(["mybucket", str(uuid.uuid4())])
+        #
+        # bucket = aws_s3.Bucket(self, id="s3_bucket", versioned=True, bucket_name=bucket_name_for_s3,
+        #                        block_public_access=BlockPublicAccess.BLOCK_ALL)
+        #
+        # function = aws_lambda.Function(self, id="Lambda_fucntion_for _s3", code=
+        #                                aws_lambda.AssetCode('functions/s3_lambda_beginner'), handler="s3_lambda_beginner.main", runtime=aws_lambda.Runtime.PYTHON_3_7)
+        #
+        # bucket.add_object_created_notification(aws_s3_notifications.LambdaDestination(function),
+        #                                        aws_s3.NotificationKeyFilter(suffix=".png"))
+
+        # lambda_function = aws_lambda.Function(self, id="Lambda_Function",
+        #                                       code=aws_lambda.AssetCode('functions/Canary')
+        #                                       , handler="canary_1.lambda_handler", runtime=aws_lambda.Runtime.PYTHON_3_7,
+        #                                       function_name="Lambda_canary_custom_1", description="website checking",
+        #                                       environment={'site': 'https://youtube.com', 'expected': 'youtube'}
+        #                                       )
+        #
+        # schedule = aws_events.Rule(self, "Schedule_for_canary", rule_name="Check_every_5_mins_1",
+        #                            description="To the check youtube for every 5 mins", schedule=aws_events.Schedule.rate(Duration.minutes(5)))
+        #
+        # schedule.add_target(targets.LambdaFunction(lambda_function))
+
+        # iam_username = "testuser"
+        # iam_user = aws_iam.User(self, "iam_user", user_name=iam_username)
+        # access_keys = aws_iam.CfnAccessKey(self, "access_keys", user_name=iam_user.user_name)
+        # core.CfnOutput(self, 'accesskey', value=access_keys.ref)
+        # core.CfnOutput(self, 'secretkey', value=access_keys.attr_secret_access_key)
+        # iam_group = aws_iam.Group(self, "group", group_name="Admin")
+        # iam_group.add_managed_policy(ManagedPolicy.from_aws_managed_policy_name("AdministratorAccess"))
+        # iam_user.add_to_group(iam_group)
+        # kms = aws_kms.Key(self, "kms", alias="kms_twitter_api", description="keys for twitter api",
+        #                   enable_key_rotation=True)
+        # kms.grant_encrypt_decrypt(grantee=iam_user)
+        # kms.grant_encrypt_decrypt(grantee=kms_role_lambda)
+        # kms_role_lambda = Role(self, id="KMS_Access_for_Lambda", assumed_by=ServicePrincipal("lambda.amazonaws.com"))
+        # kms_policy = Policy(self, id="Kms_Policy", policy_name="Lambda_KMS", statements=[PolicyStatement(effect=Effect.ALLOW,
+        #                                                                                                  actions=["*"], resources=["*"])],
+        #                     roles=[kms_role_lambda])
+        # twitter_function = aws_lambda.Function(self, "twitter_function",
+        #                                        code=aws_lambda.Code.from_asset("functions/automated_tweets/Lambda.zip"),
+        #                                        runtime=aws_lambda.Runtime.PYTHON_3_7,
+        #                                        handler="sparrow_kms.handler", function_name="automated_tweets",
+        #                                        description="sending tweets every one hour",
+        #                                        role=kms_role_lambda)
+        # schedule = aws_events.Rule(self, "Schedule_for_twitter", rule_name="send_every_1_hour", description="send tweets every one hour",
+        #                            schedule=aws_events.Schedule.rate(Duration.minutes(1)))
+        # schedule.add_target(targets.LambdaFunction(twitter_function))
+
+#         lambda_role = Role(self, id="Reminderbasedon cron",
+#                            assumed_by=ServicePrincipal("lambda.amazonaws.com"),
+#                            role_name="roleforlambdacronexpressions")
+#         lambda_role.add_managed_policy(ManagedPolicy.from_aws_managed_policy_name("AmazonSESFullAccess"))
+#         lambda_role.add_managed_policy(ManagedPolicy.from_aws_managed_policy_name("AWSLambdaExecute"))
+#         lambda_role.add_managed_policy(ManagedPolicy.from_aws_managed_policy_name("AmazonS3FullAccess"))
+        # html_templates_bucket = aws_s3.Bucket(self, id="HTML Templates Bucket", bucket_name="htmltemplatesbucketv907", public_read_access=False)
+        # deploying_the_html_to_bucket = aws_s3_deployment.BucketDeployment(self, "deploying_the_asset",
+        #                                                                 sources= [aws_s3_deployment.Source.asset('/home/ec2-user/environment/Lambda/Reminder')],
+        #                                                                 destination_bucket=html_templates_bucket, destination_key_prefix="templates/")
+#         pickup_event = aws_events.Rule(self, "Reminder for pickup", rule_name="pickup_schedule",
+#                                        description="setting up reminder for pickup",
+#                                        schedule=aws_events.Schedule.cron(week_day="MON-FRI",
+#                                                                          hour='22', minute='0'))
+#         daily_tasks = aws_events.Rule(self, "Reminder for daily tasks", rule_name="daily_tasks_schedule",
+#                                       description="setting up reminder for daily tasks",
+#                                       schedule=aws_events.Schedule.cron(week_day="MON-FRI",
+#                                                                         hour='17', minute='0'))
+#         come_to_work = aws_events.Rule(self, "Come to work reminder", rule_name="wake_up_message_schedule",
+#                                        description="setting up reminder to come to work",
+#                                        schedule=aws_events.Schedule.cron(week_day="MON-FRI",
+#                                                                          hour='12', minute='0'))
+#         reminder_lambda = aws_lambda.Function(self, 'Reminder_mail_functions', code=aws_lambda.Code.from_asset("Lambda.zip"),
+#                                               runtime=aws_lambda.Runtime.PYTHON_3_7, handler="email.handler", function_name="reminders",
+#                                               description="sending reminders based on events", role=lambda_role)
+#         pickup_event.add_target(targets.LambdaFunction(reminder_lambda))
+#         daily_tasks.add_target(targets.LambdaFunction(reminder_lambda))
+#         come_to_work.add_target(targets.LambdaFunction(reminder_lambda))
+#   dynamodb = aws_dynamodb.Table(self, "inventory table", table_name="inventory",
+#                                       partition_key=aws_dynamodb.Attribute(name="product_id",
+#                                                                            type=aws_dynamodb.AttributeType.NUMBER),
+#                                       read_capacity=1, write_capacity=1
+#                                       )
+#         lambda_role = Role(self, id="RoleToCreatLogBackup",
+#                            assumed_by=ServicePrincipal("lambda.amazonaws.com"),
+#                            role_name="inventorybackuprole")
+#         dynamodb_backup_policy_for_lambda = Policy(self, id="dynamodb_backup_policy",
+#                                                    policy_name="dynamodb_backup_policy",
+#                                                    statements=[PolicyStatement(effect=Effect.ALLOW,
+#                                                                                actions=["logs:CreateLogGroup",
+#                                                                                         "logs:CreateLogStream",
+#                                                                                         "logs:PutLogEvents"],
+#                                                                                resources=["arn:aws:logs:*:*:*"]),
+#                                                                PolicyStatement(effect=Effect.ALLOW,
+#                                                                                actions=["dynamodb:CreateBackup"],
+#                                                                                resources=["arn:aws:dynamodb:*:*:*"]),
+#                                                                ], roles=[lambda_role])
+#         backup_lambda = aws_lambda.Function(self, 'Create backup for inventory table',
+#                                             code=aws_lambda.Code.from_asset(
+#                                                 "C:/Users/Gautam/PycharmProjects/cdk_examples/functions/first_big_project"),
+#                                             runtime=aws_lambda.Runtime.PYTHON_3_7, handler="backup.handler",
+#                                             function_name="InventoryTableBackup",
+#                                             description="create backup for inventory table", role=lambda_role)
+#         inventory_backup_schedule = aws_events.Rule(self, "inventory_backup_schedule_every_day_at_2",
+#                                                     rule_name="inventory_backup_schedule",
+#                                                     description="setting up reminder for pickup",
+#                                                     schedule=aws_events.Schedule.cron(hour='2', minute='0'))
+#         inventory_backup_schedule.add_target(targets.LambdaFunction(backup_lambda))
+#    dynamodb = aws_dynamodb.Table(self, "inventory table", table_name="inventory",
+#                                       partition_key=aws_dynamodb.Attribute(name="product_id",
+#                                                                            type=aws_dynamodb.AttributeType.STRING),
+#                                       read_capacity=1, write_capacity=1, stream=aws_dynamodb.StreamViewType.NEW_AND_OLD_IMAGES
+#                                       )
+#         lambda_role_for_s3_dynamo = Role(self, id="RoleToCreateItemsFromS3",
+#                                          assumed_by=ServicePrincipal("lambda.amazonaws.com"),
+#                                          role_name="RoleToCreateItemsFromS3")
+#         dynamodb_item_creation_policy_for_lambda = Policy(self, id="dynamodb_item_creation_policy_for_lambda",
+#                                                           policy_name="dynamodb_item_creation_policy_for_lambda",
+#                                                           statements=[PolicyStatement(effect=Effect.ALLOW,
+#                                                                                       actions=["logs:CreateLogGroup",
+#                                                                                                "logs:CreateLogStream",
+#                                                                                                "logs:PutLogEvents"],
+#                                                                                       resources=["arn:aws:logs:*:*:*"]),
+#                                                                       PolicyStatement(effect=Effect.ALLOW,
+#                                                                                       actions=["dynamodb:PutItem"],
+#                                                                                       resources=[
+#                                                                                           "arn:aws:dynamodb:us-east-2:641484180035:table/inventory"]),
+#                                                                       PolicyStatement(effect=Effect.ALLOW,
+#                                                                                       actions=["s3:Get*",
+#                                                                                                "s3:List*"],
+#                                                                                       resources=["*"]
+#                                                                                       )
+#                                                                       ], roles=[lambda_role_for_s3_dynamo])
+#         layer = aws_lambda.LayerVersion(self, "Layer_for_inventory_Lambda_55",
+#                                         code=aws_lambda.Code.from_asset(
+#                                             "C:/Users/Gautam/PycharmProjects/cdk_examples/Layers/Lambda.zip"),
+#                                         compatible_runtimes=[aws_lambda.Runtime.PYTHON_3_6],
+#                                         license="Apache-2.0",
+#                                         description="A layer to test the L2 construct"
+#                                         )
+#         lambda_dynamo_item_from_inventory = aws_lambda.Function(self, 'Create_item_when_csv_is_uploaded',
+#                                                                 code=aws_lambda.Code.from_asset(
+#                                                                     "C:/Users/Gautam/PycharmProjects/cdk_examples/functions/first_big_project/storeitem"),
+#                                                                 runtime=aws_lambda.Runtime.PYTHON_3_6,
+#                                                                 handler="storeitem.handler",
+#                                                                 function_name="CreateItemsFromS3",
+#                                                                 description="create a new item when csv file is uploaded in s3",
+#                                                                 role=lambda_role_for_s3_dynamo,
+#                                                                 layers=[layer])
+#         csv_bucket = aws_s3.Bucket(self, id="inventorybucket", versioned=True, bucket_name="inventorybucketv907",
+#                                    block_public_access=BlockPublicAccess.BLOCK_ALL)
+#         lambda_dynamo_item_from_inventory.add_event_source(
+#             aws_lambda_event_sources.S3EventSource(csv_bucket, events=[aws_s3.EventType.OBJECT_CREATED],
+#                                                    filters=[
+#                                                        aws_s3.NotificationKeyFilter(prefix="Sales", suffix=".csv")]))
+#         api_lambda = aws_lambda.Function(self, "Api_handling_lambda", code=aws_lambda.Code.from_asset(
+#             "C:/Users/Gautam/PycharmProjects/cdk_examples/functions/first_big_project/api_access"),
+#                                          runtime=aws_lambda.Runtime.PYTHON_3_6, handler="api.handler",
+#                                          function_name="Apicalls",
+#                                          description="handling api calls to access inventory table",
+#                                          role=lambda_role_for_s3_dynamo)
+#         api_gateway_for_inventory = aws_apigateway.RestApi(self, "api_gateway_for_inventory",
+#                                                            rest_api_name="api for inventory management",
+#                                                            description="api gateway to access the invenory table",
+#                                                            cloud_watch_role=True,
+#                                                            endpoint_types=[aws_apigateway.EndpointType.REGIONAL])
+#         items_resource = api_gateway_for_inventory.root.add_resource("items")
+#         items_resource.add_method(http_method="GET",
+#                                   integration=aws_apigateway.LambdaIntegration(handler=api_lambda, proxy=True))
+#         items_mapping_resource = items_resource.add_resource("{itemid}")
+#         api_lambda_for_item_operations = aws_lambda.Function(self, "Api_handling_items_operations",
+#                                                              code=aws_lambda.Code.from_asset(
+#                                                                  "C:/Users/Gautam/PycharmProjects/cdk_examples/functions/first_big_project/item_actions"),
+#                                                              runtime=aws_lambda.Runtime.PYTHON_3_6,
+#                                                              handler="item_actions.handler",
+#                                                              function_name="itemactions",
+#                                                              description="Perform all types of actions on the items",
+#                                                              role=lambda_role_for_s3_dynamo)
+#         items_mapping_resource.add_method(http_method="GET", integration=aws_apigateway.LambdaIntegration(
+#             handler=api_lambda_for_item_operations))
+#         items_mapping_resource.add_method(http_method="PUT", integration=aws_apigateway.LambdaIntegration(
+#             handler=api_lambda_for_item_operations))
+#         lambda_role_for_sns_dynamo = Role(self, id="lambda_role_for_sns_dynamo",
+#                                           assumed_by=ServicePrincipal("lambda.amazonaws.com"),
+#                                           role_name="lambda_role_for_sns_dynamo")
+#         dynamo_read_sns_publish_access_policy = Policy(self, id="dynamo_read_sns_publish_access",
+#                                                        policy_name="dynamo_read_sns_publish_access",
+#                                                        statements=[PolicyStatement(effect=Effect.ALLOW,
+#                                                                                    actions=["logs:CreateLogGroup",
+#                                                                                             "logs:CreateLogStream",
+#                                                                                             "logs:PutLogEvents"],
+#                                                                                    resources=["arn:aws:logs:*:*:*"]),
+#                                                                    PolicyStatement(effect=Effect.ALLOW,
+#                                                                                    actions=["dynamodb:PutItem",
+#                                                                                             "dynamodb:GetRecords",
+#                                                                                             "dynamodb:GetSharedIterator",
+#                                                                                             "dynamodb:ListStreams"],
+#                                                                                    resources=[
+#                                                                                        "arn:aws:dynamodb:us-east-2:641484180035:table/inventory"]),
+#                                                                    PolicyStatement(effect=Effect.ALLOW,
+#                                                                                    actions=["sns:Publish"],
+#                                                                                    resources=["*"]
+#                                                                                    )
+#                                                                    ], roles=[lambda_role_for_sns_dynamo])
+#         lambda_triggered_by_dynamo_stream = aws_lambda.Function(self, "lambda_triggered_by_dynamo_stream", code=aws_lambda.Code.from_asset(
+#                                                                 "C:/Users/Gautam/PycharmProjects/cdk_examples/functions/first_big_project/dynamo_stream"),
+#                                                                 runtime=aws_lambda.Runtime.PYTHON_3_6, handler="dynamo_stream.handler",
+#                                                                 function_name="stream_for_change_in_price", description="run lambda to create notification when price changes",
+#                                                                 role=lambda_role_for_sns_dynamo, environment={"expected_price": "1200", 'sns_arn': 'arn:aws:sns:us-east-2:641484180035:Lambdatopic'})
+#         lambda_triggered_by_dynamo_stream.add_event_source(aws_lambda_event_sources.DynamoEventSource(table=dynamodb,
+#                                                                                                       starting_position=aws_lambda.StartingPosition.LATEST))
+#         sns_topic = aws_sns.Topic(self, "topic which is published by lambda", topic_name="Lambdatopic", display_name="Lambda topic")

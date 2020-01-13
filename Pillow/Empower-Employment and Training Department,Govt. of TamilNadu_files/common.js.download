@@ -1,0 +1,377 @@
+/*
+ * Document   : common.js
+ * Created on : Jan 27, 2011, 4:15:39 PM
+ * Author     : Jagan Mohan. B
+ */
+
+function isUidExist(textBoxObj){
+    var uid = textBoxObj.value;
+    if(uid!=null && uid!="")
+        LoginAction.isUidExist(uid,setUidDetails);
+}
+function setUidDetails(map){
+    if(map!=null){
+        if(map.ERROR!=null && map.ERROR!=""){
+            document.forms[0].uid.value = "";
+            alert(map.ERROR);
+        } else {
+            if(map!=null && map.uid!=null && map.uid!="") {
+                alert(map.uid+" UID Already Exist! ");
+                document.forms[0].uid.value = "";
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+//var iChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?";
+var iChars = "~`!%^&*()+={}[]\\\';|\":<>?";
+
+/*
+ * This Function used for given values is number or not -- Jagan Mohan. B
+ */
+function isNumber(txtBoxObj){
+    x = txtBoxObj.value;
+    nos=new Array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E',
+        'F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','!','@','#','$','%','^','&','(',')','|','?','>','<','[',']','{','}','*','"','`','~','.','-','_','+','=','*');
+    for(i=0;i<txtBoxObj.value.length;i++){
+        for(j=0;j<=nos.length;j++){
+            if(x.charAt(i) == nos[j]){
+                alert("Only Numbers Are Allowed")
+                txtBoxObj.value="";
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+
+function checkMandatoryFormFields(elementsToValidate){
+    for(var i = 0;  i < elementsToValidate.length ; i++){
+        var split = elementsToValidate[i].split('~');
+        var fieldId = split[0];
+        var fieldDescription = split[1];
+
+        var fieldValue = document.getElementById(fieldId).value;
+        fieldValue = fieldValue.replace(/^\s*|\s*$/g,'');
+        if(fieldValue==null || fieldValue=="" || fieldValue=="0" || fieldValue.length<=0){
+            alert("Please enter "+fieldDescription);
+            return false;
+        }
+    }
+    return true;
+}
+
+function isNumeric(obj){
+    var strValidChars = "0123456789,.-";
+    var strChar;
+    var blnResult = true;
+    var strString = obj.value;
+
+    if (strString.length == 0) return false;
+
+    for (var i = 0; i < strString.length && blnResult == true; i++){
+        strChar = strString.charAt(i);
+        if (strValidChars.indexOf(strChar) == -1){
+            blnResult = false;
+        }
+    }
+    if(!blnResult){
+        alert("Only Numbers Are Allowed")
+        obj.value="";
+        return false;
+    }
+    return blnResult;
+}
+
+/*
+ * This Function used for given values is not number or not
+ */
+function numberNotAllowed(txtBoxObj){
+    x = txtBoxObj.value;
+    nos=new Array('0','1','2','3','4','5','6','7','8','9');
+    for(i=0;i<txtBoxObj.value.length;i++){
+        for(j=0;j<=nos.length;j++){
+            if(x.charAt(i) == nos[j]){
+                alert("Numbers Are not Allowed")
+                txtBoxObj.value="";
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+/*
+ * This function used for give value is proper mail id or not -- Jagan Mohan. B
+ */
+function validateEmailid(txtBoxObj) {
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var address = txtBoxObj.value;
+    if(address!=null && address!="" && reg.test(address) == false) {
+        alert('Invalid Email Address');
+        txtBoxObj.value="";
+        return false;
+    }
+    return true;
+}
+
+/*
+ * This function used for Special Characters -- Jagan Mohan. B
+ */
+function specialCharNotAllowed(txtBoxObj){
+    /*x = txtBoxObj.value;
+    nos=new Array('!','@','#','$','%','^','&','(',')','|','?','>','<','[',']','{','}','*','"','`','~','.','+','=','*','"');
+    for(i=0;i<txtBoxObj.value.length;i++){
+        for(j=0;j<=nos.length;j++){
+            if(x.charAt(i) == nos[j]){
+                alert("Special Characters are not Allowed")
+                txtBoxObj.value="";
+                return false;
+            }
+        }
+    }
+    return true;*/
+    var fieldValue = txtBoxObj.value;
+    var fieldName = txtBoxObj.name;
+    for (var i = 0; i < fieldValue.length; i++) {
+        if (iChars.indexOf(fieldValue.charAt(i)) >= 0) {
+            alert (fieldName+" has special characters. \nSpecial Caharacters are not allowed.\n");
+            txtBoxObj.value = "";
+            return false;
+        }
+    }
+    return true;
+}
+
+
+/*
+ * This function used for check enter value having any special character onkeyup
+ * This method not allowed ~`!#%^&*()+={}[]'";:,./|\?<>
+ * Jagan Mohan. B
+ */
+function specialCharactersCheck(textBoxObj) {
+    textBoxObj.value = filterNum(textBoxObj.value)
+
+    function filterNum(str) {
+        //re = /\s|\~|\`|\!|\#|\%|\^|\&|\*|\(|\)|\+|\=|\{|\}|\[|\]|\'|\"|\;|\:|\,|\.|\\|\||\?|\/|\>|\<|\./g;
+        re = /\~|\`|\!|\#|\%|\^|\&|\*|\(|\)|\+|\=|\{|\}|\[|\]|\'|\"|\;|\:|\\|\||\?|\>|\<|/g;
+        return str.replace(re, "");
+    }
+}
+
+
+
+function specialCharactersChecks(textBoxObj) {
+    textBoxObj.value = filterNum(textBoxObj.value)
+
+    function filterNum(str) {
+        //re = /\s|\~|\`|\!|\#|\%|\^|\&|\*|\(|\)|\+|\=|\{|\}|\[|\]|\'|\"|\;|\:|\,|\.|\\|\||\?|\/|\>|\<|\./g;
+        re = /\~|\`|\!|\#|\%|\^|\$|\@|\&|\*|\(|\)|\+|\=|\{|\}|\[|\]|\'|\"|\;|\:|\\|\||\?|\>|\<|/g;
+        return str.replace(re, "");
+    }
+}
+
+
+function specialCharactersChecksNco(textBoxObj) {
+    textBoxObj.value = filterNum(textBoxObj.value)
+
+    function filterNum(str) {
+        //re = /\s|\~|\`|\!|\#|\%|\^|\&|\*|\(|\)|\+|\=|\{|\}|\[|\]|\'|\"|\;|\:|\,|\.|\\|\||\?|\/|\>|\<|\./g;
+        re = /\~|\`|\!|\#|\%|\^|\$|\@|\&|\*|\(|\)|\+|\=|\_|\-|\{|\}|\[|\]|\'|\"|\;|\:|\,|\.|\\|\||\?|\/|\>|\<|/g;
+        return str.replace(re, "");
+    }
+}
+
+/*
+ * This function used Exit the Screen -- Jagan Mohan. B
+ */
+function exitScreen(){
+    document.forms[0].action="LoginAction.htm";
+    document.forms[0].method.value="loginPage";
+    document.forms[0].submit();
+}
+
+/*
+ * This function used for check the value most contain Alpha and Number
+ * Jagan Mohan. B
+ */
+function isAlphaNumeric(txtBoxObj){
+    var textString = txtBoxObj.value;
+    var re = /[\D]/g
+    var re1 = /[^a-zA-Z]/g;
+    if( (!textString.match(re)) || (!textString.match(re1)) ){
+        alert(txtBoxObj.name+' Should be AlphaNumeric');
+        txtBoxObj.value="";
+        return ;
+    }
+}
+
+/*
+ * This method used for Password checking and Password should cantain minimum 8 Characters
+ * It will be change min character 5 to 8 for VAPT
+ */
+function passwordCheck(txtBoxObj){
+    var x = txtBoxObj.value
+    if(x!=""){
+        if(txtBoxObj.value.length < 8) {
+            alert("Error: Password must contain at least Eight characters!");
+            txtBoxObj.value="";
+            return false;
+        }
+    //isAlphaNumeric(obj);
+    }
+    return true;
+}
+
+/**
+ * This function check the special characters in particular Form
+ * This method not allowed !#$%^&*()+=-[]\\\';,./{}|\":<>?
+ * Jagan Mohan. B
+ */
+function checkTotalFormSpecialCharacters(doc){
+    var fields=doc.getElementsByTagName("input");
+    for(var i=0;i<fields.length;i++) {
+        if(!(fields[i].type=="button") && !(fields[i].type=="hidden")) {
+            for (var j = 0; j < fields[i].value.length; j++) {
+                //if (iChars.indexOf(fields[i].value.charAt(j)) != -1) {
+                if (iChars.indexOf(fields[i].value.charAt(j)) >= 0) {
+                    alert(fields[i].name+" Contains special characters. \n These are not allowed.\n Please remove and try again.");
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
+function pincodeValidate(objval){
+    var val = objval.value;
+    if(val.substring(0,1)!='6'){
+        alert("Please Enter Proper Pincode");
+        objval.value = "";
+        return false;
+    }else if(val.length !=6){
+        alert("Please Enter Proper Pincode");
+        objval.value = "";
+        return false;
+    }
+    return true;
+}
+
+//the following function is used to verify the script are eployed in apache server properly or not
+
+function alertscriptversion(){
+    alert('Version 2.0.0');
+}
+
+function isFloatRangeValid(obj,fromrange,torange,fieldlength,percision,fieldname){
+    var floatValue = obj.value;
+    var errormessage = fieldname + " should be in the range of " + fromrange +" - "+ torange;
+    if(floatValue!=null && floatValue!="" && floatValue.length>0){
+        if(isValidFloatRange(obj,fieldlength,percision,errormessage)){
+            if(parseFloat(floatValue) < parseFloat(fromrange) || parseFloat(floatValue) > parseFloat(torange)){
+                alert(errormessage);
+                obj.value = "";
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+function isValidFloatRange(obj,fieldlength,percision,errorMessage){
+    var idName = obj.id;
+    var doubleValueId = document.getElementById(idName);
+    var numberPattern = /^-{0,1}\d*\.{0,1}\d+$/;
+    if(percision==null || percision=="" || percision=="undefined" || percision=="0")
+        percision = "2";
+    var addZeros = "";
+    var fieldLengthValue = "";
+    if(doubleValueId.value.length > 0){
+        if(doubleValueId.value == '.'){
+            alert(errorMessage);
+            doubleValueId.value = "";
+            return false;
+        } else if(!numberPattern.test(doubleValueId.value)){
+            alert(errorMessage);
+            doubleValueId.value = "";
+            return false;
+        } else{
+            var arval = doubleValueId.value.split(".");
+            if(arval[0]==null || arval[0]=="" || arval[0]=="undefined")
+                arval[0] = "0";
+            if(arval[1]==null || arval[1]=="" || arval[1]=="undefined")
+                arval[1] = "0";
+            if(arval[0] != null && arval[0]!= "" && arval[0] != "undefined"){
+                for(var fl=1; fl<=fieldlength; fl++){
+                    if(fieldLengthValue!=null && fieldLengthValue!="")
+                        fieldLengthValue = fieldLengthValue+"9";
+                    else
+                        fieldLengthValue = "9";
+                }
+                if(arval[0] > parseInt(fieldLengthValue)){
+                    alert(errorMessage);
+                    doubleValueId.value = "";
+                    return false;
+                } else if (percision < arval[1].length) {
+                    alert("Entered percision value should not cross "+percision+" digits");
+                    doubleValueId.value = "";
+                    return false;
+                } else if (doubleValueId.value.indexOf(".") == -1) {
+                    for(var zero=1; zero<=percision; zero++){
+                        if(addZeros!=null && addZeros!="")
+                            addZeros = addZeros+"0";
+                        else
+                            addZeros = "0";
+                    }
+                    doubleValueId.value = arval[0]+"."+addZeros;
+                } else{
+                    var percisionValue = arval[1];
+                    var remaintZeros = percision - arval[1].length;
+                    for(var zero=1; zero<=remaintZeros; zero++){
+                        percisionValue = percisionValue+"0";
+                    }
+                    doubleValueId.value = arval[0]+"."+percisionValue;
+                }
+            }
+            return true;
+        }
+    } else{
+        return true;
+    }
+    return true;
+}
+
+/*
+ * This Function used to not allow numbers
+ */
+//function numberValueCheck(textBoxObj){
+//    textBoxObj.value = filterNumberValue(textBoxObj.value)
+//
+//    function filterNumberValue(str) {
+//        re = /\s|\~|\`|\!|\#|\%|\^|\&|\*|\(|\)|\+|\=|\{|\}|\[|\]|\'|\"|\;|\:|\,|\.|\\|\||\?|\/|\>|\<|\1|\2|\3|\4|\./g;
+//        alert(re);
+//        alert(str);
+//        return str.replace(re, "");
+//    }
+//}
+
+
+function numberValueCheck(textBoxObj){
+   x = textBoxObj.value;
+   var splittedVal;
+    nos=new Array('0','1','2','3','4','5','6','7','8','9');
+    for(i=0;i<textBoxObj.value.length;i++){
+        for(j=0;j<=nos.length;j++){
+            if(x.charAt(i) == nos[j]){
+               splittedVal=x.split(j);
+               textBoxObj.value=splittedVal[0];
+                return false;
+            }
+        }
+    }
+    return true;
+}

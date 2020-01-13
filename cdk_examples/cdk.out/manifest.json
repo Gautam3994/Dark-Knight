@@ -1,0 +1,1363 @@
+{
+  "version": "1.16.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "cdk-examples": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/us-east-2",
+      "properties": {
+        "templateFile": "cdk-examples.template.json"
+      },
+      "metadata": {
+        "/cdk-examples": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.d49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0.zip",
+              "id": "d49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0",
+              "packaging": "file",
+              "sourceHash": "d49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0",
+              "s3BucketParameter": "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0S3Bucket3071BD96",
+              "s3KeyParameter": "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0S3VersionKey06BDD6BC",
+              "artifactHashParameter": "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0ArtifactHash00765F28"
+            },
+            "trace": [
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:352:23)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new LayerVersion (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\layers.js:37:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.bd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586c",
+              "id": "bd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586c",
+              "packaging": "zip",
+              "sourceHash": "bd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586c",
+              "s3BucketParameter": "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cS3Bucket9A805BAC",
+              "s3KeyParameter": "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cS3VersionKey16862245",
+              "artifactHashParameter": "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cArtifactHash6F4CD61B"
+            },
+            "trace": [
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:352:23)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.a1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290",
+              "id": "a1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290",
+              "packaging": "zip",
+              "sourceHash": "a1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290",
+              "s3BucketParameter": "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290S3Bucket0504B4FA",
+              "s3KeyParameter": "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290S3VersionKey54B0965C",
+              "artifactHashParameter": "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290ArtifactHashE02780D4"
+            },
+            "trace": [
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:352:23)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.e45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2",
+              "id": "e45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2",
+              "packaging": "zip",
+              "sourceHash": "e45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2",
+              "s3BucketParameter": "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2S3BucketACB0BBEC",
+              "s3KeyParameter": "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2S3VersionKeyD6710916",
+              "artifactHashParameter": "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2ArtifactHash2E3B188F"
+            },
+            "trace": [
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:352:23)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58",
+              "id": "1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58",
+              "packaging": "zip",
+              "sourceHash": "1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58",
+              "s3BucketParameter": "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58S3BucketE51CC2D0",
+              "s3KeyParameter": "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58S3VersionKey44A74FBD",
+              "artifactHashParameter": "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58ArtifactHash93E1C83B"
+            },
+            "trace": [
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:352:23)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60a",
+              "id": "9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60a",
+              "packaging": "zip",
+              "sourceHash": "9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60a",
+              "s3BucketParameter": "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aS3Bucket4C5EFE8B",
+              "s3KeyParameter": "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aS3VersionKey864A3308",
+              "artifactHashParameter": "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aArtifactHash490BF0A1"
+            },
+            "trace": [
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:352:23)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/inventory table": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": "inventory",
+            "trace": [
+              "new Table (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:118:23)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/inventory table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "inventorytableE0FE6093",
+            "trace": [
+              "new Table (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:100:22)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/RoleToCreateItemsFromS3/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RoleToCreateItemsFromS35D093F1A",
+            "trace": [
+              "new Role (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/dynamodb_item_creation_policy_for_lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dynamodbitemcreationpolicyforlambda1223E9D7",
+            "trace": [
+              "new Policy (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:30:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/Layer_for_inventory_Lambda_55/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LayerforinventoryLambda55D98D084F",
+            "trace": [
+              "new LayerVersion (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\layers.js:44:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/d49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0S3Bucket3071BD96",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:11:36)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new LayerVersion (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\layers.js:37:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/d49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0S3VersionKey06BDD6BC",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:15:35)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new LayerVersion (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\layers.js:37:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/d49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0ArtifactHash00765F28",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:19:38)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new LayerVersion (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\layers.js:37:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/bd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586c/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cS3Bucket9A805BAC",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:11:36)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/bd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586c/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cS3VersionKey16862245",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:15:35)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/bd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586c/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cArtifactHash6F4CD61B",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:19:38)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/a1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290S3Bucket0504B4FA",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:11:36)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/a1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290S3VersionKey54B0965C",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:15:35)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/a1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290ArtifactHashE02780D4",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:19:38)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/e45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2S3BucketACB0BBEC",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:11:36)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/e45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2S3VersionKeyD6710916",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:15:35)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/e45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2ArtifactHash2E3B188F",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:19:38)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58S3BucketE51CC2D0",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:11:36)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58S3VersionKey44A74FBD",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:15:35)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58ArtifactHash93E1C83B",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:19:38)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60a/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aS3Bucket4C5EFE8B",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:11:36)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60a/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aS3VersionKey864A3308",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:15:35)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/AssetParameters/9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60a/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aArtifactHash490BF0A1",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:19:38)",
+              "Stack.addFileAsset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\core\\lib\\stack.js:342:22)",
+              "new Asset (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:30:32)",
+              "AssetCode.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:135:26)",
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:67:33)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/Create_item_when_csv_is_uploaded/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateitemwhencsvisuploadedA54E1500",
+            "trace": [
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:69:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/Create_item_when_csv_is_uploaded/AllowBucketNotificationsFromcdkexamplesinventorybucket4716AB93": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateitemwhencsvisuploadedAllowBucketNotificationsFromcdkexamplesinventorybucket4716AB93584E3572",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:22:9)",
+              "LambdaDestination.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3-notifications\\lib\\lambda.js:16:21)",
+              "BucketNotifications.addNotification (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.js:41:36)",
+              "Bucket.addEventNotification (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:508:28)",
+              "S3EventSource.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\s3.js:15:25)",
+              "Function.addEventSource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:106:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/inventorybucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "inventorybucket12C53621",
+            "trace": [
+              "new Bucket (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:366:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/inventorybucket/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "inventorybucketNotifications3B03AC25",
+            "trace": [
+              "BucketNotifications.createResourceOnce (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.js:82:29)",
+              "BucketNotifications.addNotification (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.js:38:31)",
+              "Bucket.addEventNotification (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:508:28)",
+              "S3EventSource.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\s3.js:15:25)",
+              "Function.addEventSource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:106:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC",
+            "trace": [
+              "new Role (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "new NotificationsResourceHandler (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.js:25:22)",
+              "Function.singleton (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.js:74:22)",
+              "BucketNotifications.createResourceOnce (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.js:81:94)",
+              "BucketNotifications.addNotification (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.js:38:31)",
+              "Bucket.addEventNotification (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:508:28)",
+              "S3EventSource.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\s3.js:15:25)",
+              "Function.addEventSource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:106:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+            "trace": [
+              "new Policy (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:30:26)",
+              "Role.addToPolicy (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "new NotificationsResourceHandler (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.js:32:14)",
+              "Function.singleton (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.js:74:22)",
+              "BucketNotifications.createResourceOnce (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.js:81:94)",
+              "BucketNotifications.addNotification (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.js:38:31)",
+              "Bucket.addEventNotification (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:508:28)",
+              "S3EventSource.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\s3.js:15:25)",
+              "Function.addEventSource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:106:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691",
+            "trace": [
+              "new NotificationsResourceHandler (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.js:48:26)",
+              "Function.singleton (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource-handler.js:74:22)",
+              "BucketNotifications.createResourceOnce (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.js:81:94)",
+              "BucketNotifications.addNotification (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\notifications-resource\\notifications-resource.js:38:31)",
+              "Bucket.addEventNotification (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:508:28)",
+              "S3EventSource.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\s3.js:15:25)",
+              "Function.addEventSource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:106:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/Api_handling_lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Apihandlinglambda5D319231",
+            "trace": [
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:69:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventory995BD3AC",
+            "trace": [
+              "new RestApi (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:28:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryDeployment41FD765310436cbe550cff0fc542e5183ef9b21b",
+            "trace": [
+              "new Deployment (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\deployment.js:39:25)",
+              "RestApi.configureDeployment (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:173:38)",
+              "new RestApi (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:42:14)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryDeploymentStageprod0F7AC9E1",
+            "trace": [
+              "new Stage (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\stage.js:27:26)",
+              "RestApi.configureDeployment (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:181:36)",
+              "new RestApi (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:42:14)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryEndpointB09ACB6C",
+            "trace": [
+              "RestApi.configureDeployment (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:185:13)",
+              "new RestApi (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:42:14)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryCloudWatchRole61402545",
+            "trace": [
+              "new Role (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "RestApi.configureCloudWatchRole (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:194:22)",
+              "new RestApi (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:45:18)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryAccount45848435",
+            "trace": [
+              "RestApi.configureCloudWatchRole (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:198:26)",
+              "new RestApi (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.js:45:18)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsD1520767",
+            "trace": [
+              "new Resource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:170:26)",
+              "RootResource.addResource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:14:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/GET/ApiPermission.cdkexamplesapigatewayforinventory834096EA.GET..items": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsGETApiPermissioncdkexamplesapigatewayforinventory834096EAGETitems4DC289E2",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:22:9)",
+              "LambdaIntegration.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.js:30:22)",
+              "Method.renderIntegration (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:88:21)",
+              "new Method (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:40:31)",
+              "Resource.addMethod (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:17:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/GET/ApiPermission.Test.cdkexamplesapigatewayforinventory834096EA.GET..items": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsGETApiPermissionTestcdkexamplesapigatewayforinventory834096EAGETitems571D74D7",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:22:9)",
+              "LambdaIntegration.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.js:37:26)",
+              "Method.renderIntegration (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:88:21)",
+              "new Method (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:40:31)",
+              "Resource.addMethod (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:17:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsGETF212FE88",
+            "trace": [
+              "new Method (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:45:26)",
+              "Resource.addMethod (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:17:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsitemid1400DA6E",
+            "trace": [
+              "new Resource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:170:26)",
+              "Resource.addResource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:14:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/GET/ApiPermission.cdkexamplesapigatewayforinventory834096EA.GET..items.{itemid}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsitemidGETApiPermissioncdkexamplesapigatewayforinventory834096EAGETitemsitemidB140B113",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:22:9)",
+              "LambdaIntegration.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.js:30:22)",
+              "Method.renderIntegration (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:88:21)",
+              "new Method (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:40:31)",
+              "Resource.addMethod (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:17:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/GET/ApiPermission.Test.cdkexamplesapigatewayforinventory834096EA.GET..items.{itemid}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsitemidGETApiPermissionTestcdkexamplesapigatewayforinventory834096EAGETitemsitemid3A5B02C0",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:22:9)",
+              "LambdaIntegration.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.js:37:26)",
+              "Method.renderIntegration (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:88:21)",
+              "new Method (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:40:31)",
+              "Resource.addMethod (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:17:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsitemidGETC7E31BD6",
+            "trace": [
+              "new Method (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:45:26)",
+              "Resource.addMethod (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:17:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/PUT/ApiPermission.cdkexamplesapigatewayforinventory834096EA.PUT..items.{itemid}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsitemidPUTApiPermissioncdkexamplesapigatewayforinventory834096EAPUTitemsitemid81DE65E2",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:22:9)",
+              "LambdaIntegration.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.js:30:22)",
+              "Method.renderIntegration (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:88:21)",
+              "new Method (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:40:31)",
+              "Resource.addMethod (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:17:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/PUT/ApiPermission.Test.cdkexamplesapigatewayforinventory834096EA.PUT..items.{itemid}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsitemidPUTApiPermissionTestcdkexamplesapigatewayforinventory834096EAPUTitemsitemid63B7AFE7",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:22:9)",
+              "LambdaIntegration.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.js:37:26)",
+              "Method.renderIntegration (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:88:21)",
+              "new Method (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:40:31)",
+              "Resource.addMethod (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:17:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/PUT/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryitemsitemidPUT3C540BF1",
+            "trace": [
+              "new Method (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.js:45:26)",
+              "Resource.addMethod (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.js:17:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/Api_handling_items_operations/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApihandlingitemsoperationsB3133104",
+            "trace": [
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:69:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/lambda_role_for_sns_dynamo/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaroleforsnsdynamoBF795863",
+            "trace": [
+              "new Role (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:35:22)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/lambda_role_for_sns_dynamo/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaroleforsnsdynamoDefaultPolicy08511BEE",
+            "trace": [
+              "new Policy (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:30:26)",
+              "Role.addToPolicy (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:153:34)",
+              "Function.addToPrincipal (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:57:65)",
+              "Table.grantTableListStreams (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:244:26)",
+              "Table.grantStreamRead (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:259:14)",
+              "DynamoEventSource.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\dynamodb.js:20:20)",
+              "Function.addEventSource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:106:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/dynamo_read_sns_publish_access/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dynamoreadsnspublishaccess7852006F",
+            "trace": [
+              "new Policy (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:30:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/lambda_triggered_by_dynamo_stream/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdatriggeredbydynamostreamF745CF0B",
+            "trace": [
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:69:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/lambda_triggered_by_dynamo_stream/DynamoDBEventSource:cdkexamplesinventorytableF888FB39/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdatriggeredbydynamostreamDynamoDBEventSourcecdkexamplesinventorytableF888FB39381C630C",
+            "trace": [
+              "new EventSourceMapping (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\event-source-mapping.js:23:9)",
+              "Function.addEventSourceMapping (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:65:16)",
+              "DynamoEventSource.bind (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda-event-sources\\lib\\dynamodb.js:19:16)",
+              "Function.addEventSource (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:106:16)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8198:20)",
+              "Kernel.invoke (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/topic which is published by lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "topicwhichispublishedbylambdaC7E21923",
+            "trace": [
+              "new Topic (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic.js:15:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/lambda_to_trigger_step_functions/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdatotriggerstepfunctions20E51CEA",
+            "trace": [
+              "new Function (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:69:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/cdk-examples/step_function_hello_world/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "stepfunctionhelloworld5157B516",
+            "trace": [
+              "new StateMachine (C:\\Users\\Gautam\\AppData\\Local\\Temp\\jsii-kernel-hEd26U\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.js:68:26)",
+              "C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:8222:20)",
+              "Kernel._create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7762:26)",
+              "Kernel.create (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7296:28)",
+              "KernelHost.run (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (C:\\Users\\Gautam\\PycharmProjects\\cdk_examples\\.env\\lib\\site-packages\\jsii\\_embedded\\jsii\\jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cx-api": "1.20.0",
+      "@aws-cdk/core": "1.20.0",
+      "@aws-cdk/region-info": "1.20.0",
+      "@aws-cdk/aws-iam": "1.20.0",
+      "@aws-cdk/aws-autoscaling-common": "1.20.0",
+      "@aws-cdk/aws-cloudwatch": "1.20.0",
+      "@aws-cdk/aws-applicationautoscaling": "1.20.0",
+      "@aws-cdk/aws-dynamodb": "1.20.0",
+      "@aws-cdk/aws-kms": "1.20.0",
+      "@aws-cdk/aws-ssm": "1.20.0",
+      "@aws-cdk/aws-ec2": "1.20.0",
+      "@aws-cdk/aws-events": "1.20.0",
+      "@aws-cdk/aws-logs": "1.20.0",
+      "@aws-cdk/aws-s3": "1.20.0",
+      "@aws-cdk/assets": "1.20.0",
+      "@aws-cdk/aws-s3-assets": "1.20.0",
+      "@aws-cdk/aws-sqs": "1.20.0",
+      "@aws-cdk/aws-lambda": "1.20.0",
+      "@aws-cdk/aws-sns": "1.20.0",
+      "@aws-cdk/aws-s3-notifications": "1.20.0",
+      "@aws-cdk/aws-cloudformation": "1.20.0",
+      "@aws-cdk/aws-route53": "1.20.0",
+      "@aws-cdk/aws-certificatemanager": "1.20.0",
+      "@aws-cdk/aws-cloudfront": "1.20.0",
+      "@aws-cdk/aws-s3-deployment": "1.20.0",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.20.0",
+      "@aws-cdk/aws-apigateway": "1.20.0",
+      "@aws-cdk/aws-kinesis": "1.20.0",
+      "@aws-cdk/aws-sns-subscriptions": "1.20.0",
+      "@aws-cdk/aws-lambda-event-sources": "1.20.0",
+      "@aws-cdk/aws-stepfunctions": "1.20.0",
+      "@aws-cdk/aws-ses": "1.20.0",
+      "@aws-cdk/aws-codecommit": "1.18.0",
+      "@aws-cdk/aws-ecr": "1.18.0",
+      "@aws-cdk/aws-ecr-assets": "1.18.0",
+      "@aws-cdk/aws-secretsmanager": "1.18.0",
+      "@aws-cdk/aws-codebuild": "1.18.0",
+      "@aws-cdk/aws-codepipeline": "1.18.0",
+      "@aws-cdk/aws-elasticloadbalancing": "1.18.0",
+      "@aws-cdk/aws-autoscaling": "1.18.0",
+      "@aws-cdk/aws-autoscaling-hooktargets": "1.18.0",
+      "@aws-cdk/aws-route53-targets": "1.18.0",
+      "@aws-cdk/aws-servicediscovery": "1.18.0",
+      "@aws-cdk/aws-ecs": "1.18.0",
+      "@aws-cdk/aws-events-targets": "1.18.0",
+      "jsii-runtime": "Python/3.7.4"
+    }
+  }
+}

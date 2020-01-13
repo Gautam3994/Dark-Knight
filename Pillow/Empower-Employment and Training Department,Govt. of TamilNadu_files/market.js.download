@@ -1,0 +1,156 @@
+/**
+ * <p>This function used for check for the Mandatory Fields based on pass the id's array</p>
+ *
+ * @Createdon : Oct 10, 2012, 2:40: PM
+ * @Author    : Jagan Mohan. B
+ *
+ * @param doc document *
+ * @param fieldId id array
+ * @param fieldMessage message array
+ */
+function mandatoryFieldsValidation(doc,fieldId,fieldMessage){
+    for (var i=0;i<fieldId.length;i++)   {
+        var idName = fieldId[i];
+        doc.getElementById(idName).value = (doc.getElementById(idName).value).replace(/^\s*|\s*$/g,'');
+        if(doc.getElementById(idName).value==null || doc.getElementById(idName).value == "" || doc.getElementById(idName).length<=0) {
+            alert(fieldMessage[i]);
+            return false;
+        }
+    }
+    return true;
+}
+
+var iChars = "`!%^&*+={}[]\\\';\"<>?";
+//var iChars = "~`!%^&*+={}[]\\\';|\"<>?";
+/**
+ * <p>This function check the special characters in particular Form
+ * This method not allowed !#$%^&*()+=-[]\\\';,./{}|\":<>?
+ *
+ * @Createdon : Oct 10, 2012, 2:40: PM
+ * @Author    : Jagan Mohan. B
+ *
+ * @param doc document
+ */
+function checkTotalFormSpecialCharacters(doc){
+    var inputFields = doc.getElementsByTagName("input");
+    for(var i=0;i<inputFields.length;i++) {
+        if(!(inputFields[i].type=="button") && !(inputFields[i].type=="hidden")) {
+            for (var j = 0; j < inputFields[i].value.length; j++) {
+                //if (iChars.indexOf(fields[i].value.charAt(j)) != -1) {
+                if (iChars.indexOf(inputFields[i].value.charAt(j)) >= 0) {
+                    //alert(inputFields[i].name+" Containts special characters. \n These are not allowed.\n Please remove and try again.");
+                    alert(inputFields[i].name+" Containts special characters, except @ $ # - ~ . , _ | : ( ) / are not allowed.\n Please remove and try again.");
+                    return false;
+                }
+            }
+        }
+    }
+
+    var fields = doc.getElementsByTagName("textarea");
+    for(var x=0;x<fields.length;x++) {
+        if(!(fields[x].type=="button") && !(fields[x].type=="hidden")) {
+            for (var y = 0; y < fields[x].value.length; y++) {
+                //if (iChars.indexOf(fields[x].value.charAt(y)) != -1) {
+                if (iChars.indexOf(fields[x].value.charAt(y)) >= 0) {
+                    alert(fields[x].name+" Containts special characters, except @ $ # - ~ . , _ | : ( ) / are not allowed.\n Please remove and try again.");
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
+/**
+ * <p>Function used for entered phone number valid or not</p>
+ *
+ * @Createdon : Oct 10, 2012, 2:40: PM
+ * @Author    : Jagan Mohan. B
+ * 
+ * @param obj phonumber field object
+ * @param errormessage Error message
+ */
+function isValidPhoneNumber(obj,errormessage){
+    var phoneNumber = obj.value;
+    if(phoneNumber!=null && phoneNumber!=""){
+        var numberPattern = /^[0-9]*$/;
+        if(numberPattern.test(phoneNumber)){
+            return true;
+        } else {
+            obj.value = "";
+            alert(errormessage);
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
+ * <p>This function used validate the pincode.</p>
+ *
+ * @Createdon : Oct 10, 2012, 2:40: PM
+ * @Author    : Jagan Mohan. B
+ *
+ * @param obj text box obj
+ * @param errormessage Error message
+ */
+function pincodeValidate(obj,errormessage){
+    var pincode = obj.value;
+    if(pincode!=null && pincode!=""){
+        var numberPattern = /^[0-9]*$/;
+        if(numberPattern.test(pincode)){
+            if(pincode.length<6){
+                obj.value = "";
+                alert(errormessage);
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            obj.value = "";
+            alert(errormessage);
+            return false;
+        }
+    }
+    return true;
+}
+
+/*
+ * <p>This function used for give value is proper mail id or not -- Jagan Mohan. B</p>
+ *
+ * @Createdon : Oct 10, 2012, 2:40: PM
+ * @Author    : Jagan Mohan. B
+ *
+ * @param textBoxObj textbox object
+ */
+function validateEmailid(txtBoxObj) {
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var address = txtBoxObj.value;
+    if(address!=null && address!="" && reg.test(address) == false) {
+        alert('Invalid email id');
+        txtBoxObj.focus();
+        txtBoxObj.value="";
+        return false;
+    }
+    return true;
+}
+
+/**
+ * <p>This function used for check the valid number</p>
+ *
+ * @Createdon : Oct 17, 2012, 10:05: PM
+ * @Author    : Jagan Mohan. B
+ *
+ * @param obj text box object
+ */
+function isValidNumber(txtBoxObj,errormessage){
+    var numberValue = txtBoxObj.value;    
+    var numberPattern = /^[0-9]*$/;
+    if(numberPattern.test(numberValue)){
+        return true;
+    } else {
+        alert(errormessage);
+        txtBoxObj.value = "";
+        return false;
+    }
+}
