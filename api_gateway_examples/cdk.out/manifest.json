@@ -1,0 +1,756 @@
+{
+  "version": "1.16.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "api-gateway-examples": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "api-gateway-examples.template.json"
+      },
+      "metadata": {
+        "/api-gateway-examples": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.da005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67c",
+              "id": "da005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67c",
+              "packaging": "zip",
+              "sourceHash": "da005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67c",
+              "s3BucketParameter": "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cS3BucketC4A9C885",
+              "s3KeyParameter": "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cS3VersionKey11C1C67A",
+              "artifactHashParameter": "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cArtifactHash5300A967"
+            },
+            "trace": [
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:352:23)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new LayerVersion (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/layers.js:37:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.e131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8",
+              "id": "e131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8",
+              "packaging": "zip",
+              "sourceHash": "e131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8",
+              "s3BucketParameter": "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8S3BucketE79A8B24",
+              "s3KeyParameter": "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8S3VersionKeyCDF92E61",
+              "artifactHashParameter": "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8ArtifactHash45519D1D"
+            },
+            "trace": [
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:352:23)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new Function (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function.js:67:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.de8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9",
+              "id": "de8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9",
+              "packaging": "zip",
+              "sourceHash": "de8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9",
+              "s3BucketParameter": "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9S3BucketEBF765FD",
+              "s3KeyParameter": "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9S3VersionKey36F2218F",
+              "artifactHashParameter": "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9ArtifactHashD6328D89"
+            },
+            "trace": [
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:352:23)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new Function (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function.js:67:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/RoleToCreateLogs/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RoleToCreateLogs64623482",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-iam/lib/role.js:35:22)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/log_creation_policy_for_lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "logcreationpolicyforlambda10AE8B05",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-iam/lib/policy.js:30:26)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/Layer_for_faker_module/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Layerforfakermodule33522CDE",
+            "trace": [
+              "new LayerVersion (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/layers.js:44:26)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/AssetParameters/da005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67c/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cS3BucketC4A9C885",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:11:36)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new LayerVersion (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/layers.js:37:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/AssetParameters/da005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67c/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cS3VersionKey11C1C67A",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:15:35)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new LayerVersion (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/layers.js:37:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/AssetParameters/da005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67c/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cArtifactHash5300A967",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:19:38)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new LayerVersion (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/layers.js:37:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/AssetParameters/e131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8S3BucketE79A8B24",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:11:36)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new Function (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function.js:67:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/AssetParameters/e131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8S3VersionKeyCDF92E61",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:15:35)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new Function (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function.js:67:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/AssetParameters/e131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8ArtifactHash45519D1D",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:19:38)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new Function (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function.js:67:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/AssetParameters/de8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9S3BucketEBF765FD",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:11:36)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new Function (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function.js:67:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/AssetParameters/de8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9S3VersionKey36F2218F",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:15:35)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new Function (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function.js:67:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/AssetParameters/de8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9ArtifactHashD6328D89",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:19:38)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
+              "new Asset (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:30:32)",
+              "AssetCode.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/code.js:135:26)",
+              "new Function (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function.js:67:33)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/lambda_get_inventory_function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdagetinventoryfunction5108E7AD",
+            "trace": [
+              "new Function (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function.js:69:26)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventory995BD3AC",
+            "trace": [
+              "new RestApi (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:28:26)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryDeployment41FD76533a0911906bd11108614e4b56afbe8e27",
+            "trace": [
+              "new Deployment (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/deployment.js:39:25)",
+              "RestApi.configureDeployment (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:173:38)",
+              "new RestApi (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:42:14)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryDeploymentStageprod0F7AC9E1",
+            "trace": [
+              "new Stage (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/stage.js:27:26)",
+              "RestApi.configureDeployment (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:181:36)",
+              "new RestApi (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:42:14)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryEndpointB09ACB6C",
+            "trace": [
+              "RestApi.configureDeployment (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:185:13)",
+              "new RestApi (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:42:14)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryCloudWatchRole61402545",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-iam/lib/role.js:35:22)",
+              "RestApi.configureCloudWatchRole (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:194:22)",
+              "new RestApi (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:45:18)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryAccount45848435",
+            "trace": [
+              "RestApi.configureCloudWatchRole (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:198:26)",
+              "new RestApi (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:45:18)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/shoes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryshoes20000B9A",
+            "trace": [
+              "new Resource (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:170:26)",
+              "RootResource.addResource (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:14:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/shoes/GET/ApiPermission.apigatewayexamplesapigatewayforinventory6D09B328.GET..shoes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryshoesGETApiPermissionapigatewayexamplesapigatewayforinventory6D09B328GETshoesFA2FFCFB",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:22:9)",
+              "LambdaIntegration.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:30:22)",
+              "Method.renderIntegration (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:88:21)",
+              "new Method (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:40:31)",
+              "Resource.addMethod (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:17:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/shoes/GET/ApiPermission.Test.apigatewayexamplesapigatewayforinventory6D09B328.GET..shoes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryshoesGETApiPermissionTestapigatewayexamplesapigatewayforinventory6D09B328GETshoesBFB5133B",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:22:9)",
+              "LambdaIntegration.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:37:26)",
+              "Method.renderIntegration (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:88:21)",
+              "new Method (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:40:31)",
+              "Resource.addMethod (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:17:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/shoes/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryshoesGET3FD0DEA1",
+            "trace": [
+              "new Method (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:45:26)",
+              "Resource.addMethod (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:17:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/order/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryorder0A51AEB3",
+            "trace": [
+              "new Resource (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:170:26)",
+              "RootResource.addResource (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:14:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/order/POST/ApiPermission.apigatewayexamplesapigatewayforinventory6D09B328.POST..order": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryorderPOSTApiPermissionapigatewayexamplesapigatewayforinventory6D09B328POSTorder24F6E568",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:22:9)",
+              "LambdaIntegration.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:30:22)",
+              "Method.renderIntegration (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:88:21)",
+              "new Method (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:40:31)",
+              "Resource.addMethod (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:17:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/order/POST/ApiPermission.Test.apigatewayexamplesapigatewayforinventory6D09B328.POST..order": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryorderPOSTApiPermissionTestapigatewayexamplesapigatewayforinventory6D09B328POSTorderD617B86B",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:22:9)",
+              "LambdaIntegration.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:37:26)",
+              "Method.renderIntegration (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:88:21)",
+              "new Method (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:40:31)",
+              "Resource.addMethod (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:17:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/order/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryorderPOST19B63541",
+            "trace": [
+              "new Method (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:45:26)",
+              "Resource.addMethod (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:17:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/order/{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryorderid7F2BF3E8",
+            "trace": [
+              "new Resource (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:170:26)",
+              "Resource.addResource (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:14:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/order/{id}/GET/ApiPermission.apigatewayexamplesapigatewayforinventory6D09B328.GET..order.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryorderidGETApiPermissionapigatewayexamplesapigatewayforinventory6D09B328GETorderidF121C059",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:22:9)",
+              "LambdaIntegration.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:30:22)",
+              "Method.renderIntegration (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:88:21)",
+              "new Method (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:40:31)",
+              "Resource.addMethod (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:17:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/order/{id}/GET/ApiPermission.Test.apigatewayexamplesapigatewayforinventory6D09B328.GET..order.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryorderidGETApiPermissionTestapigatewayexamplesapigatewayforinventory6D09B328GETorderid3C0D7BF3",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:22:9)",
+              "LambdaIntegration.bind (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:37:26)",
+              "Method.renderIntegration (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:88:21)",
+              "new Method (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:40:31)",
+              "Resource.addMethod (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:17:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/api_gateway_for_inventory/Default/order/{id}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apigatewayforinventoryorderidGETB251CBE4",
+            "trace": [
+              "new Method (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/method.js:45:26)",
+              "Resource.addMethod (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:17:16)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:51",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7589:25",
+              "Kernel._ensureSync (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8198:20)",
+              "Kernel.invoke (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7588:26)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/api-gateway-examples/lambda_get_order_status_function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdagetorderstatusfunction2306169A",
+            "trace": [
+              "new Function (/tmp/jsii-kernel-TLXbhY/node_modules/@aws-cdk/aws-lambda/lib/function.js:69:26)",
+              "/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:49",
+              "Kernel._wrapSandboxCode (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8222:20)",
+              "Kernel._create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7762:26)",
+              "Kernel.create (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7509:21)",
+              "KernelHost.processRequest (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7296:28)",
+              "KernelHost.run (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7236:14)",
+              "Immediate._onImmediate (/home/darkknight/PycharmProjects/api_gateway_examples/.env/lib/python3.6/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7239:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cx-api": "1.20.0",
+      "@aws-cdk/core": "1.20.0",
+      "@aws-cdk/region-info": "1.20.0",
+      "@aws-cdk/aws-iam": "1.20.0",
+      "@aws-cdk/aws-cloudwatch": "1.20.0",
+      "@aws-cdk/aws-kms": "1.20.0",
+      "@aws-cdk/aws-ssm": "1.20.0",
+      "@aws-cdk/aws-ec2": "1.20.0",
+      "@aws-cdk/aws-events": "1.20.0",
+      "@aws-cdk/aws-logs": "1.20.0",
+      "@aws-cdk/aws-s3": "1.20.0",
+      "@aws-cdk/assets": "1.20.0",
+      "@aws-cdk/aws-s3-assets": "1.20.0",
+      "@aws-cdk/aws-sqs": "1.20.0",
+      "@aws-cdk/aws-lambda": "1.20.0",
+      "@aws-cdk/aws-sns": "1.20.0",
+      "@aws-cdk/aws-cloudformation": "1.20.0",
+      "@aws-cdk/aws-route53": "1.20.0",
+      "@aws-cdk/aws-certificatemanager": "1.20.0",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.20.0",
+      "@aws-cdk/aws-apigateway": "1.20.0",
+      "jsii-runtime": "Python/3.6.9"
+    }
+  }
+}

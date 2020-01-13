@@ -1,0 +1,883 @@
+{
+  "Resources": {
+    "RoleToCreateLogs64623482": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "RoleName": "RoleToCreateLogs"
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/RoleToCreateLogs/Resource"
+      }
+    },
+    "logcreationpolicyforlambda10AE8B05": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:logs:*:*:*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "log_creation_policy_for_lambda",
+        "Roles": [
+          {
+            "Ref": "RoleToCreateLogs64623482"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/log_creation_policy_for_lambda/Resource"
+      }
+    },
+    "Layerforfakermodule33522CDE": {
+      "Type": "AWS::Lambda::LayerVersion",
+      "Properties": {
+        "Content": {
+          "S3Bucket": {
+            "Ref": "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cS3BucketC4A9C885"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cS3VersionKey11C1C67A"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cS3VersionKey11C1C67A"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "CompatibleRuntimes": [
+          "python3.6"
+        ],
+        "Description": "A layer to add the faker module to lambda",
+        "LicenseInfo": "Apache-2.0"
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/Layer_for_faker_module/Resource",
+        "aws:asset:path": "asset.da005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67c",
+        "aws:asset:property": "Content"
+      }
+    },
+    "lambdagetinventoryfunction5108E7AD": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8S3BucketE79A8B24"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8S3VersionKeyCDF92E61"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8S3VersionKeyCDF92E61"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "getinventory.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "RoleToCreateLogs64623482",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.6",
+        "Description": "function to get and post values on api calls",
+        "FunctionName": "lambda_get_inventory_function",
+        "Layers": [
+          {
+            "Ref": "Layerforfakermodule33522CDE"
+          }
+        ]
+      },
+      "DependsOn": [
+        "RoleToCreateLogs64623482"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/lambda_get_inventory_function/Resource",
+        "aws:asset:path": "asset.e131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8",
+        "aws:asset:property": "Code"
+      }
+    },
+    "apigatewayforinventory995BD3AC": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Description": "api gateway to access the inventory table",
+        "EndpointConfiguration": {
+          "Types": [
+            "REGIONAL"
+          ]
+        },
+        "Name": "api for inventory management_new"
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Resource"
+      }
+    },
+    "apigatewayforinventoryDeployment41FD76533a0911906bd11108614e4b56afbe8e27": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "apigatewayforinventoryorderidGETB251CBE4",
+        "apigatewayforinventoryorderid7F2BF3E8",
+        "apigatewayforinventoryorderPOST19B63541",
+        "apigatewayforinventoryorder0A51AEB3",
+        "apigatewayforinventoryshoesGET3FD0DEA1",
+        "apigatewayforinventoryshoes20000B9A"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Deployment/Resource"
+      }
+    },
+    "apigatewayforinventoryDeploymentStageprod0F7AC9E1": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        },
+        "DeploymentId": {
+          "Ref": "apigatewayforinventoryDeployment41FD76533a0911906bd11108614e4b56afbe8e27"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/DeploymentStage.prod/Resource"
+      }
+    },
+    "apigatewayforinventoryCloudWatchRole61402545": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/CloudWatchRole/Resource"
+      }
+    },
+    "apigatewayforinventoryAccount45848435": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "apigatewayforinventoryCloudWatchRole61402545",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "apigatewayforinventory995BD3AC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Account"
+      }
+    },
+    "apigatewayforinventoryshoes20000B9A": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "apigatewayforinventory995BD3AC",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "shoes",
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/shoes/Resource"
+      }
+    },
+    "apigatewayforinventoryshoesGETApiPermissionapigatewayexamplesapigatewayforinventory6D09B328GETshoesFA2FFCFB": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "lambdagetinventoryfunction5108E7AD",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/",
+              {
+                "Ref": "apigatewayforinventoryDeploymentStageprod0F7AC9E1"
+              },
+              "/GET/shoes"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/shoes/GET/ApiPermission.apigatewayexamplesapigatewayforinventory6D09B328.GET..shoes"
+      }
+    },
+    "apigatewayforinventoryshoesGETApiPermissionTestapigatewayexamplesapigatewayforinventory6D09B328GETshoesBFB5133B": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "lambdagetinventoryfunction5108E7AD",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/test-invoke-stage/GET/shoes"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/shoes/GET/ApiPermission.Test.apigatewayexamplesapigatewayforinventory6D09B328.GET..shoes"
+      }
+    },
+    "apigatewayforinventoryshoesGET3FD0DEA1": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Ref": "apigatewayforinventoryshoes20000B9A"
+        },
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type, X-Amz-Date, Authorization'",
+                "method.response.header.Access-Control-Allow-Methods": "'GET, PUT'",
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "Type": "AWS",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "lambdagetinventoryfunction5108E7AD",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": [
+          {
+            "ResponseModels": {
+              "application/json": "Empty"
+            },
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true,
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/shoes/GET/Resource"
+      }
+    },
+    "apigatewayforinventoryorder0A51AEB3": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "apigatewayforinventory995BD3AC",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "order",
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/order/Resource"
+      }
+    },
+    "apigatewayforinventoryorderPOSTApiPermissionapigatewayexamplesapigatewayforinventory6D09B328POSTorder24F6E568": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "lambdagetorderstatusfunction2306169A",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/",
+              {
+                "Ref": "apigatewayforinventoryDeploymentStageprod0F7AC9E1"
+              },
+              "/POST/order"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/order/POST/ApiPermission.apigatewayexamplesapigatewayforinventory6D09B328.POST..order"
+      }
+    },
+    "apigatewayforinventoryorderPOSTApiPermissionTestapigatewayexamplesapigatewayforinventory6D09B328POSTorderD617B86B": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "lambdagetorderstatusfunction2306169A",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/test-invoke-stage/POST/order"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/order/POST/ApiPermission.Test.apigatewayexamplesapigatewayforinventory6D09B328.POST..order"
+      }
+    },
+    "apigatewayforinventoryorderPOST19B63541": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "ResourceId": {
+          "Ref": "apigatewayforinventoryorder0A51AEB3"
+        },
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "lambdagetorderstatusfunction2306169A",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/order/POST/Resource"
+      }
+    },
+    "apigatewayforinventoryorderid7F2BF3E8": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "apigatewayforinventoryorder0A51AEB3"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/order/{id}/Resource"
+      }
+    },
+    "apigatewayforinventoryorderidGETApiPermissionapigatewayexamplesapigatewayforinventory6D09B328GETorderidF121C059": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "lambdagetorderstatusfunction2306169A",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/",
+              {
+                "Ref": "apigatewayforinventoryDeploymentStageprod0F7AC9E1"
+              },
+              "/GET/order/{id}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/order/{id}/GET/ApiPermission.apigatewayexamplesapigatewayforinventory6D09B328.GET..order.{id}"
+      }
+    },
+    "apigatewayforinventoryorderidGETApiPermissionTestapigatewayexamplesapigatewayforinventory6D09B328GETorderid3C0D7BF3": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "lambdagetorderstatusfunction2306169A",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/test-invoke-stage/GET/order/{id}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/order/{id}/GET/ApiPermission.Test.apigatewayexamplesapigatewayforinventory6D09B328.GET..order.{id}"
+      }
+    },
+    "apigatewayforinventoryorderidGETB251CBE4": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Ref": "apigatewayforinventoryorderid7F2BF3E8"
+        },
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type, X-Amz-Date, Authorization'",
+                "method.response.header.Access-Control-Allow-Methods": "'GET, PUT'",
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "Type": "AWS",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "lambdagetorderstatusfunction2306169A",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": [
+          {
+            "ResponseModels": {
+              "application/json": "Empty"
+            },
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true,
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/api_gateway_for_inventory/Default/order/{id}/GET/Resource"
+      }
+    },
+    "lambdagetorderstatusfunction2306169A": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9S3BucketEBF765FD"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9S3VersionKey36F2218F"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9S3VersionKey36F2218F"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "getorder.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "RoleToCreateLogs64623482",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.6",
+        "Description": "function to get order status on api calls",
+        "FunctionName": "lambda_get_order_status_function",
+        "Layers": [
+          {
+            "Ref": "Layerforfakermodule33522CDE"
+          }
+        ]
+      },
+      "DependsOn": [
+        "RoleToCreateLogs64623482"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "api-gateway-examples/lambda_get_order_status_function/Resource",
+        "aws:asset:path": "asset.de8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9",
+        "aws:asset:property": "Code"
+      }
+    }
+  },
+  "Parameters": {
+    "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cS3BucketC4A9C885": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"da005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67c\""
+    },
+    "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cS3VersionKey11C1C67A": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"da005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67c\""
+    },
+    "AssetParametersda005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67cArtifactHash5300A967": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"da005ad5306d4bd4353ab8cfa28406f7742041b816ab9d31e66ce7b34f2fb67c\""
+    },
+    "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8S3BucketE79A8B24": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"e131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8\""
+    },
+    "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8S3VersionKeyCDF92E61": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"e131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8\""
+    },
+    "AssetParameterse131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8ArtifactHash45519D1D": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"e131d192de86114c9c971c81fd6c458a1991fbfadb50a2eee93d63a39c7e5aa8\""
+    },
+    "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9S3BucketEBF765FD": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"de8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9\""
+    },
+    "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9S3VersionKey36F2218F": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"de8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9\""
+    },
+    "AssetParametersde8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9ArtifactHashD6328D89": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"de8a6f95a1942d487d85836b1b6e92e55a745f9b64dc9b7d70ce506fd45c44c9\""
+    }
+  },
+  "Outputs": {
+    "apigatewayforinventoryEndpointB09ACB6C": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "apigatewayforinventory995BD3AC"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "apigatewayforinventoryDeploymentStageprod0F7AC9E1"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  }
+}
