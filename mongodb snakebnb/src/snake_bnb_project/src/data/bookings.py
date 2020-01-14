@@ -1,8 +1,13 @@
-class Booking:
-    guest_owner_id = None
-    guest_snake_id = None
-    booked_date = None
-    check_in_date = None
-    check_out_date = None
-    rating = None
-    review = None
+import mongoengine
+import datetime
+
+
+class Booking(mongoengine.EmbeddedDocument):
+    guest_owner_id = mongoengine.ObjectIdField()
+    guest_snake_id = mongoengine.ObjectIdField()
+    booked_date = mongoengine.DateTimeField()
+    check_in_date = mongoengine.DateTimeField(required=True)
+    check_out_date = mongoengine.DateTimeField(required=True)
+    rating = mongoengine.FloatField()
+    review = mongoengine.StringField()
+
