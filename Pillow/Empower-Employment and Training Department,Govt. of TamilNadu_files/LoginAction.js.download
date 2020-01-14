@@ -1,0 +1,104 @@
+
+// Provide a default path to dwr.engine
+if (dwr == null) var dwr = {};
+if (dwr.engine == null) dwr.engine = {};
+if (DWREngine == null) var DWREngine = dwr.engine;
+
+if (LoginAction == null) var LoginAction = {};
+LoginAction._path = '/Empower/dwr';
+LoginAction.loginPage = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'loginPage', p0, p1, false, false, callback);
+}
+LoginAction.goToLogin = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'goToLogin', p0, p1, false, false, callback);
+}
+LoginAction.userCreationDetails = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'userCreationDetails', p0, p1, false, false, callback);
+}
+LoginAction.genRegPageReport = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'genRegPageReport', p0, p1, false, false, callback);
+}
+LoginAction.searchPage = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'searchPage', p0, p1, false, false, callback);
+}
+LoginAction.getUserIdList = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'getUserIdList', p0, p1, false, false, callback);
+}
+LoginAction.getExchangeCode = function(p0, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'getExchangeCode', p0, false, callback);
+}
+LoginAction.getAllExchangeList = function(callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'getAllExchangeList', callback);
+}
+LoginAction.getEncryptPassword = function(p0, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'getEncryptPassword', p0, false, callback);
+}
+LoginAction.userCreationPage = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'userCreationPage', p0, p1, false, false, callback);
+}
+LoginAction.resetPasswordPage = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'resetPasswordPage', p0, p1, false, false, callback);
+}
+LoginAction.homePagesForward = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'homePagesForward', p0, p1, false, false, callback);
+}
+LoginAction.getCandidateData = function(p0, p1, p2, p3, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'getCandidateData', p0, p1, p2, p3, false, callback);
+}
+LoginAction.updateResetPasswordData = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'updateResetPasswordData', p0, p1, false, false, callback);
+}
+LoginAction.userChangePassword = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'userChangePassword', p0, p1, false, false, callback);
+}
+LoginAction.loadApplicationReferenceCodes = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'loadApplicationReferenceCodes', p0, p1, callback);
+}
+LoginAction.sessionRemove = function(callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'sessionRemove', false, false, callback);
+}
+LoginAction.getUserIdDetails = function(p0, p1, p2, p3, p4, p5, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'getUserIdDetails', p0, p1, p2, p3, p4, p5, false, callback);
+}
+LoginAction.isUidExist = function(p0, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'isUidExist', p0, false, callback);
+}
+LoginAction.setLaguage = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'setLaguage', p0, p1, false, false, callback);
+}
+LoginAction.vactionalGuidance = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'vactionalGuidance', p0, p1, false, false, callback);
+}
+LoginAction.publicHome = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'publicHome', p0, p1, false, false, callback);
+}
+LoginAction.studyCircle = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'studyCircle', p0, p1, false, false, callback);
+}
+LoginAction.forwardToVacancyModule = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'forwardToVacancyModule', p0, p1, false, false, callback);
+}
+LoginAction.forwardToVGModule = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'forwardToVGModule', p0, p1, false, false, callback);
+}
+LoginAction.forwardToEMIModule = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'forwardToEMIModule', p0, p1, false, false, callback);
+}
+LoginAction.forwardToUeaModule = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'forwardToUeaModule', p0, p1, false, false, callback);
+}
+LoginAction.superUserHome = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'superUserHome', p0, p1, false, false, callback);
+}
+LoginAction.execute = function(p0, p1, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'execute', p0, p1, false, false, callback);
+}
+LoginAction.execute = function(p0, p1, p2, p3, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'execute', p0, p1, p2, p3, callback);
+}
+LoginAction.getServlet = function(callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'getServlet', callback);
+}
+LoginAction.setServlet = function(p0, callback) {
+  dwr.engine._execute(LoginAction._path, 'LoginAction', 'setServlet', p0, callback);
+}

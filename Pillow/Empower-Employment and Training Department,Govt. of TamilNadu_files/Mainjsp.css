@@ -1,0 +1,39 @@
+/* 
+Document   : Mainjsp
+Created on : 10 May, 2012, 4:11:35 PM
+Author     : root
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/* 
+TODO customize this sample style
+Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.topMidLine {
+    width:100%;
+    background:url(../images/curveBox/topHoriLine.jpg) repeat-x;
+    font-family: "Verdana";
+    font-size: 10px;
+    font-weight: bold;
+    color: #07233f;
+    text-transform: uppercase;
+}
+.midLefLine {
+    width:auto;
+    background:url(../images/curveBox/leftMidLine.gif) repeat-y;
+}
+.midrightLine {
+    width:auto;
+    background:url(../images/curveBox/rightMidLine.gif) repeat-y;
+}
+.BotMidLine {
+    width:100%;
+    background:url(../images/curveBox/botomHoriLine.gif) repeat-x;
+}
+

@@ -1,0 +1,1380 @@
+{
+  "Resources": {
+    "inventorytableE0FE6093": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [
+          {
+            "AttributeName": "product_id",
+            "KeyType": "HASH"
+          }
+        ],
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "product_id",
+            "AttributeType": "S"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "StreamSpecification": {
+          "StreamViewType": "NEW_AND_OLD_IMAGES"
+        },
+        "TableName": "inventory"
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/inventory table/Resource"
+      }
+    },
+    "RoleToCreateItemsFromS35D093F1A": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "RoleName": "RoleToCreateItemsFromS3"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/RoleToCreateItemsFromS3/Resource"
+      }
+    },
+    "dynamodbitemcreationpolicyforlambda1223E9D7": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:logs:*:*:*"
+            },
+            {
+              "Action": "dynamodb:PutItem",
+              "Effect": "Allow",
+              "Resource": "arn:aws:dynamodb:us-east-2:641484180035:table/inventory"
+            },
+            {
+              "Action": "*",
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "dynamodb_item_creation_policy_for_lambda",
+        "Roles": [
+          {
+            "Ref": "RoleToCreateItemsFromS35D093F1A"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/dynamodb_item_creation_policy_for_lambda/Resource"
+      }
+    },
+    "LayerforinventoryLambda55D98D084F": {
+      "Type": "AWS::Lambda::LayerVersion",
+      "Properties": {
+        "Content": {
+          "S3Bucket": {
+            "Ref": "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0S3Bucket3071BD96"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0S3VersionKey06BDD6BC"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0S3VersionKey06BDD6BC"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "CompatibleRuntimes": [
+          "python3.6"
+        ],
+        "Description": "A layer to test the L2 construct",
+        "LicenseInfo": "Apache-2.0"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/Layer_for_inventory_Lambda_55/Resource",
+        "aws:asset:path": "asset.d49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0.zip",
+        "aws:asset:property": "Content"
+      }
+    },
+    "CreateitemwhencsvisuploadedA54E1500": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cS3Bucket9A805BAC"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cS3VersionKey16862245"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cS3VersionKey16862245"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "storeitem.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "RoleToCreateItemsFromS35D093F1A",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.6",
+        "Description": "create a new item when csv file is uploaded in s3",
+        "FunctionName": "CreateItemsFromS3",
+        "Layers": [
+          {
+            "Ref": "LayerforinventoryLambda55D98D084F"
+          }
+        ]
+      },
+      "DependsOn": [
+        "RoleToCreateItemsFromS35D093F1A"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/Create_item_when_csv_is_uploaded/Resource",
+        "aws:asset:path": "asset.bd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586c",
+        "aws:asset:property": "Code"
+      }
+    },
+    "CreateitemwhencsvisuploadedAllowBucketNotificationsFromcdkexamplesinventorybucket4716AB93584E3572": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "CreateitemwhencsvisuploadedA54E1500",
+            "Arn"
+          ]
+        },
+        "Principal": "s3.amazonaws.com",
+        "SourceAccount": {
+          "Ref": "AWS::AccountId"
+        },
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "inventorybucket12C53621",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/Create_item_when_csv_is_uploaded/AllowBucketNotificationsFromcdkexamplesinventorybucket4716AB93"
+      }
+    },
+    "inventorybucket12C53621": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "inventorybucketv907",
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/inventorybucket/Resource"
+      }
+    },
+    "inventorybucketNotifications3B03AC25": {
+      "Type": "Custom::S3BucketNotifications",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691",
+            "Arn"
+          ]
+        },
+        "BucketName": {
+          "Ref": "inventorybucket12C53621"
+        },
+        "NotificationConfiguration": {
+          "LambdaFunctionConfigurations": [
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "suffix",
+                      "Value": ".csv"
+                    },
+                    {
+                      "Name": "prefix",
+                      "Value": "Sales"
+                    }
+                  ]
+                }
+              },
+              "LambdaFunctionArn": {
+                "Fn::GetAtt": [
+                  "CreateitemwhencsvisuploadedA54E1500",
+                  "Arn"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "DependsOn": [
+        "CreateitemwhencsvisuploadedAllowBucketNotificationsFromcdkexamplesinventorybucket4716AB93584E3572"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/inventorybucket/Notifications/Resource"
+      }
+    },
+    "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource"
+      }
+    },
+    "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:PutBucketNotification",
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+        "Roles": [
+          {
+            "Ref": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource"
+      }
+    },
+    "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Description": "AWS CloudFormation handler for \"Custom::S3BucketNotifications\" resources (@aws-cdk/aws-s3)",
+        "Code": {
+          "ZipFile": "exports.handler = (event, context) => {\n    // eslint-disable-next-line @typescript-eslint/no-require-imports, import/no-extraneous-dependencies\n    const s3 = new (require('aws-sdk').S3)();\n    // eslint-disable-next-line @typescript-eslint/no-require-imports\n    const https = require(\"https\");\n    // eslint-disable-next-line @typescript-eslint/no-require-imports\n    const url = require(\"url\");\n    log(JSON.stringify(event, undefined, 2));\n    const props = event.ResourceProperties;\n    if (event.RequestType === 'Delete') {\n        props.NotificationConfiguration = {}; // this is how you clean out notifications\n    }\n    const req = {\n        Bucket: props.BucketName,\n        NotificationConfiguration: props.NotificationConfiguration\n    };\n    return s3.putBucketNotificationConfiguration(req, (err, data) => {\n        log({ err, data });\n        if (err) {\n            return submitResponse(\"FAILED\", err.message + `\\nMore information in CloudWatch Log Stream: ${context.logStreamName}`);\n        }\n        else {\n            return submitResponse(\"SUCCESS\");\n        }\n    });\n    function log(obj) {\n        console.error(event.RequestId, event.StackId, event.LogicalResourceId, obj);\n    }\n    // tslint:disable-next-line:max-line-length\n    // adapted from https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-cfnresponsemodule\n    // to allow sending an error messge as a reason.\n    function submitResponse(responseStatus, reason) {\n        const responseBody = JSON.stringify({\n            Status: responseStatus,\n            Reason: reason || \"See the details in CloudWatch Log Stream: \" + context.logStreamName,\n            PhysicalResourceId: event.PhysicalResourceId || event.LogicalResourceId,\n            StackId: event.StackId,\n            RequestId: event.RequestId,\n            LogicalResourceId: event.LogicalResourceId,\n            NoEcho: false,\n        });\n        log({ responseBody });\n        const parsedUrl = url.parse(event.ResponseURL);\n        const options = {\n            hostname: parsedUrl.hostname,\n            port: 443,\n            path: parsedUrl.path,\n            method: \"PUT\",\n            headers: {\n                \"content-type\": \"\",\n                \"content-length\": responseBody.length\n            }\n        };\n        const request = https.request(options, (r) => {\n            log({ statusCode: r.statusCode, statusMessage: r.statusMessage });\n            context.done();\n        });\n        request.on(\"error\", (error) => {\n            log({ sendError: error });\n            context.done();\n        });\n        request.write(responseBody);\n        request.end();\n    }\n};"
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Timeout": 300
+      },
+      "DependsOn": [
+        "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+        "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource"
+      }
+    },
+    "Apihandlinglambda5D319231": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290S3Bucket0504B4FA"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290S3VersionKey54B0965C"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290S3VersionKey54B0965C"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "api.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "RoleToCreateItemsFromS35D093F1A",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.6",
+        "Description": "handling api calls to access inventory table",
+        "FunctionName": "Apicalls"
+      },
+      "DependsOn": [
+        "RoleToCreateItemsFromS35D093F1A"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/Api_handling_lambda/Resource",
+        "aws:asset:path": "asset.a1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290",
+        "aws:asset:property": "Code"
+      }
+    },
+    "apigatewayforinventory995BD3AC": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Description": "api gateway to access the invenory table",
+        "EndpointConfiguration": {
+          "Types": [
+            "REGIONAL"
+          ]
+        },
+        "Name": "api for inventory management"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Resource"
+      }
+    },
+    "apigatewayforinventoryDeployment41FD765310436cbe550cff0fc542e5183ef9b21b": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "apigatewayforinventoryitemsitemidGETC7E31BD6",
+        "apigatewayforinventoryitemsitemidPUT3C540BF1",
+        "apigatewayforinventoryitemsitemid1400DA6E",
+        "apigatewayforinventoryitemsGETF212FE88",
+        "apigatewayforinventoryitemsD1520767"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Deployment/Resource"
+      }
+    },
+    "apigatewayforinventoryDeploymentStageprod0F7AC9E1": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        },
+        "DeploymentId": {
+          "Ref": "apigatewayforinventoryDeployment41FD765310436cbe550cff0fc542e5183ef9b21b"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/DeploymentStage.prod/Resource"
+      }
+    },
+    "apigatewayforinventoryCloudWatchRole61402545": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/CloudWatchRole/Resource"
+      }
+    },
+    "apigatewayforinventoryAccount45848435": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "apigatewayforinventoryCloudWatchRole61402545",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "apigatewayforinventory995BD3AC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Account"
+      }
+    },
+    "apigatewayforinventoryitemsD1520767": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "apigatewayforinventory995BD3AC",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "items",
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/Resource"
+      }
+    },
+    "apigatewayforinventoryitemsGETApiPermissioncdkexamplesapigatewayforinventory834096EAGETitems4DC289E2": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "Apihandlinglambda5D319231",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-2:",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/",
+              {
+                "Ref": "apigatewayforinventoryDeploymentStageprod0F7AC9E1"
+              },
+              "/GET/items"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/GET/ApiPermission.cdkexamplesapigatewayforinventory834096EA.GET..items"
+      }
+    },
+    "apigatewayforinventoryitemsGETApiPermissionTestcdkexamplesapigatewayforinventory834096EAGETitems571D74D7": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "Apihandlinglambda5D319231",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-2:",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/test-invoke-stage/GET/items"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/GET/ApiPermission.Test.cdkexamplesapigatewayforinventory834096EA.GET..items"
+      }
+    },
+    "apigatewayforinventoryitemsGETF212FE88": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Ref": "apigatewayforinventoryitemsD1520767"
+        },
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:us-east-2:lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "Apihandlinglambda5D319231",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/GET/Resource"
+      }
+    },
+    "apigatewayforinventoryitemsitemid1400DA6E": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "apigatewayforinventoryitemsD1520767"
+        },
+        "PathPart": "{itemid}",
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/Resource"
+      }
+    },
+    "apigatewayforinventoryitemsitemidGETApiPermissioncdkexamplesapigatewayforinventory834096EAGETitemsitemidB140B113": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "ApihandlingitemsoperationsB3133104",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-2:",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/",
+              {
+                "Ref": "apigatewayforinventoryDeploymentStageprod0F7AC9E1"
+              },
+              "/GET/items/{itemid}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/GET/ApiPermission.cdkexamplesapigatewayforinventory834096EA.GET..items.{itemid}"
+      }
+    },
+    "apigatewayforinventoryitemsitemidGETApiPermissionTestcdkexamplesapigatewayforinventory834096EAGETitemsitemid3A5B02C0": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "ApihandlingitemsoperationsB3133104",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-2:",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/test-invoke-stage/GET/items/{itemid}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/GET/ApiPermission.Test.cdkexamplesapigatewayforinventory834096EA.GET..items.{itemid}"
+      }
+    },
+    "apigatewayforinventoryitemsitemidGETC7E31BD6": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Ref": "apigatewayforinventoryitemsitemid1400DA6E"
+        },
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:us-east-2:lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "ApihandlingitemsoperationsB3133104",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/GET/Resource"
+      }
+    },
+    "apigatewayforinventoryitemsitemidPUTApiPermissioncdkexamplesapigatewayforinventory834096EAPUTitemsitemid81DE65E2": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "ApihandlingitemsoperationsB3133104",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-2:",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/",
+              {
+                "Ref": "apigatewayforinventoryDeploymentStageprod0F7AC9E1"
+              },
+              "/PUT/items/{itemid}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/PUT/ApiPermission.cdkexamplesapigatewayforinventory834096EA.PUT..items.{itemid}"
+      }
+    },
+    "apigatewayforinventoryitemsitemidPUTApiPermissionTestcdkexamplesapigatewayforinventory834096EAPUTitemsitemid63B7AFE7": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "ApihandlingitemsoperationsB3133104",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-2:",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apigatewayforinventory995BD3AC"
+              },
+              "/test-invoke-stage/PUT/items/{itemid}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/PUT/ApiPermission.Test.cdkexamplesapigatewayforinventory834096EA.PUT..items.{itemid}"
+      }
+    },
+    "apigatewayforinventoryitemsitemidPUT3C540BF1": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "PUT",
+        "ResourceId": {
+          "Ref": "apigatewayforinventoryitemsitemid1400DA6E"
+        },
+        "RestApiId": {
+          "Ref": "apigatewayforinventory995BD3AC"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:us-east-2:lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "ApihandlingitemsoperationsB3133104",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/api_gateway_for_inventory/Default/items/{itemid}/PUT/Resource"
+      }
+    },
+    "ApihandlingitemsoperationsB3133104": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2S3BucketACB0BBEC"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2S3VersionKeyD6710916"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2S3VersionKeyD6710916"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "item_actions.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "RoleToCreateItemsFromS35D093F1A",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.6",
+        "Description": "Perform all types of actions on the items",
+        "FunctionName": "itemactions"
+      },
+      "DependsOn": [
+        "RoleToCreateItemsFromS35D093F1A"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/Api_handling_items_operations/Resource",
+        "aws:asset:path": "asset.e45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2",
+        "aws:asset:property": "Code"
+      }
+    },
+    "lambdaroleforsnsdynamoBF795863": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "RoleName": "lambda_role_for_sns_dynamo"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/lambda_role_for_sns_dynamo/Resource"
+      }
+    },
+    "lambdaroleforsnsdynamoDefaultPolicy08511BEE": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "dynamodb:ListStreams",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "inventorytableE0FE6093",
+                        "Arn"
+                      ]
+                    },
+                    "/stream/*"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": [
+                "dynamodb:DescribeStream",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "inventorytableE0FE6093",
+                  "StreamArn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "lambdaroleforsnsdynamoDefaultPolicy08511BEE",
+        "Roles": [
+          {
+            "Ref": "lambdaroleforsnsdynamoBF795863"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/lambda_role_for_sns_dynamo/DefaultPolicy/Resource"
+      }
+    },
+    "dynamoreadsnspublishaccess7852006F": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:logs:*:*:*"
+            },
+            {
+              "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetSharedIterator",
+                "dynamodb:ListStreams"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:dynamodb:us-east-2:641484180035:table/inventory"
+            },
+            {
+              "Action": "sns:Publish",
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "dynamo_read_sns_publish_access",
+        "Roles": [
+          {
+            "Ref": "lambdaroleforsnsdynamoBF795863"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/dynamo_read_sns_publish_access/Resource"
+      }
+    },
+    "lambdatriggeredbydynamostreamF745CF0B": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58S3BucketE51CC2D0"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58S3VersionKey44A74FBD"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58S3VersionKey44A74FBD"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "dynamo_stream.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "lambdaroleforsnsdynamoBF795863",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.6",
+        "Description": "run lambda to create notification when price changes",
+        "Environment": {
+          "Variables": {
+            "expected_price": "1200",
+            "sns_arn": "arn:aws:sns:us-east-2:641484180035:Lambdatopic"
+          }
+        },
+        "FunctionName": "stream_for_change_in_price"
+      },
+      "DependsOn": [
+        "lambdaroleforsnsdynamoDefaultPolicy08511BEE",
+        "lambdaroleforsnsdynamoBF795863"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/lambda_triggered_by_dynamo_stream/Resource",
+        "aws:asset:path": "asset.1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58",
+        "aws:asset:property": "Code"
+      }
+    },
+    "lambdatriggeredbydynamostreamDynamoDBEventSourcecdkexamplesinventorytableF888FB39381C630C": {
+      "Type": "AWS::Lambda::EventSourceMapping",
+      "Properties": {
+        "EventSourceArn": {
+          "Fn::GetAtt": [
+            "inventorytableE0FE6093",
+            "StreamArn"
+          ]
+        },
+        "FunctionName": {
+          "Ref": "lambdatriggeredbydynamostreamF745CF0B"
+        },
+        "BatchSize": 100,
+        "StartingPosition": "LATEST"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/lambda_triggered_by_dynamo_stream/DynamoDBEventSource:cdkexamplesinventorytableF888FB39/Resource"
+      }
+    },
+    "topicwhichispublishedbylambdaC7E21923": {
+      "Type": "AWS::SNS::Topic",
+      "Properties": {
+        "DisplayName": "Lambda topic",
+        "TopicName": "Lambdatopic"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/topic which is published by lambda/Resource"
+      }
+    },
+    "lambdatotriggerstepfunctions20E51CEA": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aS3Bucket4C5EFE8B"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aS3VersionKey864A3308"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aS3VersionKey864A3308"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "invoke_stepfunction.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "RoleToCreateItemsFromS35D093F1A",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.6",
+        "Description": "To trigger step functions using lambda",
+        "FunctionName": "triggerstepfunctions"
+      },
+      "DependsOn": [
+        "RoleToCreateItemsFromS35D093F1A"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/lambda_to_trigger_step_functions/Resource",
+        "aws:asset:path": "asset.9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60a",
+        "aws:asset:property": "Code"
+      }
+    },
+    "stepfunctionhelloworld5157B516": {
+      "Type": "AWS::StepFunctions::StateMachine",
+      "Properties": {
+        "DefinitionString": "{\"StartAt\":\"StartState\",\"States\":{\"StartState\":{\"Type\":\"Pass\",\"Comment\":\"This is the beginning\",\"Result\":\"Hello\",\"Next\":\"MiddelState\"},\"MiddelState\":{\"Type\":\"Pass\",\"Result\":\"Wolrd\",\"Next\":\"EndState\"},\"EndState\":{\"Type\":\"Pass\",\"Result\":\"Order\",\"End\":true}},\"TimeoutSeconds\":2000}",
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "RoleToCreateItemsFromS35D093F1A",
+            "Arn"
+          ]
+        },
+        "StateMachineName": "simplestatemachine",
+        "StateMachineType": "STANDARD"
+      },
+      "DependsOn": [
+        "RoleToCreateItemsFromS35D093F1A"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-examples/step_function_hello_world/Resource"
+      }
+    }
+  },
+  "Parameters": {
+    "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0S3Bucket3071BD96": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"d49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0\""
+    },
+    "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0S3VersionKey06BDD6BC": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"d49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0\""
+    },
+    "AssetParametersd49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0ArtifactHash00765F28": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"d49114374e54743a0d8444437c45b687d66304d19daa30f6839adbc4567779c0\""
+    },
+    "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cS3Bucket9A805BAC": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"bd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586c\""
+    },
+    "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cS3VersionKey16862245": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"bd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586c\""
+    },
+    "AssetParametersbd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586cArtifactHash6F4CD61B": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"bd1e226994de9b834627b270a48a5c304a8f50d370969aafbf754fbcc3ab586c\""
+    },
+    "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290S3Bucket0504B4FA": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"a1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290\""
+    },
+    "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290S3VersionKey54B0965C": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"a1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290\""
+    },
+    "AssetParametersa1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290ArtifactHashE02780D4": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"a1d283f09e5f7cbd8be9c2e306b0c2ed6b9ac58e05e67bbf4896ad4086ab3290\""
+    },
+    "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2S3BucketACB0BBEC": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"e45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2\""
+    },
+    "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2S3VersionKeyD6710916": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"e45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2\""
+    },
+    "AssetParameterse45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2ArtifactHash2E3B188F": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"e45f57ebf9bb92b434c8f703f3629cf85e631839fda85e756ec1a8d7d44dcda2\""
+    },
+    "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58S3BucketE51CC2D0": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58\""
+    },
+    "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58S3VersionKey44A74FBD": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58\""
+    },
+    "AssetParameters1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58ArtifactHash93E1C83B": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"1bdbb39f38093c470a676e2de91e2c48f6a257ac63c050542728493fa285cd58\""
+    },
+    "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aS3Bucket4C5EFE8B": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60a\""
+    },
+    "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aS3VersionKey864A3308": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60a\""
+    },
+    "AssetParameters9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60aArtifactHash490BF0A1": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"9773b28921cf3582ae0e25eb4c35eb74d0ec4a53fb80134928eb513c133ed60a\""
+    }
+  },
+  "Outputs": {
+    "apigatewayforinventoryEndpointB09ACB6C": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "apigatewayforinventory995BD3AC"
+            },
+            ".execute-api.us-east-2.",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "apigatewayforinventoryDeploymentStageprod0F7AC9E1"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  }
+}

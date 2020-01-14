@@ -1,0 +1,137 @@
+
+// Provide a default path to dwr.engine
+if (dwr == null) var dwr = {};
+if (dwr.engine == null) dwr.engine = {};
+if (DWREngine == null) var DWREngine = dwr.engine;
+
+if (UserCreationAction == null) var UserCreationAction = {};
+UserCreationAction._path = '/Empower/dwr';
+UserCreationAction.dateToString = function(p0, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'dateToString', p0, callback);
+}
+UserCreationAction.errorPage = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'errorPage', p0, p1, false, false, callback);
+}
+UserCreationAction.checkNull = function(p0, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'checkNull', p0, callback);
+}
+UserCreationAction.veiwProfileData = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'veiwProfileData', p0, p1, false, false, callback);
+}
+UserCreationAction.genIdCardReport = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'genIdCardReport', p0, p1, false, false, callback);
+}
+UserCreationAction.openTermsAndConditions = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'openTermsAndConditions', p0, p1, false, false, callback);
+}
+UserCreationAction.mainPage = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'mainPage', p0, p1, false, false, callback);
+}
+UserCreationAction.searchPage = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'searchPage', p0, p1, false, false, callback);
+}
+UserCreationAction.getUserIdList = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getUserIdList', p0, p1, false, false, callback);
+}
+UserCreationAction.genIdCardReport1 = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'genIdCardReport1', p0, p1, false, false, callback);
+}
+UserCreationAction.candidateVacacnyDetails = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'candidateVacacnyDetails', p0, p1, false, false, callback);
+}
+UserCreationAction.searchRegisterno = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'searchRegisterno', p0, p1, false, false, callback);
+}
+UserCreationAction.getRegistrationnumber = function(p0, p1, p2, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getRegistrationnumber', p0, p1, p2, false, callback);
+}
+UserCreationAction.homePagesForward = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'homePagesForward', p0, p1, false, false, callback);
+}
+UserCreationAction.loadApplicationReferenceCodes = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'loadApplicationReferenceCodes', p0, p1, callback);
+}
+UserCreationAction.getUserIdDetails = function(p0, p1, p2, p3, p4, p5, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getUserIdDetails', p0, p1, p2, p3, p4, p5, false, callback);
+}
+UserCreationAction.updateChangePasswordData = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'updateChangePasswordData', p0, p1, false, false, callback);
+}
+UserCreationAction.checkUsertype = function(p0, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'checkUsertype', p0, false, callback);
+}
+UserCreationAction.staffRegistrationPage = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'staffRegistrationPage', p0, p1, false, false, callback);
+}
+UserCreationAction.getShowIdCardPage = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getShowIdCardPage', p0, p1, false, false, callback);
+}
+UserCreationAction.getCandidateNomineeVacancy = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getCandidateNomineeVacancy', p0, p1, false, false, callback);
+}
+UserCreationAction.staffUserCreation = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'staffUserCreation', p0, p1, false, false, callback);
+}
+UserCreationAction.changePasswordPage = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'changePasswordPage', p0, p1, false, false, callback);
+}
+UserCreationAction.candidateStutusChangePage = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'candidateStutusChangePage', p0, p1, false, false, callback);
+}
+UserCreationAction.ExchangeMaptoDirector = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'ExchangeMaptoDirector', p0, p1, false, false, callback);
+}
+UserCreationAction.isOldPasswordCorrect = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'isOldPasswordCorrect', p0, p1, false, callback);
+}
+UserCreationAction.candidateStusUpdationDetails = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'candidateStusUpdationDetails', p0, p1, false, false, callback);
+}
+UserCreationAction.populateRegId = function(callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'populateRegId', false, callback);
+}
+UserCreationAction.getRegId = function(callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getRegId', false, callback);
+}
+UserCreationAction.populateQualificationId = function(callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'populateQualificationId', false, callback);
+}
+UserCreationAction.isAccessDenied = function(p0, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'isAccessDenied', p0, false, callback);
+}
+UserCreationAction.loadExchangeList = function(callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'loadExchangeList', callback);
+}
+UserCreationAction.getMappingUserIdDetails = function(callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getMappingUserIdDetails', false, callback);
+}
+UserCreationAction.getMappingUserIdAllDetails = function(p0, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getMappingUserIdAllDetails', p0, false, callback);
+}
+UserCreationAction.getemployeeExchangeDetails = function(p0, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getemployeeExchangeDetails', p0, false, callback);
+}
+UserCreationAction.inserorUpdatetExchangeMapDetails = function(p0, p1, p2, p3, p4, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'inserorUpdatetExchangeMapDetails', p0, p1, p2, p3, p4, false, callback);
+}
+UserCreationAction.hoPasswordResetPage = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'hoPasswordResetPage', p0, p1, false, false, callback);
+}
+UserCreationAction.getHOUserDetails = function(p0, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getHOUserDetails', p0, false, callback);
+}
+UserCreationAction.HOUserResetPassword = function(p0, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'HOUserResetPassword', p0, false, callback);
+}
+UserCreationAction.execute = function(p0, p1, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'execute', p0, p1, false, false, callback);
+}
+UserCreationAction.execute = function(p0, p1, p2, p3, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'execute', p0, p1, p2, p3, callback);
+}
+UserCreationAction.getServlet = function(callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'getServlet', callback);
+}
+UserCreationAction.setServlet = function(p0, callback) {
+  dwr.engine._execute(UserCreationAction._path, 'UserCreationAction', 'setServlet', p0, callback);
+}

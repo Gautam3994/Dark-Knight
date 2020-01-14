@@ -1,0 +1,81 @@
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+        
+/*function editProfile(tabIndex){
+                getBlanket('continueDIV');
+                document.forms[0].tabindex.value = tabIndex;
+                document.forms[0].action="CandidateProfileAction.htm";
+                document.forms[0].method.value="forwardCandidateByUserID";
+                document.forms[0].submit();
+ }*/
+
+function addQualOrModifyContact(tabIndex,registrationNumber){
+    getBlanket('continueDIV');
+    //document.forms[0].tabindex.value = tabIndex;
+    document.forms[0].tabid.value = tabIndex;
+    document.forms[0].registrationnumber.value = registrationNumber;
+    document.forms[0].action="CandidateProfileAction.htm";
+    document.forms[0].method.value="forwardCandidate";
+    //document.forms[0].method.value="forwardCandidateByUserID";
+    document.forms[0].submit();
+}
+/**
+ * <br>addProfReg method to create new professional exchange account,<br>
+ * candidate will be restricted if he/she already have one professional account<br>
+ */
+function addProfReg(){
+    var userid=document.getElementById("userid").value;
+    if(userid!=""||userid!=null)
+    {
+        LoginAction.getExchangeCode(userid,exvalue);
+    }else{
+        alert("Wrong User!Cannot be Allowed..");
+    }
+
+}
+
+function exvalue(val){
+
+    if(val!="false"){
+
+        getBlanket('continueDIV');
+        document.forms[0].candidatedirectprof.value="true";
+        document.forms[0].registrationnumber.value=val;
+        document.forms[0].action="CandidateProfileAction.htm";
+        document.forms[0].method.value="forwardCandidate";
+        //document.forms[0].method.value="forwardCandidateByUserID";
+        document.forms[0].submit();
+
+    }else{
+
+        alert('Already you have one professional exchange Account');
+        return false;
+    }
+}
+
+function printIdCard(registrationnumber) {
+    
+    if(registrationnumber == ""){
+        alert("Registration Number not Available");
+        return false;
+    }
+    var url = 'UserCreationAction.htm?method=genIdCardReport';
+    url=url+"&registrationnumber="+registrationnumber;
+    var width = '860';
+    var height = '550';
+    loadwindow1(url,width,height);
+}
+function loadwindow1(url,width,height){
+    document.getElementById("dwindow").style.display=''
+    document.getElementById("dwindow").style.menubar="1"
+    document.getElementById("dwindow").style.width=initialwidth=width+"px"
+    document.getElementById("dwindow").style.height=initialheight=height+"px"
+    document.getElementById("dwindow").style.left="170px"
+    document.getElementById("dwindow").style.top=ns6? window.pageYOffset*1+40+"px" : iecompattest().scrollTop*1+40+"px"
+    document.getElementById("cframe").src=url
+}
+
+
