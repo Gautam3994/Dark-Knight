@@ -1,4 +1,5 @@
-active_account = None
+from data.owners import Owners
+active_account: Owners = None
 
 
 def reload_account():
@@ -8,3 +9,4 @@ def reload_account():
 
     # TODO: pull owner account from the database.
     pass
+

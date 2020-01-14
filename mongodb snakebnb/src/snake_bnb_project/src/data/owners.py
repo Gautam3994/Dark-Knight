@@ -10,5 +10,6 @@ class Owners(mongoengine.Document):
     cage_ids = mongoengine.ListField()
     meta = {
         "alias": "core",
-        "collection": "owners"
+        "collection": "owners",
+        "host": 'localhost:27017'
     }

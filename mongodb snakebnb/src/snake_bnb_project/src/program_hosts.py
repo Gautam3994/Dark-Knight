@@ -51,7 +51,12 @@ def create_account():
     print(' ****************** REGISTER **************** ')
     name = input("What is your name?")
     email = input("What is your mail id?")
+    old_account = data_service.find_account_by_email(email)
+    if old_account:
+        error_msg(f"The account with the mail id {email} already exists")
+        return
     state.active_account = data_service.create_account(name, email)
+    print("The account was successfully created")
 
 
 def log_into_account():
