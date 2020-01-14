@@ -5,7 +5,6 @@ import program_hosts
 
 
 def main():
-    # TODO: Setup mongoengine global values
     mongo_setup.setup()
     print_header()
 

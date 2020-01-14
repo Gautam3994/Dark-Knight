@@ -1,6 +1,7 @@
 from colorama import Fore
 from infrastructure.switchlang import switch
 import infrastructure.state as state
+from services import data_service
 
 
 def run():
@@ -48,10 +49,9 @@ def show_commands():
 
 def create_account():
     print(' ****************** REGISTER **************** ')
-    # TODO: Get name & email
-    # TODO: Create account, set as logged in.
-
-    print(" -------- NOT IMPLEMENTED -------- ")
+    name = input("What is your name?")
+    email = input("What is your mail id?")
+    state.active_account = data_service.create_account(name, email)
 
 
 def log_into_account():
