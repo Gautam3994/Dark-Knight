@@ -102,7 +102,9 @@ def list_cages(supress_header=False):
         error_msg("You must login to find the list of cages")
         return
     your_cages = data_service.get_cages(state.active_account)
-    print(your_cages)
+    print(f"You have {len(your_cages)} cages registered")
+    for cage in your_cages:
+        print(f"The {cage.name} is {cage.square_meters} meters")
 
 
 def update_availability():

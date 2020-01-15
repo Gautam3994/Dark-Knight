@@ -33,5 +33,6 @@ def register_cage_host(active_account: Owners, client: str, meters, carpeted, to
 
 
 def get_cages(active_account: Owners) -> List[Cage]:
-    query = Cage.objects(id=active_account.cage_ids)
-    return query
+    query = Cage.objects(id__in=active_account.cage_ids)
+    cages = list(query)
+    return cages
