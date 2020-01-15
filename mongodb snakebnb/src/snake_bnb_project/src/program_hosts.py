@@ -50,7 +50,7 @@ def show_commands():
 def create_account():
     print(' ****************** REGISTER **************** ')
     name = input("What is your name?")
-    email = input("What is your mail id?")
+    email = input("What is your mail id?").strip().lower()
     old_account = data_service.find_account_by_email(email)
     if old_account:
         error_msg(f"The account with the mail id {email} already exists")
@@ -61,31 +61,48 @@ def create_account():
 
 def log_into_account():
     print(' ****************** LOGIN **************** ')
-
-    # TODO: Get email
-    # TODO: Find account in DB, set as logged in.
-
-    print(" -------- NOT IMPLEMENTED -------- ")
+    email = input("Enter your mail id?").strip().lower()
+    login_mail = data_service.find_account_by_email(email)
+    if not login_mail:
+        error_msg("This email is not registered with any account.")
+        return
+    state.active_account = login_mail
+    print("You have logged in successfully")
 
 
 def register_cage():
     print(' ****************** REGISTER CAGE **************** ')
-
-    # TODO: Require an account
-    # TODO: Get info about cage
-    # TODO: Save cage to DB.
-
-    print(" -------- NOT IMPLEMENTED -------- ")
+    if not state.active_account:
+        error_msg("You must require an account to regsiter")
+        return
+    while True:
+        meters = input("Length of the cage required?")
+        if not meters:
+            error_msg("This is a required field")
+        else:
+            try:
+                length = float(meters)
+            except:
+                error_msg("You must enter numbers only")
+            else:
+                break
+    carpeted = input("Is it carpeted [y, n]?").lower().startswith('y')
+    toys = input("It has toys [y, n]?").lower().startswith('y')
+    dangerous_snake = input("Is it a venomous snake [y, n]?").lower().startswith('y')
+    client = input("Who is getting this cage?")
+    cage = data_service.register_cage_host(state.active_account, client, length, carpeted, toys, dangerous_snake)
+    state.reload_account()
+    success_msg(f"Registerd cage with id{cage.id}")
 
 
 def list_cages(supress_header=False):
     if not supress_header:
         print(' ******************     Your cages     **************** ')
-
-    # TODO: Require an account
-    # TODO: Get cages, list details
-
-    print(" -------- NOT IMPLEMENTED -------- ")
+    if not state.active_account:
+        error_msg("You must login to find the list of cages")
+        return
+    your_cages = data_service.get_cages(state.active_account)
+    print(your_cages)
 
 
 def update_availability():
