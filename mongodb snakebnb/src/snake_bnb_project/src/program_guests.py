@@ -3,6 +3,7 @@ import program_hosts as hosts
 from program_hosts import error_msg, success_msg
 import infrastructure.state as state
 from services import data_service
+from dateutil import parser
 
 
 def run():
@@ -64,7 +65,7 @@ def add_a_snake():
             error_msg("This is a required field")
         else:
             break
-    length = float(input("what is the length of the snake in meters"))
+    length = int(input("what is the length of the snake in meters"))
     is_venomous = input("Is your snake venomous [y]es or [n]o").lower().startswith('y')
     species = input("What species is your snake?")
     snake = data_service.add_snake(state.active_account, name, length, is_venomous, species)
@@ -85,9 +86,32 @@ def view_your_snakes():
 
 def book_a_cage():
     print(' ****************** Book a cage **************** ')
-    # TODO: Require an account
-    # TODO: Verify they have a snake
-    # TODO: Get dates and select snake
+    if not state.active_account:
+        error_msg("You must login in order to add a snake")
+        return
+    your_snakes = data_service.get_your_snake(state.active_account)
+    if not your_snakes:
+        error_msg("You don't have snake registered. Please [a]dd")
+        return
+    while True:
+        while True:
+            start_date_text = input("Enter the date in which you want to book the cage [yyyy-mm-dd]:")
+            if not start_date_text:
+                error_msg("Please enter start date")
+            else:
+                break
+        while True:
+            end_date_text = input("Enter the date in which you want to end the booking of the cage [yyyy-mm-dd]:")
+            if not end_date_text:
+                error_msg("Please enter end date")
+            else:
+                break
+        check_in = parser.parse(start_date_text)
+        check_out = parser.parse(end_date_text)
+        if check_in >= check_out:
+            error_msg("Check in date must before check out date")
+        else:
+            break
     # TODO: Find cages available across date range
     # TODO: Let user select cage to book.
 
