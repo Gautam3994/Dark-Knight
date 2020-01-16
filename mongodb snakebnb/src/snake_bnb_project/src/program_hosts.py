@@ -2,6 +2,7 @@ from colorama import Fore
 from infrastructure.switchlang import switch
 import infrastructure.state as state
 from services import data_service
+import dateutil
 
 
 def run():
@@ -103,19 +104,38 @@ def list_cages(supress_header=False):
         return
     your_cages = data_service.get_cages(state.active_account)
     print(f"You have {len(your_cages)} cages registered")
-    for cage in your_cages:
-        print(f"The {cage.name} is {cage.square_meters} meters")
+    for cage_no, cage in enumerate(your_cages):
+        print(f"{cage_no+1}- The {cage.name} is {cage.square_meters} meters")
+        for booking in cage.bookings:
+            print(f"Booking: {booking.check_in_date}, {(booking.check_out_date - booking.check_in_date).days}, "
+                  f"booked{'Yes' if booking.booked_date is not None else 'No'} ")
 
 
 def update_availability():
     print(' ****************** Add available date **************** ')
 
-    # TODO: Require an account
-    # TODO: list cages
-    # TODO: Choose cage
-    # TODO: Set dates, save to DB.
-
-    print(" -------- NOT IMPLEMENTED -------- ")
+    if not state.active_account:
+        error_msg("You must login to add the availability of your cages")
+        return
+    while True:
+        list_cages(supress_header=False)
+        cage_to_check = input("Enter the number of the cage which you wanna update")
+        if not cage_to_check:
+            print("Please enter the suitable number")
+        else:
+            try:
+                cage_number = int(cage_to_check)
+            except:
+                print("Please enter the suitable number")
+            else:
+                break
+    cages = data_service.get_cages(state.active_account)
+    selected_cage = cages[cage_number - 1]
+    success_msg(f"You have selected the cage {selected_cage.name}")
+    start_date = dateutil.parser.parse(input("Enter an available start date [yyyy-mm-dd]"))
+    no_of_days_required = int(input("Enter the number of days you want to make it available"))
+    data_service.add_availability(selected_cage, start_date, no_of_days_required)
+    success_msg(f"The {selected_cage.name} has been marked available for {no_of_days_required} days starting from {start_date}")
 
 
 def view_bookings():

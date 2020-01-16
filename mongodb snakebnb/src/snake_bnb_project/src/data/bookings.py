@@ -1,5 +1,4 @@
 import mongoengine
-import datetime
 
 
 class Booking(mongoengine.EmbeddedDocument):

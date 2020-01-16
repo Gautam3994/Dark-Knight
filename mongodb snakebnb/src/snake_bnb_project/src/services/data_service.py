@@ -1,6 +1,9 @@
 from data.owners import Owners
 from data.cages import Cage
+from data.bookings import Booking
+from data.snake_details import Snake
 from typing import List
+import datetime
 
 
 def create_account(name: str, email: str) -> Owners:
@@ -36,3 +39,34 @@ def get_cages(active_account: Owners) -> List[Cage]:
     query = Cage.objects(id__in=active_account.cage_ids)
     cages = list(query)
     return cages
+
+
+def add_availability(account: Owners, selected_cage: Cage, start_date: datetime.datetime,
+                     no_of_days_required: int) -> Cage:
+    booking = Booking()
+    booking.check_in_date = start_date
+    booking.check_out_date = start_date + datetime.timedelta(no_of_days_required)
+    cage = Cage.objects(id=selected_cage.id).first()
+    cage.bookings.append(booking)
+    cage.save()
+    return cage
+
+
+def add_snake(active_account: Owners, name: str, length: int, is_venomous: bool, species: str) -> Snake:
+    snake = Snake()
+    snake.name = name
+    snake.length = length
+    snake.is_venomous = is_venomous
+    snake.species = species
+    snake.save()
+
+    account = find_account_by_email(active_account.email)
+    account.snake_ids.append(snake.id)
+    account.save()
+
+    return snake
+
+
+def get_your_snake(active_account: Owners) -> List[Snake]:
+    snakes = Snake.objects(id__in=active_account.snake_ids).all()
+    return list(snakes)
