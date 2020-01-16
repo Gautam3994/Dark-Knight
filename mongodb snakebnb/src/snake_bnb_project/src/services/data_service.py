@@ -70,3 +70,8 @@ def add_snake(active_account: Owners, name: str, length: int, is_venomous: bool,
 def get_your_snake(active_account: Owners) -> List[Snake]:
     snakes = Snake.objects(id__in=active_account.snake_ids).all()
     return list(snakes)
+
+
+def get_available_cages(check_in: datetime.datetime, check_out: datetime.datetime, snake_picked: Snake) -> List[Cage]:
+    min_size = snake_picked.length / 4
+    cages = Cage.objects().filter(square_meters__gte=min_size).filter(bookings__check_in_date__lte=)

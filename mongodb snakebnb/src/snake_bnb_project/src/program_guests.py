@@ -112,10 +112,11 @@ def book_a_cage():
             error_msg("Check in date must before check out date")
         else:
             break
-    # TODO: Find cages available across date range
-    # TODO: Let user select cage to book.
-
-    print(" -------- NOT IMPLEMENTED -------- ")
+    print()
+    for no, snake in enumerate(your_snakes):
+        print(f"{no} - The snake {snake.name} is {snake.length} meter(s) long and is {'venomous'if snake.is_venomous else ''}")
+    snake_picked = your_snakes[int(input("Choose the number of the snake for which you are lookinf for a cage")) - 1]
+    cages = data_service.get_available_cages(check_in, check_out, snake_picked)
 
 
 def view_bookings():
