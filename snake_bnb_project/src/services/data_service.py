@@ -87,12 +87,4 @@ def get_available_cages(check_in: datetime.datetime, check_out: datetime.datetim
 
 def book_cage(account: Owners, selected_cage: Cage, snake_picked: Snake, check_in: datetime.datetime, check_out: datetime.datetime) -> Cage:
     booked: Booking = None
-    query = selected_cage.objects.filter(bookings__match={
-        'check_in_date__lte': check_in,
-        'check_out_date__gte': check_out,
-        'guest_snake_id__exists': False
-    })
-    for value in query:
-        for c in value.bookings:
-            for a in c:
-                print(a)
+    the_cage = Cage.objects(id=selected_cage.id).all()
