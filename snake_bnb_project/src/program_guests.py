@@ -114,9 +114,18 @@ def book_a_cage():
             break
     print()
     for no, snake in enumerate(your_snakes):
-        print(f"{no} - The snake {snake.name} is {snake.length} meter(s) long and is {'venomous'if snake.is_venomous else ''}")
+        print(f"{no + 1} - The snake {snake.name} is {snake.length} meter(s) long and is {'venomous'if snake.is_venomous else ''}")
     snake_picked = your_snakes[int(input("Choose the number of the snake for which you are lookinf for a cage")) - 1]
     cages = data_service.get_available_cages(check_in, check_out, snake_picked)
+    print(f"There are {len(cages)} cages available")
+    if len(cages) == 0:
+        print("Sorry there are no cages available")
+        return
+    for cage_no, cage in enumerate(cages):
+        print(f"{cage_no + 1} - {cage.name} which is {cage.square_meters} meters long. Carpeted: {'yes' if cage.is_carpeted else 'no'}  Has Toys: {'yes' if cage.has_toys else 'no'}")
+    selected_cage = cages[int(input("Please choose the number of any available cage")) - 1]
+    data_service.book_cage(state.active_account, selected_cage, snake_picked, check_in, check_out)
+    success_msg(f"You have successuly booked {selected_cage.name} from {check_in} to {check_out} for {snake_picked}")
 
 
 def view_bookings():

@@ -41,7 +41,7 @@ def get_cages(active_account: Owners) -> List[Cage]:
     return cages
 
 
-def add_availability(account: Owners, selected_cage: Cage, start_date: datetime.datetime,
+def add_availability(selected_cage: Cage, start_date: datetime.datetime,
                      no_of_days_required: int) -> Cage:
     booking = Booking()
     booking.check_in_date = start_date
@@ -74,4 +74,25 @@ def get_your_snake(active_account: Owners) -> List[Snake]:
 
 def get_available_cages(check_in: datetime.datetime, check_out: datetime.datetime, snake_picked: Snake) -> List[Cage]:
     min_size = snake_picked.length / 4
-    cages = Cage.objects().filter(square_meters__gte=min_size).filter(bookings__check_in_date__lte=)
+    query = Cage.objects().filter(square_meters__gte=min_size).filter(bookings__match={
+        'check_in_date__lte': check_in,
+        'check_out_date__gte': check_out,
+        'guest_snake_id__exists': False
+    })
+    if snake_picked.is_venomous:
+        query = query.filter(allow_dangerous_snakes=True)
+    cages = query.order_by("square_meters")
+    return list(cages)
+
+
+def book_cage(account: Owners, selected_cage: Cage, snake_picked: Snake, check_in: datetime.datetime, check_out: datetime.datetime) -> Cage:
+    booked: Booking = None
+    query = selected_cage.objects.filter(bookings__match={
+        'check_in_date__lte': check_in,
+        'check_out_date__gte': check_out,
+        'guest_snake_id__exists': False
+    })
+    for value in query:
+        for c in value.bookings:
+            for a in c:
+                print(a)
