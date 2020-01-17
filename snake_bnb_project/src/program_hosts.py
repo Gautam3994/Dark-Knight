@@ -2,7 +2,7 @@ from colorama import Fore
 from infrastructure.switchlang import switch
 import infrastructure.state as state
 from services import data_service
-import dateutil
+import dateutil, datetime
 
 
 def run():
@@ -105,7 +105,7 @@ def list_cages(supress_header=False):
     your_cages = data_service.get_cages(state.active_account)
     print(f"You have {len(your_cages)} cages registered")
     for cage_no, cage in enumerate(your_cages):
-        print(f"{cage_no+1}- The {cage.name} is {cage.square_meters} meters")
+        print(f"{cage_no + 1}- The {cage.name} is {cage.square_meters} meters")
         for booking in cage.bookings:
             print(f"Booking: {booking.check_in_date}, {(booking.check_out_date - booking.check_in_date).days}, "
                   f"booked{'Yes' if booking.booked_date is not None else 'No'} ")
@@ -135,17 +135,27 @@ def update_availability():
     start_date = dateutil.parser.parse(input("Enter an available start date [yyyy-mm-dd]"))
     no_of_days_required = int(input("Enter the number of days you want to make it available"))
     data_service.add_availability(selected_cage, start_date, no_of_days_required)
-    success_msg(f"The {selected_cage.name} has been marked available for {no_of_days_required} days starting from {start_date}")
+    success_msg(
+        f"The {selected_cage.name} has been marked available for {no_of_days_required} days starting from {start_date}")
 
 
 def view_bookings():
     print(' ****************** Your bookings **************** ')
-
-    # TODO: Require an account
-    # TODO: Get cages, and nested bookings as flat list
-    # TODO: Print details for each
-
-    print(" -------- NOT IMPLEMENTED -------- ")
+    if not state.active_account:
+        error_msg("You must login to add the availability of your cages")
+        return
+    your_cages = data_service.get_cages(state.active_account)
+    bookings = [(cage, booking) for cage in your_cages for booking in cage.bookings if booking.booked_date is not None]
+    for cage, booking in bookings:
+        print(" * Cage : {}, booked date: {}, from {} for {} days".format(cage.name,
+                                                                          datetime.date(booking.booked_date.year,
+                                                                                        booking.booked_date.month,
+                                                                                        booking.booked_date.day),
+                                                                          datetime.date(booking.check_in_date.year,
+                                                                                        booking.check_in_date.month,
+                                                                                        booking.check_in_date.day),
+                                                                          (booking.check_out_date - booking.check_in_date).days
+                                                                          ))
 
 
 def exit_app():
