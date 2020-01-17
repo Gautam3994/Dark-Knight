@@ -4,6 +4,7 @@ from program_hosts import error_msg, success_msg
 import infrastructure.state as state
 from services import data_service
 from dateutil import parser
+import datetime
 
 
 def run():
@@ -130,7 +131,21 @@ def book_a_cage():
 
 def view_bookings():
     print(' ****************** Your bookings **************** ')
-    # TODO: Require an account
-    # TODO: List booking info along with snake info
+    if not state.active_account:
+        error_msg("You must login in order to add a snake")
+        return
+    your_snakes = {snake.id: snake for snake in data_service.get_your_snake(state.active_account)}
+    bookings = data_service.get_your_bookings(state.active_account)
+    print(f"You have {len(bookings)} bookings")
+    for b in bookings:
+        print("* Snake: {} is booked at {} from {} for {} days".format(your_snakes.get(b.guest_snake_id).name, b.cage.name,
+                                                                       datetime.date(b.check_in_date.year, b.check_in_date.month, b.check_in_date.day),
+                                                                       (b.check_out_date - b.check_in_date).days))
+    # Easier Method but slow find below
+    # your_snakes = data_service.get_your_snake(state.active_account)
+    # for snake in your_snakes:
+    #     your_bookings = data_service.get_your_bookings(state.active_account, snake.id)
 
-    print(" -------- NOT IMPLEMENTED -------- ")
+
+
+

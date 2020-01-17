@@ -85,6 +85,32 @@ def get_available_cages(check_in: datetime.datetime, check_out: datetime.datetim
     return list(cages)
 
 
-def book_cage(account: Owners, selected_cage: Cage, snake_picked: Snake, check_in: datetime.datetime, check_out: datetime.datetime) -> Cage:
+def book_cage(account: Owners, selected_cage: Cage, snake_picked: Snake, check_in: datetime.datetime, check_out: datetime.datetime) -> None:
     booked: Booking = None
-    the_cage = Cage.objects(id=selected_cage.id).all()
+    for _bookings in selected_cage.bookings:
+        if _bookings.check_in_date <= check_in and _bookings.check_out_date >= check_out and _bookings.guest_snake_id is None:
+            booked = _bookings
+            break
+    booked.booked_date = datetime.datetime.now()
+    booked.guest_owner_id = account.id
+    booked.guest_snake_id = snake_picked.id
+    selected_cage.save()
+
+
+def get_your_bookings(active_account) -> List[Booking]:
+    booked_cages = Cage.objects().filter(bookings__guest_owner_id=active_account.id).only('bookings', 'name')
+
+    def map_cage_to_booking(cage, booking):
+        booking.cage = cage
+        return booking
+
+    bookings = [map_cage_to_booking(cage, booking) for cage in booked_cages for booking in cage.bookings if booking.guest_owner_id == active_account.id]
+    return bookings
+    # Below Code also works
+    # guest_cages_booked = Cage.objects().filter(bookings__guest_owner_id__exact=active_account.id)
+    # for cage in guest_cages_booked:
+    #     for booked in cage.bookings:
+    #         if booked.guest_snake_id == snake_id:
+    #             return cage.name, booked.guest_snake_id, booked.check_in_date, booked.check_out_date
+
+
