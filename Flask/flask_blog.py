@@ -1,9 +1,10 @@
 from flask import Flask, render_template, url_for
+
 app = Flask(__name__)
 
 posts = [
     {
-        "Author": "Gautam",
+        "Author": "Gautam Kumar",
         "Title": "PUBG",
         "posted_on": "01-01-2020",
         "Content": "About PUBG"
@@ -30,3 +31,6 @@ def about():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    # must set FLASK_APP=filename i.e flask_blog.py to use cmd(flask run)
+    # Can use set FLASK_DEBUG=1 if you are using flask run
+    # else can use python flask_blog.py
