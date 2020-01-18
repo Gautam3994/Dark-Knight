@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51133646-e5f5-4f01-b58b-3d36d1c28ed0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="51133646-e5f5-4f01-b58b-3d36d1c28ed0" name="Default Changelist" comment="Beast">
+      <change afterPath="$PROJECT_DIR$/../html/basic.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_blog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cdk_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cdk_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../snake_bnb_project/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../snake_bnb_project/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../snake_bnb_project/.idea/snake_bnb_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../snake_bnb_project/.idea/snake_bnb_project.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +15,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -26,9 +23,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1RdwurmsP8vrWMMkjYH4TolTkM3" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../html" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -84,6 +84,21 @@
       <option name="presentableId" value="Default" />
       <updated>1570010506289</updated>
     </task>
+    <task id="LOCAL-00001" summary="Beast">
+      <created>1579335551664</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579335551664</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Beast">
+      <created>1579336468606</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579336468606</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,10 +106,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Beast" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beast" />
   </component>
 </project>
