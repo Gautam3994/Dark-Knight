@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1de588d-860c-48b4-bc97-16ab445ee33d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/html.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basic_layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basic_links.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basic_lists.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basics_htmlcontainers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basics_tables.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/joker.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videos/takeoff.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Flask/.idea/Flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/.idea/Flask.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Flask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/basic_layout.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
