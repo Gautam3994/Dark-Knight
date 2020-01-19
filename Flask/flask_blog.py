@@ -1,7 +1,8 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, flash, redirect
+from forms import RegistrationForm, LoginForm
 
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] = 'cf8684c33f10290611a8a2616c40efcc'  # Got using secrets.token_hex(16) from secrets module
 posts = [
     {
         "Author": "Gautam Kumar",
@@ -26,7 +27,22 @@ def home():
 
 @app.route("/about")
 def about():
-    return render_template("about.html", posts=posts, title="About")
+    return render_template("about.html", title="About")
+
+
+@app.route("/register", methods=['GET', 'POST'])
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        flash(message=f'Account was created successfully {form.username.name}', category='success')
+        return redirect(url_for('home'))
+    return render_template("register.html", title="Register", form=form)
+
+
+@app.route("/login")
+def login():
+    form = LoginForm()
+    return render_template("login.html", title="Login", form=form)
 
 
 if __name__ == '__main__':
