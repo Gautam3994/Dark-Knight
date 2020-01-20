@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51133646-e5f5-4f01-b58b-3d36d1c28ed0" name="Default Changelist" comment="Beast">
+      <change afterPath="$PROJECT_DIR$/site.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Flask.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_blog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../html/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../html/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../html/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../html/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/.idea/workspace.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,24 +34,18 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="flask_blog" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -75,6 +74,18 @@
         <item itemvalue="Python.flask_blog" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -128,5 +139,31 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Beast" />
     <option name="LAST_COMMIT_MESSAGE" value="Beast" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="389" y="201" width="577" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579505690727">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="389" y="201" width="577" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1579505690727" />
+    <state x="461" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579488855127">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="461" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1579488855127" />
+    <state width="1320" height="175" key="GridCell.Tab.0.bottom" timestamp="1579504553698">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579504553698" />
+    <state width="1320" height="175" key="GridCell.Tab.0.center" timestamp="1579504553696">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1579504553696" />
+    <state width="1320" height="175" key="GridCell.Tab.0.left" timestamp="1579504553695">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1579504553695" />
+    <state width="1320" height="175" key="GridCell.Tab.0.right" timestamp="1579504553697">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1579504553697" />
   </component>
 </project>
