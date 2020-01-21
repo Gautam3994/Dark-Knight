@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51133646-e5f5-4f01-b58b-3d36d1c28ed0" name="Default Changelist" comment="Beast">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/../workspace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/.idea/workspace.xml" afterDir="false" />
+=======
       <change afterPath="$PROJECT_DIR$/flask_blog/templates/account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Flask.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -15,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/../html/.idea/html.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../html/.idea/html.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../html/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../html/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../html/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../html/.idea/workspace.xml" afterDir="false" />
+>>>>>>> c6bdb78b5b6de756f611f4c3cf6f3e29229c6106
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
