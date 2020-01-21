@@ -1,8 +1,13 @@
-from flask_blog.forms import RegistrationForm, LoginForm, UpdateAccountForm
+import os
+import secrets
+from PIL import Image
+
 from flask import render_template, url_for, flash, redirect, request
-from flask_blog import app, bcrypt, db
-from flask_blog.models import User, Posts
 from flask_login import login_user, current_user, logout_user, login_required
+
+from flask_blog import app, bcrypt, db
+from flask_blog.forms import RegistrationForm, LoginForm, UpdateAccountForm
+from flask_blog.models import User
 
 posts = [
     {
@@ -67,11 +72,26 @@ def logout():
     return redirect(url_for('home'))
 
 
+def upload_profile_picture(form_profile_picture):
+    hex_name = secrets.token_hex(8)
+    _, file_ext = os.path.splitext(form_profile_picture.filename)
+    file_name = hex_name + file_ext
+    file_path = os.path.join(app.root_path, 'static/profile_picture', file_name)
+    required_size = (125, 125)
+    resized_picture = Image.open(form_profile_picture)
+    resized_picture.thumbnail(required_size)
+    resized_picture.save(file_path)
+    return file_name
+
+
 @app.route("/account", methods=['GET', 'POST'])
 @login_required
 def account():
     form = UpdateAccountForm()
     if form.validate_on_submit():
+        if form.profile_picture.data:
+            new_profile_picture = upload_profile_picture(form.profile_picture.data)
+            current_user.profile_picture = new_profile_picture
         current_user.username = form.username.data
         current_user.email = form.email.data
         db.session.commit()

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51133646-e5f5-4f01-b58b-3d36d1c28ed0" name="Default Changelist" comment="Beast">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/flask_blog/static/profile_picture/joker.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Flask.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -12,6 +13,12 @@
       <change beforePath="$PROJECT_DIR$/flask_blog/site.db" beforeDir="false" afterPath="$PROJECT_DIR$/flask_blog/site.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_blog/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_blog/templates/account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../workspace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../html/.idea/html.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../html/.idea/html.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../html/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../html/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../html/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../html/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
