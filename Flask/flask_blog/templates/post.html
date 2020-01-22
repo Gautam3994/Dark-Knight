@@ -1,6 +1,5 @@
 {% extends "layout.html" %}
     {% block content %}
-        {% for post in posts %}
             <article class="media content-section">
               <img class="round-circle article-img" src="{{ url_for('static', filename='profile_picture/' + post.author.profile_picture)}}"/>
               <div class="media-body">
@@ -8,12 +7,11 @@
                   <a class="mr-2" href="#">{{ post.author.username }}</a>
                   <small class="text-muted">{{ post.posted_on.strftime("%m/%d/%Y, %H:%M:%S")}}</small>
                 </div>
-                <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
+                <h2 class="article-title">{{ post.title }}</h2>
                 <p class="article-content">{{ post.content }}</p>
                 {% if post.file %}
                     <img width="500" class="img" src="{{ url_for('static', filename='files/' + post.user_id|string + '/'+ post.file )}}"/>
                  {% endif %}
               </div>
             </article>
-        {% endfor %}
     {% endblock content %}

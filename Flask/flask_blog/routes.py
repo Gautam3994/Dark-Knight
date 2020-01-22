@@ -2,7 +2,7 @@ import os
 import secrets
 from PIL import Image
 
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request, abort
 from flask_login import login_user, current_user, logout_user, login_required
 
 from flask_blog import app, bcrypt, db
@@ -111,3 +111,19 @@ def newpost():
         flash('Your post has been added successfully', 'success')
         return redirect(url_for('home'))
     return render_template("newpost.html", title="New Post", form=form)
+
+
+@app.route("/post/<int:post_id>")
+def post(post_id):
+    post = Posts.query.get_or_404(post_id)
+    return render_template('post.html', title=post.title, post=post)
+
+
+@app.route("/post/<int:post_id>/update")
+@login_required
+def update_post(post_id):
+    post = Posts.query.get_or_404(post_id)
+    if post.author != current_user:
+        abort(403)
+    form = PostForm()
+    return render_template("newpost.html", title="Update Post", form=form)

@@ -1,2 +1,0 @@
-sudo lsof -iTCP -sTCP:LISTEN -n -P -- command to see current running tasks
-sudo kill <mongo_command_pid> -- Kill the current running process
