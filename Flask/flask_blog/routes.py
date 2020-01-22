@@ -6,28 +6,14 @@ from flask import render_template, url_for, flash, redirect, request
 from flask_login import login_user, current_user, logout_user, login_required
 
 from flask_blog import app, bcrypt, db
-from flask_blog.forms import RegistrationForm, LoginForm, UpdateAccountForm
-from flask_blog.models import User
-
-posts = [
-    {
-        "author": "Gautam Kumar",
-        "title": "PUBG",
-        "posted_on": "01-01-2020",
-        "content": "About PUBG"
-    },
-    {
-        "author": "Gautam",
-        "title": "Cricket Article",
-        "posted_on": "02-01-2020",
-        "content": "About Cricket"
-    }
-]
+from flask_blog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
+from flask_blog.models import User, Posts
 
 
 @app.route("/")
 @app.route("/home")
 def home():
+    posts = Posts.query.all()
     return render_template("home.html", posts=posts)
 
 
@@ -46,6 +32,8 @@ def register():
         user = User(username=form.username.data, email=form.email.data, password=hashed_password)
         db.session.add(user)
         db.session.commit()
+        path = os.path.join(app.root_path, 'static/files/', str(user.id))
+        os.mkdir(path)
         flash(f'Account was created successfully. You can log in now!', 'success')
         return redirect(url_for('login'))
     return render_template("register.html", title="Register", form=form)
@@ -102,3 +90,24 @@ def account():
         form.email.data = current_user.email
     profile_picture = url_for('static', filename="profile_picture/" + current_user.profile_picture)
     return render_template("account.html", title="Account", profile_picture=profile_picture, form=form)
+
+
+@app.route("/newpost", methods=['GET', 'POST'])
+@login_required
+def newpost():
+    form = PostForm()
+    if form.validate_on_submit():
+        if form.file.data:
+            hex_name = secrets.token_hex(8)
+            _, file_ext = os.path.splitext(form.file.data.filename)
+            file_name = hex_name + file_ext
+            file_path = os.path.join(app.root_path, f'static/files/{str(current_user.id)}', file_name)
+            form.file.data.save(file_path)
+            # current_user.posts.file = file_name
+        if file_name:
+            post = Posts(title=form.title.data, content=form.content.data, author=current_user, file=file_name)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post has been added successfully', 'success')
+        return redirect(url_for('home'))
+    return render_template("newpost.html", title="New Post", form=form)

@@ -35,6 +35,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1RdwurmsP8vrWMMkjYH4TolTkM3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -179,9 +180,13 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1579504553697" />
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1579598818911">
+    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1579660435489">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1579598818911" />
+    <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1579660435489" />
+    <state x="451" y="316" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579660480954">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="451" y="316" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1579660480954" />
   </component>
 </project>
