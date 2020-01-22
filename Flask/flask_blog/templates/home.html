@@ -9,10 +9,13 @@
                   <small class="text-muted">{{ post.posted_on.strftime("%m/%d/%Y, %H:%M:%S")}}</small>
                 </div>
                 <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
-                <p class="article-content">{{ post.content }}</p>
                 {% if post.file %}
+                  <br/>
                     <img width="500" class="img" src="{{ url_for('static', filename='files/' + post.user_id|string + '/'+ post.file )}}"/>
                  {% endif %}
+                  <br/>
+                  <br/>
+                  <p class="article-content">{{ post.content }}</p>
               </div>
             </article>
         {% endfor %}
