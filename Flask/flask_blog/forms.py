@@ -13,12 +13,14 @@ class RegistrationForm(FlaskForm):
     confirm_password = PasswordField(label="Confirm Passowrd", validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField(label='Sign Up')
 
-    def validate_username(self, username):
+    @staticmethod
+    def validate_username(username):
         user = User.query.filter_by(username=username.data).first()
         if user:
             raise ValidationError("user name already exists")
 
-    def validate_email(self, email):
+    @staticmethod
+    def validate_email(email):
         user = User.query.filter_by(email=email.data).first()
         if user:
             raise ValidationError("email already exists")
@@ -37,13 +39,15 @@ class UpdateAccountForm(FlaskForm):
     email = StringField(label="Email", validators=[DataRequired(), Email()])
     submit = SubmitField(label='Update')
 
-    def validate_username(self, username):
+    @staticmethod
+    def validate_username(username):
         if username.data != current_user.username:
             user = User.query.filter_by(username=username.data).first()
             if user:
                 raise ValidationError("user name already exists")
 
-    def validate_email(self, email):
+    @staticmethod
+    def validate_email(email):
         if email.data != current_user.email:
             user = User.query.filter_by(email=email.data).first()
             if user:
@@ -56,3 +60,19 @@ class PostForm(FlaskForm):
     file = FileField(label="Image", validators=[FileAllowed(['jpg', 'png'])])
     post = SubmitField(label='Post')
 
+
+class RequestResetForm(FlaskForm):
+    email = StringField(label="Email", validators=[DataRequired(), Email()])
+    request_reset = SubmitField(label='Request Password Reset')
+
+    @staticmethod
+    def validate_email(email):
+        user = User.query.filter_by(email=email.data).first()
+        if user is None:
+            raise ValidationError("This email is not associated with any account.")
+
+
+class ResetPasswordForm(FlaskForm):
+    password = PasswordField(label="Password", validators=[DataRequired()])
+    confirm_password = PasswordField(label="Confirm Passowrd", validators=[DataRequired(), EqualTo('password')])
+    reset_password = SubmitField(label="Reset Password")
