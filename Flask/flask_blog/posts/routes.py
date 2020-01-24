@@ -1,11 +1,11 @@
 import os
 import secrets
 
-from flask import Blueprint, render_template, url_for, flash, request, abort, redirect
+from flask import Blueprint, render_template, url_for, flash, request, abort, redirect, current_app
 from flask_login import login_required, current_user
 
 
-from flask_blog import app, db
+from flask_blog import db
 from flask_blog.models import Posts
 from flask_blog.posts.forms import PostForm
 
@@ -21,7 +21,7 @@ def newpost():
             hex_name = secrets.token_hex(8)
             _, file_ext = os.path.splitext(form.file.data.filename)
             file_name = hex_name + file_ext
-            file_path = os.path.join(app.root_path, f'static/files/{str(current_user.id)}', file_name)
+            file_path = os.path.join(current_app.root_path, f'static/files/{str(current_user.id)}', file_name)
             form.file.data.save(file_path)
             current_user.posts.file = file_name
             post = Posts(title=form.title.data, content=form.content.data, author=current_user, file=file_name)
@@ -54,7 +54,7 @@ def update_post(post_id):
             hex_name = secrets.token_hex(8)
             _, file_ext = os.path.splitext(form.file.data.filename)
             file_name = hex_name + file_ext
-            file_path = os.path.join(app.root_path, f'static/files/{str(current_user.id)}', file_name)
+            file_path = os.path.join(current_app.root_path, f'static/files/{str(current_user.id)}', file_name)
             form.file.data.save(file_path)
             post.file = file_name
             # current_user.post.file = form.file.data.filename

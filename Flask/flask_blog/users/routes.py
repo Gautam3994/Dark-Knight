@@ -1,9 +1,9 @@
 import os
 
-from flask import Blueprint, url_for, redirect, render_template, flash, request
+from flask import Blueprint, url_for, redirect, render_template, flash, request, current_app
 from flask_login import current_user, login_user, logout_user, login_required
 
-from flask_blog import app, bcrypt, db
+from flask_blog import bcrypt, db
 from flask_blog.models import User, Posts
 from flask_blog.users.forms import RegistrationForm, LoginForm, UpdateAccountForm, RequestResetForm, ResetPasswordForm
 from flask_blog.users.utils import upload_profile_picture, send_reset_email
@@ -21,7 +21,7 @@ def register():
         user = User(username=form.username.data, email=form.email.data, password=hashed_password)
         db.session.add(user)
         db.session.commit()
-        path = os.path.join(app.root_path, 'static/files/', str(user.id))
+        path = os.path.join(current_app.root_path, 'static/files/', str(user.id))
         os.mkdir(path)
         flash(f'Account was created successfully. You can log in now!', 'success')
         return redirect(url_for('users.login'))

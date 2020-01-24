@@ -1,7 +1,9 @@
-from flask_blog import db, login_manager, app
+from flask_blog import db, login_manager
+from flask import current_app
 from datetime import datetime
 from flask_login import UserMixin
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from flask_sqlalchemy import SQLAlchemy
 
 
 @login_manager.user_loader
@@ -21,12 +23,12 @@ class User(db.Model, UserMixin):
     # posts using the author
 
     def get_reset_token(self, expires_sec=300):
-        serial = Serializer(app.config['SECRET_KEY'], expires_sec)
+        serial = Serializer(current_app.config['SECRET_KEY'], expires_sec)
         return serial.dumps({'user_id': self.id}).decode('utf-8')
 
     @staticmethod
     def verify_reset_token(token):
-        serial = Serializer(app.config['SECRET_KEY'])
+        serial = Serializer(current_app.config['SECRET_KEY'])
         try:
             user_id = serial.loads(token)['user_id']
         except:
@@ -47,3 +49,5 @@ class Posts(db.Model):
 
     def __repr__(self):
         return f"Posts('{self.title}', '{self.posted_on}')"
+
+
