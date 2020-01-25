@@ -1,10 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.automap import automap_base
-
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\Gautam\\database\\chinook.db'
-db = SQLAlchemy(app)
+from reflect_table import app, db
 
 Base = automap_base()
 Base.prepare(db.engine, reflect=True)
