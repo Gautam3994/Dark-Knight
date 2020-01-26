@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a90efbf-3b5b-42bc-bd04-ce069a825353" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/basics_create_update.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sqlalchemy_sqlite.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flasksql/basics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SQLAlchemy -1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SQLAlchemy -1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_manipulating.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sqlalchemy_csv.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tags.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beginner.py" beforeDir="false" afterPath="$PROJECT_DIR$/beginner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flasksql/.idea/flasksql.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../flasksql/.idea/flasksql.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flasksql/auto_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/../flasksql/auto_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flasksql/reflect_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/../flasksql/reflect_table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basics_create_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/basics_create_update.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlalchemy_sqlite.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqlalchemy_sqlite.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

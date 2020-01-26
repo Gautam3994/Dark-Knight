@@ -40,6 +40,7 @@ class User(Base):
 
 # relationship
 
+
 class Posts(Base):
     __tablename__ = 'posts'
     Id = db.Column(db.Integer(), primary_key=True)
