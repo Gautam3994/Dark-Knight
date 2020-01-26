@@ -1,5 +1,3 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.automap import automap_base
 from reflect_table import app, db
 
@@ -15,6 +13,3 @@ def index():
     print(track_count)
     return ''
 
-
-if __name__ == '__main__':
-    app.run(debug=True)

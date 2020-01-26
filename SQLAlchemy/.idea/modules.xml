@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SQLAlchemy -1.iml" filepath="$PROJECT_DIR$/.idea/SQLAlchemy -1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../flasksql/.idea/flasksql.iml" filepath="$PROJECT_DIR$/../flasksql/.idea/flasksql.iml" />
     </modules>
   </component>
 </project>

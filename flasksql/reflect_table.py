@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from auto_map import Tracks
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\Gautam\\database\\site.db'
@@ -8,7 +9,7 @@ db = SQLAlchemy(app)
 users = db.Table('user', db.metadata, autoload=True, autoload_with=db.engine)
 posts = db.Table('posts', db.metadata, autoload=True, autoload_with=db.engine)
 
-
+from basics import Example
 @app.route('/')
 def index():
     all_users = db.session.query(users).all()
