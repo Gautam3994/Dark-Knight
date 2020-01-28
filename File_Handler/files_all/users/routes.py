@@ -1,13 +1,12 @@
 import os
 
 from flask import Blueprint, request, render_template, url_for, current_app, flash
-from flask_login import current_user, login_user, logout_user
-from werkzeug.utils import redirect
+from flask_login import current_user, login_user, logout_user, login_required
+from werkzeug.utils import redirect, secure_filename
 
 from files_all import db, bcrypt
 from files_all.models import FileContents, User
-from files_all.users.forms import RegistrationForm, LoginForm
-
+from files_all.users.forms import RegistrationForm, LoginForm, NewFileForm, ViewFileForm
 
 users = Blueprint('users', __name__)
 
@@ -39,7 +38,6 @@ def register():
 
 @users.route("/login", methods=['GET', 'POST'])
 def login():
-    pass
     if current_user.is_authenticated:
         return redirect(url_for('users.home'))
     form = LoginForm()
@@ -59,3 +57,51 @@ def logout():
     return redirect(url_for('users.home'))
 
 
+@users.route("/upload", methods=['GET', 'POST'])
+@login_required
+def upload():
+    form = NewFileForm()
+    if form.validate_on_submit():
+        if form.upload.data:
+            filename = secure_filename(form.upload.data.filename)
+            filename_exist = FileContents.query.filter_by(file_name=filename).first()
+            if filename_exist:
+                flash("Please choose different filename", "warning")
+            else:
+                file_path = os.path.join(current_app.root_path, 'static/files/', filename)
+                form.upload.data.save(file_path)
+                file = FileContents(file_name=filename, author=current_user)
+                db.session.add(file)
+                db.session.commit()
+                flash('Your file has been added successully', 'success')
+                return redirect(url_for('users.home'))
+    return render_template("uploadfile.html", title="Upload", form=form, legend='Upload File', isUpload=True)
+
+
+@users.route("/allfiles", methods=['GET', 'POST'])
+@login_required
+def viewfiles():
+    files = FileContents.query.all()
+    return render_template("viewfiles.html", files=files, filesView=True)
+
+
+@users.route("/yourfiles", methods=['GET', 'POST'])
+@login_required
+def viewyourfiles():
+    yourfiles = FileContents.query.filter_by(author=current_user).all()
+    if len(yourfiles) != 0:
+        # form = ViewFileForm()
+        # if form.validate_on_submit():
+        return render_template("yourfiles.html", files=yourfiles, yourFile=True)
+    else:
+        flash('You dont have any files to display', 'warning')
+        files = FileContents.query.all()
+        return render_template("viewfiles.html", files=files, filesView=True)
+    # if request.method == 'POST'
+
+
+# return render_template("home.html")
+
+# @users.route("/yourfiles", methods=['GET', 'POST'])
+# @login_required
+# def deletefiles():

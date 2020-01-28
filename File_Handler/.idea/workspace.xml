@@ -2,31 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da06b4a9-f07a-4c09-b041-c28cc7f044f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/static/files/dc569c3c1ac0e74a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/static/files/joker.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/static/files/joker_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/static/files/static_files_dc569c3c1ac0e74a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/static/files/upload" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/static/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/templates/sample.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/templates/uploadfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/templates/viewfiles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/templates/yourfiles.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/File_Handler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/File_Handler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files_all/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files_all/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files_all/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/test.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files_all/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files_all/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/users/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Flask/.idea/Flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/.idea/Flask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SQLAlchemy/.idea/SQLAlchemy -1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQLAlchemy/.idea/SQLAlchemy -1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SQLAlchemy/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQLAlchemy/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SQLAlchemy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQLAlchemy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Flask/flask_blog/posts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/flask_blog/posts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Flask/flask_blog/static/profile_picture/6386114336f747df.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/flask_blog/static/profile_picture/fuck.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Flask/flask_blog/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/flask_blog/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../file_handler.py/.idea/file_handler.py.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../file_handler.py/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../file_handler.py/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../file_handler.py/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,29 +45,55 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1WzC7voBmDxK44kqLqvzqrxxbeA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/files_all/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../html/basics_tables.html" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/files_all" />
       <recent name="C:\Users\Gautam\PycharmProjects\File_Handler\files_all\templates" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager">
+    <configuration name="routes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="File_Handler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/files_all/users" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/files_all/users/routes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <item itemvalue="Python.routes" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -92,5 +120,42 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="389" y="201" width="578" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580185770203">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="389" y="201" width="578" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1580185770203" />
+    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1580187647666">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1580187647666" />
+    <state width="1320" height="175" key="GridCell.Tab.0.bottom" timestamp="1580200020938">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1580200020938" />
+    <state width="1320" height="175" key="GridCell.Tab.0.center" timestamp="1580200020935">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1580200020935" />
+    <state width="1320" height="175" key="GridCell.Tab.0.left" timestamp="1580200020934">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1580200020934" />
+    <state width="1320" height="175" key="GridCell.Tab.0.right" timestamp="1580200020936">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580200020936" />
+    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1580203179861">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1580203179861" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1580193591613">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1580193591613" />
   </component>
 </project>

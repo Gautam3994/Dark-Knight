@@ -30,6 +30,15 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
                 {% if current_user.is_authenticated %}
+                    {% if not isUpload %}
+                        <a class="nav-item nav-link" href="{{ url_for('users.upload')}}">Upload</a>
+                    {% endif %}
+                    {% if not filesView %}
+                        <a class="nav-item nav-link" href="{{ url_for('users.viewfiles')}}">All Files</a>
+                    {% endif %}
+                    {% if not yourFile %}
+                        <a class="nav-item nav-link" href="{{ url_for('users.viewyourfiles')}}">Your Files</a>
+                    {% endif %}
                     <a class="nav-item nav-link" href="{{ url_for('users.logout')}}">Log Out</a>
                 {% else %}
                     <a class="nav-item nav-link" href="{{ url_for('users.login')}}">Login</a>

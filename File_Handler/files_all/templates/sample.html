@@ -1,0 +1,93 @@
+<table id="tableStudent" border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Class</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr onmousedown="RowClick(this,false);">
+            <td>1</td>
+            <td>John</td>
+            <td>4th</td>
+        </tr>
+         <tr onmousedown="RowClick(this,false);">
+            <td>2</td>
+            <td>Jack</td>
+            <td>5th</td>
+        </tr>
+         <tr onmousedown="RowClick(this,false);">
+            <td>3</td>
+            <td>Michel</td>
+            <td>6th</td>
+        </tr>
+        <tr onmousedown="RowClick(this,false);">
+            <td>4</td>
+            <td>Mike</td>
+            <td>7th</td>
+        </tr>
+        <tr onmousedown="RowClick(this,false);">
+            <td>5</td>
+            <td>Yke</td>
+            <td>8th</td>
+        </tr>
+         <tr onmousedown="RowClick(this,false);">
+            <td>6</td>
+            <td>4ke</td>
+            <td>9th</td>
+        </tr>
+        <tr onmousedown="RowClick(this,false);">
+            <td>7</td>
+            <td>7ke</td>
+            <td>10th</td>
+        </tr>
+    </tbody>
+</table>
+<script
+    var lastSelectedRow;
+    var trs = document.getElementById('tableStudent').tBodies[0].getElementsByTagName('tr');
+
+    // disable text selection
+    document.onselectstart = function() {
+        return false;
+}
+
+function RowClick(currenttr, lock) {
+    if (window.event.ctrlKey) {
+        toggleRow(currenttr);
+    }
+
+    if (window.event.button === 0) {
+        if (!window.event.ctrlKey && !window.event.shiftKey) {
+            clearAll();
+            toggleRow(currenttr);
+        }
+
+        if (window.event.shiftKey) {
+            selectRowsBetweenIndexes([lastSelectedRow.rowIndex, currenttr.rowIndex])
+        }
+    }
+}
+
+function toggleRow(row) {
+    row.className = row.className == 'selected' ? '' : 'selected';
+    lastSelectedRow = row;
+}
+
+function selectRowsBetweenIndexes(indexes) {
+    indexes.sort(function(a, b) {
+        return a - b;
+    });
+
+    for (var i = indexes[0]; i <= indexes[1]; i++) {
+        trs[i-1].className = 'selected';
+    }
+}
+
+function clearAll() {
+    for (var i = 0; i < trs.length; i++) {
+        trs[i].className = '';
+    }
+}>
+</script>

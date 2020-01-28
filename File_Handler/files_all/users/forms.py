@@ -1,6 +1,7 @@
 from flask_login import current_user
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, DateField
+from flask_wtf.file import FileRequired, FileAllowed
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, DateField, FileField, SelectMultipleField, SelectField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from files_all.models import User, FileContents
 
@@ -31,18 +32,19 @@ class LoginForm(FlaskForm):
     submit = SubmitField(label='Login')
 
 
-class FileForm(FlaskForm):
-    _from = DateField(label='From', validators=[])
-    to = DateField(label='To', validators=[])
+class NewFileForm(FlaskForm):
+    upload = FileField(label="Upload File", validators=[FileRequired(), FileAllowed(['jpg', 'png'])])
+    submit = SubmitField(label='Upload')
+
+
+class ViewFileForm(FlaskForm):
+    # check_box_multiple = SelectMultipleField(label="Select_")
+    check_box = SelectField(label="Select")
+    start_date = DateField(label='From', validators=[])
+    end_date = DateField(label='To', validators=[])
     submit = SubmitField(label='Find')
 
     # TODO check there are records in this time and ensure end is after start date
-    def validate_file_exists(self):
-        user_id = current_user.id
-        user_files = FileContents.query.filter_by(username=user_id).first()
-        if not user_files:
-            raise ValidationError("No files exist for this user")
-
-    def validate(self, _from, to):
-        if self.to <= self._from:
-            raise ValidationError("To must be befor from")
+    def validate(self, start_date, end_date):
+        if start_date.data <= end_date.data:
+            raise ValidationError("End date must be before start date")
