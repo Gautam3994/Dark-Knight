@@ -91,13 +91,14 @@ def viewyourfiles():
     yourfiles = FileContents.query.filter_by(author=current_user).all()
     if len(yourfiles) != 0:
         form = ViewFileForm()
-        if form.validate_on_submit():
+        if form.validate_on_submit(form.start_date, form.end_date):
             return render_template("yourfiles.html", form=form, files=yourfiles, yourFile=True)
+        else:
+            flash("Check start and end date", "warning")
         return render_template("yourfiles.html", form=form, files=yourfiles, yourFile=True)
     else:
         flash('You dont have any files to display', 'warning')
-        files = FileContents.query.all()
-        return render_template("viewfiles.html", files=files, filesView=True)
+        return redirect(url_for('users.viewfiles'))
     # if request.method == 'POST'
 
 

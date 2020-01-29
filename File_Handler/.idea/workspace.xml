@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da06b4a9-f07a-4c09-b041-c28cc7f044f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Bootstrap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Bootstrap/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bootstrap/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Bootstrap/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/templates/copy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/static/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files_all/templates/yourfiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/templates/yourfiles.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files_all/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files_all/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/users/routes.py" afterDir="false" />
@@ -135,9 +132,9 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1580290667779" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1580193591613">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1580292422883">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1580193591613" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1580292422883" />
   </component>
 </project>

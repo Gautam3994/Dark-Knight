@@ -1,27 +1,38 @@
 {% extends "layout.html" %}
-    {% block head %}
-        {{ super() }}
-         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-        <style type="text/css">
-            .topcorner{
-                       position:absolute;
-                       top:0;
-                       right:0;
-                        }
-         </style>
-    {% endblock head%}
+
     {% block content %}
         <form method="post" action="" enctype="multipart/form-data">
             {{ form.hidden_tag() }}
-
-            <div class='topcorner'>
-                {{ form.start_date.label() }}
-                {{ form.start_date }}
-            </div>
-            <div >
-                {{ form.end_date.label() }}
-                {{ form.end_date }}
-            </div>
+                <div class="form-group">
+                    {{ form.start_date.label(class="form-control-label") }}
+                    {% if form.start_date.errors %}
+                        {{ form.start_date(class = "form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.start_date.errors %}
+                                <span>
+                                    {{ error }}
+                                </span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.start_date(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.end_date.label(class="form-control-label") }}
+                    {% if form.end_date.errors %}
+                        {{ form.end_date(class = "form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.end_date.errors %}
+                                <span>
+                                    {{ error }}
+                                </span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.end_date(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
             <div>
                 {{ form.submit }}
             </div>
@@ -48,27 +59,3 @@
             </fieldset>
         </form>
     {% endblock content %}
-{% block scripts %}
-  {{ super() }}
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-  <script>
-$(function() {
-  $('#datepick1').daterangepicker({
-    singleDatePicker: true,
-    opens: 'left'
-  }, function(start, end, label) {
-    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-  });
-});
-$(function() {
-  $('#datepick2').daterangepicker({
-    singleDatePicker: true,
-    opens: 'left'
-  }, function(start, end, label) {
-    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-  });
-});
-</script>
-{% endblock %}
