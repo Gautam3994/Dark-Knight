@@ -12,10 +12,10 @@
   </head>
   <body>
       <div class="container mt-5 mb-5" style="width: 400px">
-        <h3>
-          Date Picker
-        </h3>
-        <input type="text" id="picker" class="form-control">
+        <h3>Start Date</h3>
+        <input type="text" id="picker1" class="form-control">
+        <h3>End Date</h3>
+        <input type="text" id="picker2" class="form-control">
       </div>
 
     <!-- Optional JavaScript -->
@@ -26,12 +26,25 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="jquery.datetimepicker.full.min.js"></script>
     <script type="text/javascript">
-                $('#picker').datetimepicker({
+                $('#picker1').datetimepicker({
                 timepicker: false,
                 datepicker: true,
                 format: 'Y-m-d',
-                value: '2019-8-1',
-                weeks: false
+                onsShow: function(ct){
+                  this.setOptions({
+                    maxDate: $('#picker2').val() ? $('#picker2').val() : false
+                  })
+                }
+                })
+                $('#picker2').datetimepicker({
+                timepicker: false,
+                datepicker: true,
+                format: 'Y-m-d',
+                onsShow: function(ct){
+                  this.setOptions({
+                    minDate: $('#picker1').val() ? $('#picker1').val() : false
+                  })
+                }
                 })
         </script>
   </body>

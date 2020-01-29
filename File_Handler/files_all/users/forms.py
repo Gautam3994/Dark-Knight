@@ -1,7 +1,8 @@
 from flask_login import current_user
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileRequired, FileAllowed
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, DateField, FileField, SelectMultipleField, SelectField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, FileField, SelectMultipleField, SelectField
+from wtforms.fields import DateField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from files_all.models import User, FileContents
 
@@ -39,12 +40,12 @@ class NewFileForm(FlaskForm):
 
 class ViewFileForm(FlaskForm):
     # check_box_multiple = SelectMultipleField(label="Select_")
-    check_box = SelectField(label="Select")
-    start_date = DateField(label='From', validators=[])
-    end_date = DateField(label='To', validators=[])
+    # check_box = SelectField(label="Select")
+    start_date = DateField(label='From', format="%Y-%m-%d", id="datepick1", validators=[DataRequired()])
+    end_date = DateField(label='To', format="%Y-%m-%d", id="datepick2", validators=[DataRequired()])
     submit = SubmitField(label='Find')
 
     # TODO check there are records in this time and ensure end is after start date
-    def validate(self, start_date, end_date):
-        if start_date.data <= end_date.data:
+    def validate(self):
+        if self.start_date.data <= self.end_date.data:
             raise ValidationError("End date must be before start date")

@@ -90,9 +90,10 @@ def viewfiles():
 def viewyourfiles():
     yourfiles = FileContents.query.filter_by(author=current_user).all()
     if len(yourfiles) != 0:
-        # form = ViewFileForm()
-        # if form.validate_on_submit():
-        return render_template("yourfiles.html", files=yourfiles, yourFile=True)
+        form = ViewFileForm()
+        if form.validate_on_submit():
+            return render_template("yourfiles.html", form=form, files=yourfiles, yourFile=True)
+        return render_template("yourfiles.html", form=form, files=yourfiles, yourFile=True)
     else:
         flash('You dont have any files to display', 'warning')
         files = FileContents.query.all()
