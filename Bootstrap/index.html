@@ -1,10 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="jquery.datetimepicker.min.css" rel="stylesheet">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      <div class="container mt-5 mb-5" style="width: 400px">
+        <h3>
+          Date Picker
+        </h3>
+        <input type="text" id="picker" class="form-control">
+      </div>
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript">
+                $('#picker').datetimepicker({
+                timepicker: false,
+                datepicker: true,
+                format: 'Y-m-d',
+                value: '2019-8-1',
+                weeks: false
+                })
+        </script>
+  </body>
 </html>

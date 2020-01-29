@@ -2,32 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da06b4a9-f07a-4c09-b041-c28cc7f044f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/files_all/static/files/dc569c3c1ac0e74a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/static/files/joker.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/static/files/joker_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/static/files/static_files_dc569c3c1ac0e74a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/static/files/upload" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/static/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/templates/sample.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/templates/uploadfile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/templates/viewfiles.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files_all/templates/yourfiles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/File_Handler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/File_Handler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/users/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Flask/flask_blog/posts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/flask_blog/posts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Flask/flask_blog/static/profile_picture/6386114336f747df.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/flask_blog/static/profile_picture/fuck.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Flask/flask_blog/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/flask_blog/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../file_handler.py/.idea/file_handler.py.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../file_handler.py/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../file_handler.py/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../file_handler.py/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +39,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../html/basics_tables.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vscode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -129,10 +109,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="389" y="201" width="578" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1580185770203" />
-    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1580187647666">
+    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1580265234928">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1580187647666" />
+    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1580265234928" />
     <state width="1320" height="175" key="GridCell.Tab.0.bottom" timestamp="1580200020938">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -149,10 +129,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580200020936" />
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1580203179861">
+    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1580265202899">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1580203179861" />
+    <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1580265202898" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1580193591613">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

@@ -1,10 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+        <meta http-equiv = " X-UA-compatible " content = " IE = 9; IE = 7; IE = 8 ; IE = EDGE, Chrome = 1 " >
+        <title>
+                Flask
+        </title>
+    </head>
+    <body>
+        <h1>
+            Flask
+        </h1>
+    <script type="text/javascript" src="{{ url_for('static', filename='home.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='add.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='subtract.js')}}"></script>
+    </body>
 
-</body>
-</html>
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+        <div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </div>
+</div>
+
+{% endblock content %}
+{% block scripts %}
+{{ super() }}
+
+    <script type="text/javascript" src="{{ url_for('static', filename='home.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='add.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='subtract.js')}}"></script>
+
+{% endblock scripts %}
