@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da06b4a9-f07a-4c09-b041-c28cc7f044f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/files_all/templates/copy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files_all/static/files/fog-1535201.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/File_Handler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/File_Handler.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files_all/templates/yourfiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/templates/yourfiles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files_all/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/test.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files_all/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files_all/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/users/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Flask/.idea/Flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/.idea/Flask.iml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,13 +44,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SQLAlchemy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/files_all" />
       <recent name="C:\Users\Gautam\PycharmProjects\File_Handler\files_all\templates" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="routes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">

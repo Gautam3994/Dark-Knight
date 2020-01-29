@@ -42,11 +42,11 @@ class NewFileForm(FlaskForm):
 class ViewFileForm(FlaskForm):
     # check_box_multiple = SelectMultipleField(label="Select_")
     # check_box = SelectField(label="Select")
-    start_date = DateField(label='From', format="%Y-%m-%d", id="datepick1", validators=[DataRequired()], default=date.today)
-    end_date = DateField(label='To', format="%Y-%m-%d", id="datepick2", validators=[DataRequired()], default=date.today())
+    start_date = DateField(label='From', format="%Y-%m-%d", id="datepick1", validators=[DataRequired()])
+    end_date = DateField(label='To', format="%Y-%m-%d", id="datepick2", validators=[DataRequired()])
     submit = SubmitField(label='Find')
 
     def validate_on_submit(self, start_date, end_date):
-        if start_date.data > self.end_date.data:
-            raise ValidationError("Some")
+        if start_date.data <= end_date.data:
+            return True
 # TODO Validation

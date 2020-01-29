@@ -1,5 +1,5 @@
 import os
-
+import datetime
 from flask import Blueprint, request, render_template, url_for, current_app, flash
 from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.utils import redirect, secure_filename
@@ -7,6 +7,7 @@ from werkzeug.utils import redirect, secure_filename
 from files_all import db, bcrypt
 from files_all.models import FileContents, User
 from files_all.users.forms import RegistrationForm, LoginForm, NewFileForm, ViewFileForm
+from sqlalchemy.sql import func
 
 users = Blueprint('users', __name__)
 
@@ -89,18 +90,29 @@ def viewfiles():
 @login_required
 def viewyourfiles():
     yourfiles = FileContents.query.filter_by(author=current_user).all()
+    # for file in yourfiles:
+    #     print(type(datetime.datetime.date(file.uploaded_on)))
     if len(yourfiles) != 0:
         form = ViewFileForm()
-        if form.validate_on_submit(form.start_date, form.end_date):
-            return render_template("yourfiles.html", form=form, files=yourfiles, yourFile=True)
-        else:
-            flash("Check start and end date", "warning")
+        if form.start_date.data:
+            if form.validate_on_submit(form.start_date, form.end_date):
+                # SELECT * FROM file_contents WHERE date(uploaded_on) BETWEEN '2020-01-28' AND '2020-01-29';
+                # selected_files = FileContents.query.filter(func.date(FileContents.uploaded_on).between(form.start_date.data, form.end_date.data)).filter_by(author=current_user).all()
+                selected_files = []
+                for file in yourfiles:
+                    if form.end_date.data >= datetime.datetime.date(file.uploaded_on) >= form.start_date.data:
+                        selected_files.append(file)
+                # selected_files = [selected_files.append(file) for file in yourfiles if
+                #                   form.end_date.data >= datetime.datetime.date(
+                #                       file.uploaded_on) >= form.start_date.data]
+                return render_template("yourfiles.html", form=form, files=selected_files, yourFile=True)
+            else:
+                flash("Check start and end date", "warning")
         return render_template("yourfiles.html", form=form, files=yourfiles, yourFile=True)
     else:
         flash('You dont have any files to display', 'warning')
         return redirect(url_for('users.viewfiles'))
     # if request.method == 'POST'
-
 
 # return render_template("home.html")
 
