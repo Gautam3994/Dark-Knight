@@ -94,17 +94,36 @@ def viewyourfiles():
     #     print(type(datetime.datetime.date(file.uploaded_on)))
     if len(yourfiles) != 0:
         form = ViewFileForm()
+        delete = request.form.get("delete")
+        if delete:
+            filelist = request.form.getlist("check")
+            print(delete)
+            if filelist:
+                for file in filelist:
+                    print(file)
+                    file_path = os.path.join(current_app.root_path, 'static/files/', file)
+                    print(file_path)
+                    try:
+                        os.remove(file_path)
+                    except:
+                        flash("The file doesn't exist in path. Contact Support")
+                    else:
+                        file_to_remove = FileContents.query.filter_by(file_name=file).first()
+                        db.session.delete(file_to_remove)
+                        db.session.commit()
+                        print(file_to_remove)
+                        flash("Your file has been removed successfully", "success")
+                        return redirect(url_for('users.viewyourfiles'))
+            else:
+                flash("You have not selected any file to delete", "warning")
+            return render_template("yourfiles.html", form=form, files=yourfiles, yourFile=True)
         if form.start_date.data:
             if form.validate_on_submit(form.start_date, form.end_date):
                 # SELECT * FROM file_contents WHERE date(uploaded_on) BETWEEN '2020-01-28' AND '2020-01-29';
                 # selected_files = FileContents.query.filter(func.date(FileContents.uploaded_on).between(form.start_date.data, form.end_date.data)).filter_by(author=current_user).all()
                 selected_files = []
-                for file in yourfiles:
-                    if form.end_date.data >= datetime.datetime.date(file.uploaded_on) >= form.start_date.data:
-                        selected_files.append(file)
-                # selected_files = [selected_files.append(file) for file in yourfiles if
-                #                   form.end_date.data >= datetime.datetime.date(
-                #                       file.uploaded_on) >= form.start_date.data]
+                files = [selected_files.append(file) for file in yourfiles if form.end_date.data >= datetime.datetime.date(
+                                      file.uploaded_on) >= form.start_date.data]
                 return render_template("yourfiles.html", form=form, files=selected_files, yourFile=True)
             else:
                 flash("Check start and end date", "warning")
@@ -112,10 +131,7 @@ def viewyourfiles():
     else:
         flash('You dont have any files to display', 'warning')
         return redirect(url_for('users.viewfiles'))
-    # if request.method == 'POST'
 
-# return render_template("home.html")
-
-# @users.route("/yourfiles", methods=['GET', 'POST'])
+# @users.route("/yourfiles/delete", methods=['GET', 'POST'])
 # @login_required
 # def deletefiles():
