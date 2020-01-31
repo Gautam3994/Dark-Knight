@@ -5,16 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/File_Handler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/File_Handler.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/static/files/fog-1535201.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/static/files/joker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/static/files/upload" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/templates/copy.html" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/templates/copy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/templates/yourfiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/templates/yourfiles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files_all/static/files/1616123.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/files_all/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/users/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Flask/.idea/Flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/.idea/Flask.iml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,13 +39,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SQLAlchemy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Css" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/files_all" />
       <recent name="C:\Users\Gautam\PycharmProjects\File_Handler\files_all\templates" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="routes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -111,37 +117,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="389" y="201" width="578" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580185770203">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="389" y="201" width="578" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1580185770203" />
-    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1580265234928">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1580265234928" />
-    <state width="1320" height="175" key="GridCell.Tab.0.bottom" timestamp="1580200020938">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state width="1320" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1580200020938" />
-    <state width="1320" height="175" key="GridCell.Tab.0.center" timestamp="1580200020935">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state width="1320" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1580200020935" />
-    <state width="1320" height="175" key="GridCell.Tab.0.left" timestamp="1580200020934">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state width="1320" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1580200020934" />
-    <state width="1320" height="175" key="GridCell.Tab.0.right" timestamp="1580200020936">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state width="1320" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580200020936" />
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1580352223647">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1580352223647" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1580292422883">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1580292422883" />
+    <state x="389" y="201" width="578" height="390" key="#com.intellij.fileTypes.FileTypeChooser" />
+    <state x="389" y="201" width="578" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" />
+    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" />
+    <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" />
+    <state width="1320" height="175" key="GridCell.Tab.0.bottom" />
+    <state width="1320" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" />
+    <state width="1320" height="175" key="GridCell.Tab.0.center" />
+    <state width="1320" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" />
+    <state width="1320" height="175" key="GridCell.Tab.0.left" />
+    <state width="1320" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" />
+    <state width="1320" height="175" key="GridCell.Tab.0.right" />
+    <state width="1320" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" />
+    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" />
+    <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" />
   </component>
 </project>

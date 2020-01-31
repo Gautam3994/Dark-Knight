@@ -1,0 +1,96 @@
+/* h1{
+    color: brown;
+} */
+
+/* *{ this is set margin and padding for everyhting in all apfes with this css file imported
+    margin: 0;
+    padding: 0;
+} */
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: lightgreen;
+}
+
+a:active{
+    color: red;
+}
+
+/* a:visited{
+    color: royalblue;
+} */
+
+body{
+    background-color: black;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    /* font: normal 16px Arial, Helvetica, san-serif; */
+    line-height: 1.4em;
+    margin: 1cm;
+}
+/* in div class is used to refer css if it going to used somewhere else 
+if it is going to be used in one place alone use id(in div)
+*/
+
+
+.container{
+    /* width: 1000px; */
+    width: 80%;
+    margin: auto;
+    /* margin space outsdide the container */
+    /* then(inside it) comes border */
+    /* then padding and content */
+
+}
+
+.box-1{
+    background-color: darkslategrey;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 5px red solid; /* you have to mention solid for border line to appear you can use dotted lin e etc*/
+    margin: 50px 10px 5px 10px; /* all padding, margin , border can be set with short hands as well */
+    border-width: 3px grey solid;
+}
+
+.box-1 h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    word-spacing: 0.5em;
+}
+
+.box-2{
+    border: 3px dotted grey;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.categories{
+    border:1px #ccc solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+.categories h2{
+    text-align: center;
+}
+
+.categories ul{
+    /* padding: 0; */
+    list-style: square;
+    list-style: none;
+
+}
