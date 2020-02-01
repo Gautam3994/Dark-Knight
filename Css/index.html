@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="box-1">
+        <!-- <div class="box-1">
             <h1> Hello There</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusamus cum veritatis dolor vitae eos quae, in deleniti ratione doloremque! Deserunt eveniet necessitatibus distinctio. Delectus aperiam hic laudantium, nam aut quae eius ipsum voluptatibus alias, voluptas optio mollitia architecto molestias inventore dolore atque ea quaerat quibusdam nihil cum? Corporis dolorem ipsum nobis. Labore illo ipsum, architecto saepe dolore sequi veritatis ab iure. Illo totam nulla deserunt magnam assumenda rem reprehenderit ullam. Expedita cumque sequi natus est necessitatibus fuga magni, quis nisi veritatis quibusdam impedit optio harum consequuntur ducimus porro quasi nesciunt dolor id nihil pariatur ullam adipisci perferendis beatae illo! Suscipit ad pariatur cumque? Impedit aut commodi repellat, nulla nobis odit soluta asperiores error laboriosam doloremque natus vitae placeat sit at animi adipisci quaerat sint minima. Dolor provident quaerat ducimus enim reiciendis sapiente sint delectus quia autem quasi, at voluptatibus recusandae alias, odio optio nemo itaque nobis id repellat ab aliquid fuga ipsa soluta. Sit assumenda repudiandae quam repellat voluptatum. Sint eos necessitatibus, dignissimos quas aut repudiandae modi optio, enim quaerat voluptate, cum tempora beatae cumque saepe in obcaecati nulla facilis blanditiis quia? Distinctio adipisci rerum necessitatibus! Rerum, corrupti? Quis repudiandae in officia ex, ratione nihil voluptatibus, voluptas sapiente quas maiores cumque ut harum, ipsum illum sint porro voluptatem atque assumenda. Debitis necessitatibus eius, quidem quaerat quia magni ea voluptas maiores enim cupiditate fugiat officiis. In aspernatur odit, laborum consectetur possimus nostrum dolorem voluptatem distinctio non maiores tenetur, aperiam delectus mollitia totam blanditiis minus obcaecati rerum nobis aut quaerat. Accusamus pariatur exercitationem quo labore voluptates molestias, eos dolore adipisci velit quasi provident aperiam vel eius debitis, corrupti eligendi porro autem, sequi placeat nesciunt perspiciatis neque. Provident error dolorum debitis iste temporibus laboriosam labore. Dolorem aspernatur soluta vero minima rerum commodi libero eum nulla. Numquam odit rem optio ab! Quia, consectetur?
@@ -26,10 +26,97 @@
             <ul>
                 <li><a href="https://www.google.com" target="_blank">Category1</a></li>
                 <li><a href="#">Category2</a></li>
-                <li><a href="#">Category3</a></li>
-                <li><a href="b.html">Category4</a></li>
+                <li><a href="#">Category3</a></li> <!-- # is same page -->
+                <!-- <li><a href="b.html">Category4</a></li>
             </ul>
+        </div> -->
+        <form action="procces.py" method="post" class="myform">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="firstName" placeholder="firstName">
+            </div>
+            <br/>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="lasttName" placeholder="lastName">
+            </div>
+            <br/>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email">
+            </div>
+            <br/>
+            <div class="form-group">
+                <label>Select</label>
+                <select>
+                    <option>Select</option>
+                    <option>Option1</option>
+                    <option>Option2</option>
+                    <option>Option3</option>
+                </select>
+            </div>
+            <br/>
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" name="age" value="firstName" min="0">
+            </div>
+            <br/>
+            <div class="form-group">
+                <label>Birthday</label>
+                <input type="date" name="birthday">
+            </div>
+            <br/>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" placeholder="Enter your text" rows="10" cols="100"></textarea>
+            </div>
+            <br/>
+            
+            <div class="form-group">
+                <input class="button" type="submit" name="birthday" value="Submit">
+            </div>
+        </form>
+        <a class="button"href="https://www.google.com" target="_blank">Already have a account</a>
+    <br/>
+    <br/>
+    <br/>
+        <div class="block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente optio perferendis libero exercitationem dolorum nostrum dolores ipsam ducimus, amet dicta voluptates at odit soluta commodi. Iusto eaque ab temporibus.</p>
         </div>
+        <div class="block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente optio perferendis libero exercitationem dolorum nostrum dolores ipsam ducimus, amet dicta voluptates at odit soluta commodi. Iusto eaque ab temporibus.</p>
+        </div>
+        <div class="block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente optio perferendis libero exercitationem dolorum nostrum dolores ipsam ducimus, amet dicta voluptates at odit soluta commodi. Iusto eaque ab temporibus.</p>
+        </div>
+        <div class="clr"></div> <!-- does this whenever border-box is used-->
+        <div id="main-block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente optio perferendis libero exercitationem dolorum nostrum dolores ipsam ducimus, amet dicta voluptates at odit soluta commodi. Iusto eaque ab temporibus.</p>
+        </div>
+        <div id="sidebar">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente optio perferendis libero exercitationem dolorum nostrum dolores ipsam ducimus, amet dicta voluptates at odit soluta commodi. Iusto eaque ab temporibus.</p>
+        </div>
+        <div class="clr"></div>
+        <!-- <div style="margin-top: 1000px;"></div> this line pushes everything to the top -->
+        <div class="position-box">
+            <h1>Hello</h1>
+            <h2>Good Morning</h2>
+        </div>
+        <ul class="list">
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+        </ul>
     </div>
+    <a href="" class="fixed button">Fixed</a> <!-- Fixed is mostly used with nav bar-->
 </body>
 </html>

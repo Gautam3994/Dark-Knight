@@ -25,10 +25,11 @@ a:active{
 } */
 
 body{
-    background-color: black;
+    background-color: #f9f9f9;
+    /* background-image: url("./images/download.png"); */
     color: grey;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 15px;
     font-weight: normal;
     /* font: normal 16px Arial, Helvetica, san-serif; */
     line-height: 1.4em;
@@ -38,6 +39,9 @@ body{
 if it is going to be used in one place alone use id(in div)
 */
 
+.clr{
+    clear: both;
+}
 
 .container{
     /* width: 1000px; */
@@ -47,6 +51,18 @@ if it is going to be used in one place alone use id(in div)
     /* then(inside it) comes border */
     /* then padding and content */
 
+}
+
+.button{
+    background-color: #333;
+    color: blanchedalmond;
+    padding: 10px 15px;
+    border: none;
+}
+
+.button:hover{
+    color: aqua;
+    background-color: black;
 }
 
 .box-1{
@@ -90,7 +106,114 @@ if it is going to be used in one place alone use id(in div)
 
 .categories ul{
     /* padding: 0; */
+    padding-left: 200px;
     list-style: square;
     list-style: none;
 
 }
+
+
+.categories li{
+    padding-bottom: 0px;
+    border-bottom: dotted 1px #333;
+    list-style-image: url("./images/download.png");
+}
+
+.myform{
+    padding: 20px; /* this line seperated the form from other elements in the div */
+}
+
+.myform .form-group{
+    padding-bottom: 0px;
+}
+
+.myform label{
+    display: block;
+}
+
+.myform select{
+    margin-bottom: 55px;
+    width:  20%;
+}
+
+.myform input[type="text"], .myform textarea{
+    padding: 6px;
+    width: 50%;
+}
+
+/* .myform input[type="submit"]{
+    background-color: #333;
+    color: blanchedalmond; This is implemented at the top for all button type class
+} */
+
+.block{
+    float: left;
+    width: 33%;
+    border: 1px solid #333;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* if it is id will have to use  */
+
+#main-block{
+    float: left;
+    width: 70%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#sidebar{
+    float: right;
+    width: 30%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.position-box{
+    width:800px;
+    height: 500px;
+    border: 1px solid #000;
+    margin-top: 30px;
+    position: relative;
+    background-image: url("./images/download.png");
+    background-repeat: no-repeat;
+    background-position: 100px 200px;
+    background-position: center top; 
+    /* background-position: ; */
+}
+
+.position-box h1{
+    position: absolute;
+    top:40px;
+    left: 80px;
+}
+
+.position-box h2{
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+
+.fixed{
+    position: fixed;
+    top: 400px;
+}
+
+.list li:first-child{
+    background: blue;
+}
+
+.list li:last-child{
+    background-color: brown;
+}
+
+.list li:nth-child(4){
+    background-color: darkblue;
+}
+
+/* .list li:nth-child(even){
+    background-color: darkgreen;
+} */

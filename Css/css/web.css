@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(43, 41, 41);
+    color: gainsboro;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* to pervent scroll bar from coming up */
+}
+
+.clr{
+    clear: both;
+}
+#main-header{
+    background-color: rgb(19, 17, 17);
+    color: gainsboro;
+}
+
+#navbar{
+    background-color:  rgb(39, 36, 36);
+    color: white;
+}
+
+#navbar ul{
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+#navbar li{
+    display: inline;
+}
+
+#navbar a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 14px;
+    padding-right: 14px;
+}
+
+#showcase{
+    background-image: url("./images/image.jpg");
+    background-position: center right;
+    min-height: 300px; /* min height is used to make the website responsive */
+    background-repeat: repeat;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#showcase{
+    color:#fff;
+    font-size: 50px;
+    line-height: 1.6em;
+    padding-top: 30px;
+}
+
+#main{
+    float: left;
+    width: 70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+#side-bar{
+    float: right;
+    width: 30%;
+    background-color: black;
+    color: whitesmoke;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+#main-footer{
+    /* position: fixed; */
+    /* bottom: 0px;
+    width: 100%; */
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+    margin-top: 400px;
+}
+
+@media(max-width:600px){
+    #main{
+        width:100%;
+        float: none;
+    }
+    #side-bar{
+        width:100%;
+        float: none;
+    }
+}
