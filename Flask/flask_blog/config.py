@@ -10,3 +10,4 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get('EMAIL')
     MAIL_PASSWORD = os.environ.get('PASSWORD')
+    WTF_CSRF_ENABLED = True
