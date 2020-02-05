@@ -1,0 +1,40 @@
+To connect to another system:
+mongo --host Gautam (machine/hostname/ns name) --port 27017
+mongo mongodb://Gautam:27017
+mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[database][?options]]
+
+Set db path:
+mkdir data
+mongod --dbpath ./data
+
+setup best pratice:
+ext4(not ext3) - Mount command
+Disable last access time
+sudo vi /etc/fstab
+edit ext4 defaults to ext4 defaults,noatime
+reboot
+enter mount command to check
+
+ALWAYS ENSURE mongo.lock is 0 mb in size
+sometime it is not 0 because of improper shutdown
+If so use different port.
+
+Config file
+
+set the logrotate and log append(if needed)
+by default the log changes when service is started
+
+storage engine:
+engine: mmapv1(default), wiredTiger(recommended)
+while switching engine create new log file
+
+journal(acknowledgemt of data is moved from memory to disk):
+	enabled: true
+
+directoryperdb to true to have sep dir for each db
+
+IP and Port:
+net: (note this file is in yaml format)
+bindIp: 192.168.1.86, can add more.
+port: 27017
+
