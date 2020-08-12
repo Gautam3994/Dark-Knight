@@ -6,5 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Flask" />
     <orderEntry type="module" module-name="SQLAlchemy -1" />
+    <orderEntry type="module" module-name="Flask" />
+    <orderEntry type="module" module-name="Flask_API" />
   </component>
 </module>

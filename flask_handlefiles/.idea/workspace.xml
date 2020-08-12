@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1603088c-3212-4f81-aada-bb0a48f9c70a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Flask/flask_blog/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Flask/flask_blog/users/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/flask_handlefiles.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../File_Handler/.idea/File_Handler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../File_Handler/.idea/File_Handler.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../File_Handler/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../File_Handler/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../File_Handler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../File_Handler/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +53,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../File_Handler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flasksql" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -58,15 +66,15 @@
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -82,6 +90,17 @@
       <updated>1580093180457</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

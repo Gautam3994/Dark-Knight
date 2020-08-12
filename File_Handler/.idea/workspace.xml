@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da06b4a9-f07a-4c09-b041-c28cc7f044f0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../flask_handlefiles/.idea/flask_handlefiles.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flask_handlefiles/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flask_handlefiles/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flask_handlefiles/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/File_Handler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/File_Handler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/static/files/1616123.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files_all/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/files_all/test.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flask_handlefiles/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flask_handlefiles/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +42,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flask_handlefiles" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
